@@ -14,9 +14,73 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://akhairkar.github.io/BhumiRecord/index.html">
   
-  <!-- ORIGINAL THEME CSS -->
+  <!-- Original Stylesheet for Variables -->
   <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    /* Premium Village-Friendly UI that respects Theme Variables */
+    .hero-simple { background: linear-gradient(135deg, var(--color-primary) 0%, #0d3d20 100%); color: white; padding: 60px 20px; text-align: center; }
+    .hero-simple h1 { font-size: 2.5rem; margin-bottom: 16px; font-weight: 700; color: white; }
+    .hero-simple p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px auto; opacity: 0.95; line-height: 1.6; color: white; }
+    
+    @media(max-width: 768px) {
+      .hero-simple { padding: 40px 16px; }
+      .hero-simple h1 { font-size: 2rem; }
+    }
 
+    .search-container { max-width: 500px; margin: 0 auto; position: relative; }
+    .search-box { width: 100%; padding: 16px 20px 16px 48px; font-size: 1.1rem; border: none; border-radius: 30px; box-shadow: var(--shadow-md); outline: none; background: var(--color-bg-card); color: var(--color-text); }
+    .search-box:focus { box-shadow: 0 0 0 3px rgba(27, 107, 58, 0.3); }
+    .search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: 1.2rem; }
+    .search-examples { margin-top: 12px; font-size: 0.85rem; color: #d1fae5; }
+    
+    .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 32px; font-weight: 700; color: var(--color-text); }
+    
+    /* Action Cards */
+    .action-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .action-card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 24px; text-align: left; box-shadow: var(--shadow-sm); position: relative; transition: var(--transition); }
+    .action-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--color-primary); }
+    .action-card .icon { font-size: 2.5rem; margin-bottom: 12px; display: block; }
+    .action-card h3 { font-size: 1.3rem; margin-bottom: 8px; color: var(--color-text); }
+    .action-card p { color: var(--color-text-muted); font-size: 0.95rem; margin: 0; line-height: 1.5; }
+    
+    .badge-soon { background: var(--color-bg-alt); color: var(--color-text-muted); font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; font-weight: bold; position: absolute; top: 24px; right: 24px; border: 1px solid var(--color-border); }
+    
+    /* State Grid */
+    .state-simple-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+    .state-btn-ux { display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--color-bg-card); border: 1px solid var(--color-border); padding: 16px; border-radius: 8px; text-decoration: none; color: var(--color-text); font-weight: 600; font-size: 1.1rem; transition: var(--transition); box-shadow: var(--shadow-sm); }
+    .state-btn-ux:hover { background: var(--color-primary-light); border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    
+    /* Decision Nav */
+    .decision-list { display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 0 auto; }
+    .decision-link { background: var(--color-bg-card); border: 2px solid var(--color-border); padding: 16px 20px; border-radius: 8px; text-decoration: none; color: var(--color-text); font-size: 1.1rem; font-weight: 500; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); }
+    .decision-link:hover { border-color: var(--color-primary); background: var(--color-primary-light); }
+    .decision-link span.arrow { color: var(--color-primary); font-weight: bold; }
+    
+    /* Steps */
+    .step-grid-ux { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .step-card-ux { background: var(--color-bg-card); padding: 24px; border-radius: 8px; text-align: center; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); }
+    .step-num-ux { background: var(--color-primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold; margin: 0 auto 16px auto; }
+    
+    /* Trust Note */
+    .trust-note { background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 16px; border-radius: 4px; margin-top: 32px; font-size: 0.95rem; color: var(--color-text); text-align: left; }
+    
+    /* FAQs Semantic */
+    details.faq-item-ux { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 8px; margin-bottom: 12px; padding: 0; box-shadow: var(--shadow-sm); }
+    details.faq-item-ux summary { font-weight: 600; font-size: 1.05rem; padding: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--color-text); transition: var(--transition); }
+    details.faq-item-ux summary:hover { background: var(--color-primary-light); }
+    details.faq-item-ux summary::-webkit-details-marker { display: none; }
+    details.faq-item-ux summary::after { content: '+'; font-size: 1.2rem; color: var(--color-primary); }
+    details.faq-item-ux[open] summary::after { content: '-'; }
+    details.faq-item-ux .faq-answer-content { padding: 0 16px 16px 16px; color: var(--color-text-muted); line-height: 1.6; border-top: 1px solid var(--color-border); margin-top: 8px; padding-top: 16px; }
+    
+    /* Checkmarks */
+    .check-list-simple { list-style: none; padding: 0; }
+    .check-list-simple li { padding-left: 32px; position: relative; margin-bottom: 16px; font-size: 1.1rem; color: var(--color-text); }
+    .check-list-simple li::before { content: '✓'; position: absolute; left: 0; color: var(--color-primary); font-weight: bold; font-size: 1.4rem; top: -2px; }
+  </style>
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -100,7 +164,7 @@
   <div class="tricolor-rule"></div>
   <a class="skip-link" href="#main-content">मुख्य सामग्री पर जाएं</a>
 
-  <!-- ===== ORIGINAL HEADER (SIMPLIFIED CONTENT) ===== -->
+  <!-- ===== 1. HEADER (Original Theme Style + Theme Toggle) ===== -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
@@ -136,362 +200,279 @@
     </div>
     <span class="mobile-section-title">नेविगेशन</span>
     <a href="index.html">🏠 Home</a>
-    <a href="#state-selection">📍 अपना राज्य चुनें</a>
+    <a href="#state-selection" onclick="document.getElementById('mobile-nav').classList.remove('active')">📍 अपना राज्य चुनें</a>
     <a href="states/">🌐 सभी 36 राज्य और UTs</a>
     <span class="mobile-section-title">जानकारी</span>
     <a href="disclaimer.html">⚠️ अस्वीकरण</a>
   </div>
 
-  <!-- ===== HERO SECTION (ORIGINAL THEME, NEW CONTENT) ===== -->
-  <section class="hero" id="main-content">
-    <div class="container text-center">
-      <div class="hero-label">सरल और सटीक गाइड</div>
-      <h1 class="mt-16">भूमि रिकॉर्ड ऑनलाइन देखें</h1>
-      <p class="hero-sub mt-16 mx-auto">अपने राज्य का 7/12, खसरा-खतौनी, जमाबंदी, प्रॉपर्टी कार्ड और अन्य भूमि रिकॉर्ड कैसे देखें — आसान हिंदी में जानें।</p>
+  <!-- ===== 3. HERO & 4. SEARCH ===== -->
+  <section class="hero-simple" id="main-content">
+    <div class="container">
+      <h1>भूमि रिकॉर्ड ऑनलाइन देखें</h1>
+      <p>अपने राज्य का 7/12, खसरा-खतौनी, जमाबंदी, प्रॉपर्टी कार्ड और अन्य भूमि रिकॉर्ड कैसे देखें — आसान हिंदी में जानें।</p>
       
-      <!-- Safe Search Box using original theme variables -->
-      <div class="mt-32 mx-auto" style="max-width: 600px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <input type="text" id="heroSearch" placeholder="अपना राज्य खोजें (उदा: Maharashtra)..." 
-               style="width: 100%; padding: 16px 24px; font-size: 1.1rem; border: 2px solid var(--color-border); border-radius: 30px; background: var(--color-bg-card); color: var(--color-text); outline: none; transition: var(--transition);">
-        <p style="font-size: 0.85rem; color: var(--color-text-muted);">उदाहरण: "Maharashtra 7/12", "UP Bhulekh", "Bihar Khatauni"</p>
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="heroSearch" class="search-box" placeholder="अपना राज्य खोजें (उदा: Maharashtra)..." aria-label="अपना राज्य खोजें">
+        <div class="search-examples">उदाहरण: "Maharashtra 7/12", "UP Bhulekh", "Bihar Khatauni"</div>
       </div>
-      <script>
-        document.getElementById('heroSearch').addEventListener('focus', function(e) {
-            e.target.style.borderColor = 'var(--color-primary)';
-            e.target.style.boxShadow = 'var(--shadow-md)';
-        });
-        document.getElementById('heroSearch').addEventListener('blur', function(e) {
-            e.target.style.borderColor = 'var(--color-border)';
-            e.target.style.boxShadow = 'none';
-        });
-        document.getElementById('heroSearch').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                document.getElementById('state-selection').scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-      </script>
     </div>
   </section>
 
-  <!-- ===== QUICK ACTIONS (Original Service Grid) ===== -->
-  <section class="section-alt">
+  <script>
+    document.getElementById('heroSearch').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            document.getElementById('state-selection').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+  </script>
+
+  <!-- ===== 5. आपको क्या चाहिए? (QUICK ACTIONS) ===== -->
+  <section class="section-alt" style="padding: 64px 0;">
     <div class="container">
-      <div class="section-header text-center">
-        <h2>आपको क्या चाहिए?</h2>
-        <p>सबसे ज्यादा खोजी जाने वाली भूमि जानकारी</p>
-      </div>
+      <h2 class="section-title">आपको क्या चाहिए?</h2>
       
-      <div class="service-grid mt-32">
-        <div class="service-card" style="cursor: default;">
-          <span class="card-icon">📄</span>
-          <h3>7/12 उतारा 
-            <span style="background:var(--color-bg-alt); color:var(--color-text-muted); font-size:0.7rem; padding:4px 8px; border-radius:12px; margin-left:8px; border:1px solid var(--color-border);">जल्द उपलब्ध</span>
-          </h3>
+      <div class="action-grid">
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">📄</span>
+          <h3>7/12 उतारा</h3>
           <p>भूमि की जानकारी और रिकॉर्ड (महाराष्ट्र/गुजरात)</p>
         </div>
-        <div class="service-card" style="cursor: default;">
-          <span class="card-icon">📋</span>
-          <h3>8A उतारा 
-            <span style="background:var(--color-bg-alt); color:var(--color-text-muted); font-size:0.7rem; padding:4px 8px; border-radius:12px; margin-left:8px; border:1px solid var(--color-border);">जल्द उपलब्ध</span>
-          </h3>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">📋</span>
+          <h3>8A उतारा</h3>
           <p>खाता और जमीन की जानकारी का सारांश</p>
         </div>
-        <div class="service-card" style="cursor: default;">
-          <span class="card-icon">🔄</span>
-          <h3>फेरफार / Mutation 
-            <span style="background:var(--color-bg-alt); color:var(--color-text-muted); font-size:0.7rem; padding:4px 8px; border-radius:12px; margin-left:8px; border:1px solid var(--color-border);">जल्द उपलब्ध</span>
-          </h3>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">🔄</span>
+          <h3>फेरफार / Mutation</h3>
           <p>नाम परिवर्तन और भूमि रिकॉर्ड अपडेट की जानकारी</p>
         </div>
-        <div class="service-card" style="cursor: default;">
-          <span class="card-icon">🗺️</span>
-          <h3>भू-नक्शा 
-            <span style="background:var(--color-bg-alt); color:var(--color-text-muted); font-size:0.7rem; padding:4px 8px; border-radius:12px; margin-left:8px; border:1px solid var(--color-border);">जल्द उपलब्ध</span>
-          </h3>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">🗺️</span>
+          <h3>भू-नक्शा</h3>
           <p>अपनी जमीन, खेत या प्लॉट का आधिकारिक नक्शा देखें</p>
         </div>
-        <div class="service-card" style="cursor: default;">
-          <span class="card-icon">🏠</span>
-          <h3>Property Card 
-            <span style="background:var(--color-bg-alt); color:var(--color-text-muted); font-size:0.7rem; padding:4px 8px; border-radius:12px; margin-left:8px; border:1px solid var(--color-border);">जल्द उपलब्ध</span>
-          </h3>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">🏠</span>
+          <h3>Property Card</h3>
           <p>शहरी संपत्ति (घर/प्लॉट) का रिकॉर्ड और मालिकाना हक</p>
         </div>
-        <div class="service-card" style="cursor: default;">
-          <span class="card-icon">📑</span>
-          <h3>खसरा-खतौनी 
-            <span style="background:var(--color-bg-alt); color:var(--color-text-muted); font-size:0.7rem; padding:4px 8px; border-radius:12px; margin-left:8px; border:1px solid var(--color-border);">जल्द उपलब्ध</span>
-          </h3>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">📑</span>
+          <h3>खसरा-खतौनी / जमाबंदी</h3>
           <p>उत्तर भारत के राज्यों के अनुसार भूमि रिकॉर्ड</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== STATE SELECTION (Original State Grid) ===== -->
-  <section id="state-selection">
+  <!-- ===== 6. अपना राज्य चुनें (STATE SELECTION) ===== -->
+  <section id="state-selection" style="padding: 64px 0;">
     <div class="container">
-      <div class="section-header text-center">
-        <h2>अपना राज्य चुनें</h2>
-        <p>अपने राज्य के अनुसार भूमि रिकॉर्ड की जानकारी देखें।</p>
+      <h2 class="section-title" style="margin-bottom: 8px;">अपना राज्य चुनें</h2>
+      <p style="text-align: center; color: var(--color-text-muted); margin-bottom: 32px; font-size: 1.1rem;">अपने राज्य के अनुसार भूमि रिकॉर्ड की जानकारी देखें।</p>
+      
+      <div class="state-simple-grid">
+        <a href="states/maharashtra.html" class="state-btn-ux">महाराष्ट्र</a>
+        <a href="states/uttar-pradesh.html" class="state-btn-ux">उत्तर प्रदेश</a>
+        <a href="states/bihar.html" class="state-btn-ux">बिहार</a>
+        <a href="states/madhya-pradesh.html" class="state-btn-ux">मध्य प्रदेश</a>
+        <a href="states/rajasthan.html" class="state-btn-ux">राजस्थान</a>
+        <a href="states/gujarat.html" class="state-btn-ux">गुजरात</a>
+        <a href="states/karnataka.html" class="state-btn-ux">कर्नाटक</a>
+        <a href="states/haryana.html" class="state-btn-ux">हरियाणा</a>
       </div>
       
-      <div class="state-grid mt-32">
-        <a href="states/maharashtra.html" class="state-card text-center" style="padding: 24px;">
-          <span class="state-emoji">🏰</span>
-          <span class="state-name-hi" style="font-size:1.1rem; margin-top:8px;">महाराष्ट्र</span>
-        </a>
-        <a href="states/uttar-pradesh.html" class="state-card text-center" style="padding: 24px;">
-          <span class="state-emoji">🛕</span>
-          <span class="state-name-hi" style="font-size:1.1rem; margin-top:8px;">उत्तर प्रदेश</span>
-        </a>
-        <a href="states/bihar.html" class="state-card text-center" style="padding: 24px;">
-          <span class="state-emoji">🏛️</span>
-          <span class="state-name-hi" style="font-size:1.1rem; margin-top:8px;">बिहार</span>
-        </a>
-        <a href="states/madhya-pradesh.html" class="state-card text-center" style="padding: 24px;">
-          <span class="state-emoji">🐅</span>
-          <span class="state-name-hi" style="font-size:1.1rem; margin-top:8px;">मध्य प्रदेश</span>
-        </a>
-        <a href="states/rajasthan.html" class="state-card text-center" style="padding: 24px;">
-          <span class="state-emoji">🐪</span>
-          <span class="state-name-hi" style="font-size:1.1rem; margin-top:8px;">राजस्थान</span>
-        </a>
-        <a href="states/gujarat.html" class="state-card text-center" style="padding: 24px;">
-          <span class="state-emoji">🦁</span>
-          <span class="state-name-hi" style="font-size:1.1rem; margin-top:8px;">गुजरात</span>
-        </a>
-        <a href="states/karnataka.html" class="state-card text-center" style="padding: 24px;">
-          <span class="state-emoji">🐘</span>
-          <span class="state-name-hi" style="font-size:1.1rem; margin-top:8px;">कर्नाटक</span>
-        </a>
-        <a href="states/haryana.html" class="state-card text-center" style="padding: 24px;">
-          <span class="state-emoji">🌾</span>
-          <span class="state-name-hi" style="font-size:1.1rem; margin-top:8px;">हरियाणा</span>
-        </a>
-      </div>
-      
-      <div class="text-center mt-32">
-        <a href="states/" class="btn btn-primary">सभी 36 राज्य और UTs देखें →</a>
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="states/" class="btn btn-outline" style="border-radius: 30px; font-weight: 600;">सभी 36 राज्य और UTs देखें →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== DECISION NAV (Using Glossary Grid as base for premium UI) ===== -->
-  <section class="section-alt">
+  <!-- ===== 7. आपको कौन-सी जानकारी चाहिए? (DECISION NAV) ===== -->
+  <section class="section-alt" style="padding: 64px 0;">
     <div class="container">
-      <div class="section-header text-center">
-        <h2>आपको कौन-सी जानकारी चाहिए?</h2>
-      </div>
-      <div class="glossary-grid mt-32" style="max-width: 800px; margin: 0 auto;">
-        <a href="#state-selection" class="glossary-card">
-          <span class="glossary-term" style="font-size:1.1rem;">मुझे 7/12 देखना है →</span>
-        </a>
-        <a href="#state-selection" class="glossary-card">
-          <span class="glossary-term" style="font-size:1.1rem;">मुझे जमीन का नक्शा देखना है →</span>
-        </a>
-        <a href="#state-selection" class="glossary-card">
-          <span class="glossary-term" style="font-size:1.1rem;">मुझे फेरफार की जानकारी चाहिए →</span>
-        </a>
-        <a href="#state-selection" class="glossary-card">
-          <span class="glossary-term" style="font-size:1.1rem;">मुझे Property Card चाहिए →</span>
-        </a>
-        <a href="#state-selection" class="glossary-card" style="grid-column: 1 / -1; text-align: center;">
-          <span class="glossary-term" style="font-size:1.1rem;">मुझे अपने राज्य का Bhulekh Portal चाहिए →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== POPULAR SERVICES ===== -->
-  <section>
-    <div class="container">
-      <div class="section-header text-center">
-        <h2>सबसे ज्यादा खोजी जाने वाली सेवाएं</h2>
-      </div>
-      <div class="text-center mt-32" style="display:flex; justify-content:center; flex-wrap:wrap; gap:16px;">
-        <a href="states/maharashtra.html" class="btn btn-outline">Maharashtra 7/12</a>
-        <a href="states/uttar-pradesh.html" class="btn btn-outline">UP Bhulekh</a>
-        <a href="states/bihar.html" class="btn btn-outline">Bihar Land Record</a>
-        <a href="states/madhya-pradesh.html" class="btn btn-outline">MP Bhulekh</a>
-        <a href="states/rajasthan.html" class="btn btn-outline">Rajasthan Jamabandi</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== HOW IT WORKS (Original Steps Component) ===== -->
-  <section class="section-green">
-    <div class="container">
-      <div class="section-header text-center">
-        <h2>भूमि रिकॉर्ड कैसे देखें?</h2>
-      </div>
+      <h2 class="section-title">आपको कौन-सी जानकारी चाहिए?</h2>
       
-      <ol class="steps mt-32" style="max-width: 700px; margin: 0 auto; background: var(--color-bg-card); padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
-        <li class="step-item">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h4>अपना राज्य चुनें</h4>
-            <p>ऊपर दी गई सूची से अपने राज्य के नाम पर क्लिक करें।</p>
-          </div>
-        </li>
-        <li class="step-item">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h4>आधिकारिक वेबसाइट खोलें</h4>
-            <p>हमारी गाइड में दिए गए सरकार के असली (Official) लिंक पर जाएं।</p>
-          </div>
-        </li>
-        <li class="step-item">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h4>जानकारी भरें</h4>
-            <p>पोर्टल पर अपना जिला, तहसील, गांव और सर्वे नंबर/नाम डालें।</p>
-          </div>
-        </li>
-        <li class="step-item">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h4>रिकॉर्ड देखें</h4>
-            <p>अपनी जमीन का रिकॉर्ड स्क्रीन पर देखें और डाउनलोड करें।</p>
-          </div>
-        </li>
-      </ol>
+      <div class="decision-list">
+        <a href="#state-selection" class="decision-link">
+          मुझे 7/12 देखना है <span class="arrow">→</span>
+        </a>
+        <a href="#state-selection" class="decision-link">
+          मुझे जमीन का नक्शा (Bhu Naksha) देखना है <span class="arrow">→</span>
+        </a>
+        <a href="#state-selection" class="decision-link">
+          मुझे नामांतरण / फेरफार की जानकारी चाहिए <span class="arrow">→</span>
+        </a>
+        <a href="#state-selection" class="decision-link">
+          मुझे Property Card चाहिए <span class="arrow">→</span>
+        </a>
+        <a href="#state-selection" class="decision-link">
+          मुझे अपने राज्य का Bhulekh Portal चाहिए <span class="arrow">→</span>
+        </a>
+      </div>
+      <p style="text-align: center; margin-top: 16px; color: var(--color-text-muted); font-size: 0.9rem;"><em>जानकारी देखने के लिए पहले अपना राज्य चुनें।</em></p>
+    </div>
+  </section>
+
+  <!-- ===== 8. POPULAR SERVICES ===== -->
+  <section style="padding: 64px 0;">
+    <div class="container">
+      <h2 class="section-title">सबसे ज्यादा खोजी जाने वाली सेवाएं</h2>
       
-      <div class="disclaimer-banner mt-32" style="max-width: 700px; margin: 32px auto 0 auto;">
-        <strong>ध्यान दें:</strong> BhumiRecord सरकारी वेबसाइट नहीं है। हम सरकारी सेवाओं और आधिकारिक पोर्टल तक पहुंचने की जानकारी आसान भाषा में देते हैं।
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+        <a href="states/maharashtra.html" class="btn btn-outline" style="border-radius: 20px;">Maharashtra 7/12</a>
+        <a href="states/uttar-pradesh.html" class="btn btn-outline" style="border-radius: 20px;">UP Bhulekh</a>
+        <a href="states/bihar.html" class="btn btn-outline" style="border-radius: 20px;">Bihar Land Record</a>
+        <a href="states/madhya-pradesh.html" class="btn btn-outline" style="border-radius: 20px;">MP Bhulekh</a>
+        <a href="states/rajasthan.html" class="btn btn-outline" style="border-radius: 20px;">Rajasthan Jamabandi</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHY BHUMIRECORD (Simple Trust Section) ===== -->
-  <section>
-    <div class="container text-center">
-      <div class="section-header">
-        <h2>BhumiRecord क्यों?</h2>
-      </div>
-      <div class="trust-grid mt-32" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-        <div class="trust-item">
-          <span class="trust-icon text-primary">📝</span>
-          <h4>आसान हिंदी में जानकारी</h4>
+  <!-- ===== 9. भूमि रिकॉर्ड कैसे देखें? (HOW IT WORKS) ===== -->
+  <section class="section-green" style="padding: 64px 0;">
+    <div class="container">
+      <h2 class="section-title" style="color:var(--color-primary-dark);">भूमि रिकॉर्ड कैसे देखें?</h2>
+      
+      <div class="step-grid-ux">
+        <div class="step-card-ux">
+          <div class="step-num-ux">1</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--color-text);">अपना राज्य चुनें</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">ऊपर दी गई सूची से अपने राज्य के नाम पर क्लिक करें।</p>
         </div>
-        <div class="trust-item">
-          <span class="trust-icon text-primary">📍</span>
-          <h4>राज्य के अनुसार गाइड</h4>
+        <div class="step-card-ux">
+          <div class="step-num-ux">2</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--color-text);">आधिकारिक वेबसाइट खोलें</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">हमारी गाइड में दिए गए सरकार के असली (Official) लिंक पर जाएं।</p>
         </div>
-        <div class="trust-item">
-          <span class="trust-icon text-primary">🏛️</span>
-          <h4>आधिकारिक पोर्टल लिंक</h4>
+        <div class="step-card-ux">
+          <div class="step-num-ux">3</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--color-text);">जानकारी भरें</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">पोर्टल पर अपना जिला, तहसील, गांव और सर्वे नंबर/नाम डालें।</p>
         </div>
-        <div class="trust-item">
-          <span class="trust-icon text-primary">📱</span>
-          <h4>मोबाइल पर आसान उपयोग</h4>
+        <div class="step-card-ux">
+          <div class="step-num-ux">4</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px; color: var(--color-text);">रिकॉर्ड देखें</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;">अपनी जमीन का रिकॉर्ड स्क्रीन पर देखें और डाउनलोड करें।</p>
         </div>
       </div>
+      
+      <div class="trust-note" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+        <strong>ध्यान दें:</strong> BhumiRecord सरकारी वेबसाइट नहीं है। हम सरकारी सेवाओं और आधिकारिक पोर्टल तक पहुंचने की जानकारी आसान भाषा में देते हैं। हम कोई दस्तावेज जारी नहीं करते।
+      </div>
     </div>
   </section>
 
-  <!-- ===== FAQ SECTION (Original JS Component) ===== -->
-  <section class="section-alt">
-    <div class="container">
-      <div class="section-header text-center">
-        <h2>सामान्यतः पूछे जाने वाले प्रश्न (FAQ)</h2>
-      </div>
+  <!-- ===== 10. BhumiRecord क्यों? (WHY BHUMIRECORD) ===== -->
+  <section style="padding: 64px 0;">
+    <div class="container" style="max-width: 600px;">
+      <h2 class="section-title">BhumiRecord क्यों?</h2>
       
-      <ul class="faq-list mt-32" style="max-width:800px; margin: 0 auto;">
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            भूमि रिकॉर्ड ऑनलाइन कैसे देखें?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            भूमि रिकॉर्ड देखने के लिए सबसे पहले अपना राज्य चुनें, फिर आधिकारिक सरकारी पोर्टल पर जाएं। वहां अपना जिला, तहसील और गांव चुनकर सर्वे नंबर या नाम दर्ज करें।
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            7/12 उतारा क्या होता है?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            7/12 (सातबारा) उतारा महाराष्ट्र और गुजरात में इस्तेमाल होने वाला एक महत्वपूर्ण भूमि रिकॉर्ड है, जिसमें जमीन के मालिक का नाम, क्षेत्रफल और कर्ज़ की जानकारी होती है।
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            खसरा और खतौनी में क्या अंतर है?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            खसरा एक विशिष्ट जमीन (प्लॉट) का विवरण होता है, जबकि खतौनी किसी व्यक्ति या परिवार के नाम पर दर्ज सभी जमीनों का सारांश (Summary) होता है।
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            जमाबंदी क्या होती है?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            जमाबंदी उत्तर भारत (जैसे राजस्थान, हरियाणा, पंजाब) में भूमि रिकॉर्ड (Record of Rights) को कहा जाता है, जिसमें जमीन के स्वामित्व और खेती का विवरण होता है।
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            फेरफार / Mutation कैसे करें?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            जमीन खरीदने या विरासत के बाद सरकारी रिकॉर्ड में अपना नाम दर्ज करवाने की प्रक्रिया को फेरफार (नामांतरण) कहते हैं। इसे आप आधिकारिक पोर्टल या स्थानीय तहसील कार्यालय के माध्यम से कर सकते हैं।
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            भू-नक्शा ऑनलाइन कैसे देखें?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            लगभग सभी राज्यों ने भू-नक्शा देखने के लिए अलग पोर्टल बनाए हैं। आप अपने राज्य के आधिकारिक Bhu Naksha पोर्टल पर जाकर अपना जिला और सर्वे नंबर चुनकर नक्शा देख सकते हैं।
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            क्या भूमि रिकॉर्ड ऑनलाइन देखने के लिए पैसे लगते हैं?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            केवल जानकारी देखने (Informational View) के लिए कोई शुल्क नहीं लगता। लेकिन बैंक लोन या कानूनी कार्यों के लिए 'डिजिटली साइंड' (Digitally Signed) कॉपी डाउनलोड करने पर सरकारी शुल्क (लगभग ₹15 से ₹30) देना पड़ सकता है।
-          </div>
-        </li>
-
+      <ul class="check-list-simple">
+        <li>आसान हिंदी में जानकारी</li>
+        <li>राज्य के अनुसार सटीक गाइड</li>
+        <li>सही आधिकारिक पोर्टल तक पहुंचने में मदद</li>
+        <li>मोबाइल पर उपयोग करने में बेहद आसान</li>
       </ul>
     </div>
   </section>
 
-  <!-- ===== DISCLAIMER ===== -->
-  <div class="container">
-    <div class="disclaimer-banner">
-      ⚠️ <strong>स्वतंत्र जानकारी पोर्टल:</strong> BhumiRecord एक स्वतंत्र जानकारी पोर्टल है। यह किसी सरकारी विभाग, राजस्व विभाग या सरकारी वेबसाइट का आधिकारिक हिस्सा नहीं है। हमारा उद्देश्य केवल जटिल सरकारी प्रक्रियाओं को आसान हिंदी भाषा में समझाना है। सरकारी रिकॉर्ड, आधिकारिक दस्तावेजों या सेवाओं के लिए कृपया संबंधित राज्य के आधिकारिक सरकारी पोर्टल का ही उपयोग करें।
-    </div>
-  </div>
+  <!-- ===== 11. FAQ ===== -->
+  <section class="section-alt" style="padding: 64px 0;">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-title">सामान्यतः पूछे जाने वाले प्रश्न (FAQ)</h2>
+      
 
-  <!-- ===== FINAL CTA ===== -->
-  <section style="background: var(--color-primary); color: white; padding: 64px 0; text-align: center;">
-    <div class="container">
-      <h2 style="color: white; margin-bottom: 16px;">अपने राज्य का भूमि रिकॉर्ड खोजें</h2>
-      <p style="opacity: 0.9; max-width: 600px; margin: 0 auto 32px auto; font-size: 1.1rem;">
-        राज्य चुनें और अपने भूमि रिकॉर्ड की जानकारी आसान हिंदी में देखें।
-      </p>
-      <a href="#state-selection" class="btn" style="background: white; color: var(--color-primary);">अपना राज्य चुनें</a>
+      <details class="faq-item-ux">
+        <summary>भूमि रिकॉर्ड ऑनलाइन कैसे देखें?</summary>
+        <div class="faq-answer-content">
+          भूमि रिकॉर्ड देखने के लिए सबसे पहले अपना राज्य चुनें, फिर आधिकारिक सरकारी पोर्टल पर जाएं। वहां अपना जिला, तहसील और गांव चुनकर सर्वे नंबर या नाम दर्ज करें।
+        </div>
+      </details>
+
+      <details class="faq-item-ux">
+        <summary>7/12 उतारा क्या होता है?</summary>
+        <div class="faq-answer-content">
+          7/12 (सातबारा) उतारा महाराष्ट्र और गुजरात में इस्तेमाल होने वाला एक महत्वपूर्ण भूमि रिकॉर्ड है, जिसमें जमीन के मालिक का नाम, क्षेत्रफल और कर्ज़ की जानकारी होती है।
+        </div>
+      </details>
+
+      <details class="faq-item-ux">
+        <summary>खसरा और खतौनी में क्या अंतर है?</summary>
+        <div class="faq-answer-content">
+          खसरा एक विशिष्ट जमीन (प्लॉट) का विवरण होता है, जबकि खतौनी किसी व्यक्ति या परिवार के नाम पर दर्ज सभी जमीनों का सारांश (Summary) होता है।
+        </div>
+      </details>
+
+      <details class="faq-item-ux">
+        <summary>जमाबंदी क्या होती है?</summary>
+        <div class="faq-answer-content">
+          जमाबंदी उत्तर भारत (जैसे राजस्थान, हरियाणा, पंजाब) में भूमि रिकॉर्ड (Record of Rights) को कहा जाता है, जिसमें जमीन के स्वामित्व और खेती का विवरण होता है।
+        </div>
+      </details>
+
+      <details class="faq-item-ux">
+        <summary>फेरफार / Mutation कैसे करें?</summary>
+        <div class="faq-answer-content">
+          जमीन खरीदने या विरासत के बाद सरकारी रिकॉर्ड में अपना नाम दर्ज करवाने की प्रक्रिया को फेरफार (नामांतरण) कहते हैं। इसे आप आधिकारिक पोर्टल या स्थानीय तहसील कार्यालय के माध्यम से कर सकते हैं।
+        </div>
+      </details>
+
+      <details class="faq-item-ux">
+        <summary>भू-नक्शा ऑनलाइन कैसे देखें?</summary>
+        <div class="faq-answer-content">
+          लगभग सभी राज्यों ने भू-नक्शा देखने के लिए अलग पोर्टल बनाए हैं। आप अपने राज्य के आधिकारिक Bhu Naksha पोर्टल पर जाकर अपना जिला और सर्वे नंबर चुनकर नक्शा देख सकते हैं।
+        </div>
+      </details>
+
+      <details class="faq-item-ux">
+        <summary>क्या भूमि रिकॉर्ड ऑनलाइन देखने के लिए पैसे लगते हैं?</summary>
+        <div class="faq-answer-content">
+          केवल जानकारी देखने (Informational View) के लिए कोई शुल्क नहीं लगता। लेकिन बैंक लोन या कानूनी कार्यों के लिए 'डिजिटली साइंड' (Digitally Signed) कॉपी डाउनलोड करने पर सरकारी शुल्क (लगभग ₹15 से ₹30) देना पड़ सकता है।
+        </div>
+      </details>
+
     </div>
   </section>
 
-  <!-- ===== FOOTER (Original Footer Component) ===== -->
+  <!-- ===== 12. TRUST / DISCLAIMER ===== -->
+  <section style="padding: 48px 0;">
+    <div class="container" style="max-width: 800px;">
+      <div class="disclaimer-banner">
+        <h3 style="margin-bottom: 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+          <span>⚠️</span> स्वतंत्र जानकारी पोर्टल
+        </h3>
+        <p style="margin: 0; font-size: 0.95rem;">
+          BhumiRecord एक स्वतंत्र जानकारी पोर्टल है। यह किसी सरकारी विभाग, राजस्व विभाग या सरकारी वेबसाइट का आधिकारिक हिस्सा नहीं है। हमारा उद्देश्य केवल जटिल सरकारी प्रक्रियाओं को आसान हिंदी भाषा में समझाना है। सरकारी रिकॉर्ड, आधिकारिक दस्तावेजों या सेवाओं के लिए कृपया संबंधित राज्य के आधिकारिक सरकारी पोर्टल का ही उपयोग करें।
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 14. FINAL CTA ===== -->
+  <section style="background: var(--color-primary); color: white; padding: 64px 0; text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 2rem; margin-bottom: 16px; color: white;">अपने राज्य का भूमि रिकॉर्ड खोजें</h2>
+      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px auto; opacity: 0.9;">राज्य चुनें और अपने भूमि रिकॉर्ड की जानकारी आसान हिंदी में देखें।</p>
+      <a href="#state-selection" class="btn" style="background: white; color: var(--color-primary); font-size: 1.1rem; padding: 14px 32px; border-radius: 30px; font-weight: bold;">अपना राज्य चुनें</a>
+    </div>
+  </section>
+
+  <!-- ===== 15. FOOTER ===== -->
   <footer class="site-footer" id="site-footer">
     <div class="container">
       <div class="footer-grid">
