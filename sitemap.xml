@@ -1,151 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/disclaimer.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://akhairkar.github.io/BhumiRecord/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/andhra-pradesh.html</loc>
-    <priority>0.9</priority>
+    <loc>https://akhairkar.github.io/BhumiRecord/privacy-policy.html</loc>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/arunachal-pradesh.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/assam.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/bihar.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/chhattisgarh.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/goa.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/gujarat.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/haryana.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/himachal-pradesh.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/jharkhand.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/karnataka.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/kerala.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/madhya-pradesh.html</loc>
-    <priority>0.9</priority>
+    <loc>https://akhairkar.github.io/BhumiRecord/sitemap.html</loc>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://akhairkar.github.io/BhumiRecord/states/maharashtra.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/manipur.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/meghalaya.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/mizoram.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/nagaland.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/odisha.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/punjab.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/rajasthan.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/sikkim.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/tamil-nadu.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/telangana.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/tripura.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/uttarakhand.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/west-bengal.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/andaman-and-nicobar-islands.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/chandigarh.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/dadra-and-nagar-haveli-and-daman-and-diu.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/delhi.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/jammu-and-kashmir.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/ladakh.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/lakshadweep.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/puducherry.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
@@ -157,7 +29,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/maharashtra/property-card.html</loc>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/maharashtra/bhu-naksha.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -165,7 +37,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://akhairkar.github.io/BhumiRecord/states/maharashtra/bhu-naksha.html</loc>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/maharashtra/property-card.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>

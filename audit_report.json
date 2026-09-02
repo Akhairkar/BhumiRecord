@@ -1,0 +1,454 @@
+{
+  "pages": {
+    "disclaimer.html": {
+      "title": "\u0905\u0938\u094d\u0935\u0940\u0915\u0930\u0923 (Disclaimer) | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/disclaimer.html",
+      "h1_count": 1
+    },
+    "index.html": {
+      "title": "BhumiRecord: \u092d\u0942\u092e\u093f \u0930\u093f\u0915\u0949\u0930\u094d\u0921 \u0911\u0928\u0932\u093e\u0907\u0928 \u0926\u0947\u0916\u0947\u0902 | 7/12, \u0916\u0938\u0930\u093e-\u0916\u0924\u094c\u0928\u0940, \u091c\u092e\u093e\u092c\u0902\u0926\u0940",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/index.html",
+      "h1_count": 1
+    },
+    "privacy-policy.html": {
+      "title": "\u0917\u094b\u092a\u0928\u0940\u092f\u0924\u093e \u0928\u0940\u0924\u093f (Privacy Policy) | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/privacy-policy.html",
+      "h1_count": 1
+    },
+    "sitemap.html": {
+      "title": "\u0938\u093e\u0907\u091f\u092e\u0948\u092a (Sitemap) | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/sitemap.html",
+      "h1_count": 1
+    },
+    "states/maharashtra.html": {
+      "title": "Maharashtra Bhulekh (\u092e\u0939\u093e\u092d\u0941\u0932\u0947\u0916 7/12) \u0932\u0948\u0902\u0921 \u0930\u093f\u0915\u0949\u0930\u094d\u0921 \u0911\u0928\u0932\u093e\u0907\u0928 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/maharashtra.html",
+      "h1_count": 1
+    },
+    "states/maharashtra/7-12.html": {
+      "title": "Maharashtra 7/12 Utara Online: \u092e\u0939\u093e\u092d\u0941\u0932\u0947\u0916 7/12 \u0909\u0924\u093e\u0930\u093e \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/maharashtra/7-12.html",
+      "h1_count": 1
+    },
+    "states/maharashtra/8a.html": {
+      "title": "Maharashtra 8A Utara Online: 8A Extract \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/maharashtra/8a.html",
+      "h1_count": 1
+    },
+    "states/maharashtra/bhu-naksha.html": {
+      "title": "Maharashtra Bhu Naksha Online | \u091c\u092e\u0940\u0928 \u0915\u093e \u0928\u0915\u094d\u0936\u093e \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/maharashtra/bhu-naksha.html",
+      "h1_count": 1
+    },
+    "states/maharashtra/ferfar.html": {
+      "title": "Maharashtra Ferfar / Mutation Online: \u092b\u0947\u0930\u092b\u093e\u0930 \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/maharashtra/ferfar.html",
+      "h1_count": 1
+    },
+    "states/maharashtra/property-card.html": {
+      "title": "Maharashtra Property Card Online: \u092e\u093e\u0932\u092e\u0924\u094d\u0924\u093e \u092a\u0924\u094d\u0930\u0915 \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/maharashtra/property-card.html",
+      "h1_count": 1
+    }
+  },
+  "broken_links": [
+    [
+      "disclaimer.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "states/gujarat.html",
+      "states/gujarat.html"
+    ],
+    [
+      "index.html",
+      "states/karnataka.html",
+      "states/karnataka.html"
+    ],
+    [
+      "index.html",
+      "states/haryana.html",
+      "states/haryana.html"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "index.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "privacy-policy.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "sitemap.html",
+      "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/7-12.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/7-12.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/7-12.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/7-12.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/7-12.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/7-12.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/7-12.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/7-12.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/7-12.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/8a.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/8a.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/8a.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/8a.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/8a.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/8a.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/8a.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/8a.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/8a.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/ferfar.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/ferfar.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/ferfar.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/ferfar.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/ferfar.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/ferfar.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/ferfar.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/ferfar.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/ferfar.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ]
+  ],
+  "placeholder_links": [],
+  "missing_canonicals": [],
+  "mismatched_canonicals": [],
+  "missing_titles": [],
+  "missing_descriptions": [],
+  "noindex_pages": [],
+  "multiple_h1": [],
+  "missing_h1": []
+}
