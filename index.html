@@ -3,817 +3,523 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>भूमि रिकॉर्ड ऑनलाइन चेक करें | BhumiRecord — सभी राज्य गाइड 2026</title>
-  <meta name="description" content="भारत के किसी भी राज्य का भूमि रिकॉर्ड, खसरा, खतौनी, जमाबंदी ऑनलाइन कैसे देखें — UP, Bihar, Rajasthan, MP, Maharashtra सहित 36 राज्यों और UTs की सरल step-by-step गाइड हिंदी में।">
-  <meta name="keywords" content="भूमि रिकॉर्ड, भूलेख, खसरा खतौनी, जमाबंदी, bhulekh, land record online, mutation, namantaran">
-  <link rel="canonical" href="https://akhairkar.github.io/BhumiRecord/">
-  <meta property="og:title" content="भूमि रिकॉर्ड ऑनलाइन चेक करें | BhumiRecord">
-  <meta property="og:description" content="36 राज्यों और UTs के भूमि रिकॉर्ड की सरल हिंदी गाइड — खसरा, खतौनी, म्यूटेशन, जमाबंदी।">
+  
+  <title>BhumiRecord: भूमि रिकॉर्ड ऑनलाइन देखें | 7/12, खसरा-खतौनी, जमाबंदी</title>
+  <meta name="description" content="अपने राज्य का 7/12, खसरा-खतौनी, जमाबंदी, प्रॉपर्टी कार्ड और अन्य भूमि रिकॉर्ड कैसे देखें — आसान हिंदी में जानें।">
+  
+  <link rel="canonical" href="https://akhairkar.github.io/BhumiRecord/index.html">
+  
+  <meta property="og:title" content="BhumiRecord: भूमि रिकॉर्ड ऑनलाइन देखें | आसान हिंदी गाइड">
+  <meta property="og:description" content="अपने राज्य का 7/12, खसरा-खतौनी, जमाबंदी, प्रॉपर्टी कार्ड और अन्य भूमि रिकॉर्ड कैसे देखें — आसान हिंदी में जानें।">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://akhairkar.github.io/BhumiRecord/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="भूमि रिकॉर्ड ऑनलाइन | BhumiRecord">
-  <meta name="twitter:description" content="36 राज्यों और UTs के भूमि रिकॉर्ड की सरल हिंदी गाइड।">
+  <meta property="og:url" content="https://akhairkar.github.io/BhumiRecord/index.html">
+  
   <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    /* Village-Friendly Simple UI Styles */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    
+    .hero-simple { background: linear-gradient(135deg, #1b6b3a 0%, #104d28 100%); color: white; padding: 60px 20px; text-align: center; }
+    .hero-simple h1 { font-size: 2.5rem; margin-bottom: 16px; font-weight: 700; }
+    .hero-simple p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px auto; opacity: 0.95; line-height: 1.6; }
+    
+    @media(max-width: 768px) {
+      .hero-simple { padding: 40px 16px; }
+      .hero-simple h1 { font-size: 2rem; }
+    }
+
+    .search-container { max-width: 500px; margin: 0 auto; position: relative; }
+    .search-box { width: 100%; padding: 16px 20px 16px 48px; font-size: 1.1rem; border: none; border-radius: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); outline: none; }
+    .search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: 1.2rem; }
+    .search-examples { margin-top: 12px; font-size: 0.85rem; color: #d1fae5; }
+    
+    .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 32px; color: #1e293b; font-weight: 700; }
+    
+    /* Action Cards */
+    .action-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .action-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; text-align: left; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: relative; }
+    .action-card .icon { font-size: 2.5rem; margin-bottom: 12px; display: block; }
+    .action-card h3 { font-size: 1.3rem; margin-bottom: 8px; color: #0f172a; }
+    .action-card p { color: #475569; font-size: 0.95rem; margin: 0; line-height: 1.5; }
+    
+    .badge-soon { background: #fef3c7; color: #d97706; font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; font-weight: bold; position: absolute; top: 24px; right: 24px; border: 1px solid #fde68a; }
+    
+    /* State Grid */
+    .state-simple-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+    .state-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #fff; border: 1px solid #cbd5e1; padding: 16px; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; font-size: 1.1rem; transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .state-btn:hover, .state-btn:active { background: #f0fdf4; border-color: #1b6b3a; color: #1b6b3a; transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    
+    /* Decision Nav */
+    .decision-list { display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 0 auto; }
+    .decision-link { background: #fff; border: 2px solid #e2e8f0; padding: 16px 20px; border-radius: 8px; text-decoration: none; color: #1e293b; font-size: 1.1rem; font-weight: 500; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; }
+    .decision-link:hover, .decision-link:active { border-color: #1b6b3a; background: #f8fafc; }
+    .decision-link span.arrow { color: #1b6b3a; font-weight: bold; }
+    
+    /* Steps */
+    .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .step-card { background: white; padding: 24px; border-radius: 8px; text-align: center; border: 1px solid #eee; }
+    .step-num { background: #1b6b3a; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold; margin: 0 auto 16px auto; }
+    
+    /* Trust Note */
+    .trust-note { background: #fef2f2; border-left: 4px solid #ef4444; padding: 16px; border-radius: 4px; margin-top: 32px; font-size: 0.95rem; color: #991b1b; text-align: left; }
+    
+    /* FAQs */
+    details.faq-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; padding: 0; }
+    details.faq-item summary { font-weight: 600; font-size: 1.05rem; padding: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: #0f172a; }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after { content: '+'; font-size: 1.2rem; color: #1b6b3a; }
+    details.faq-item[open] summary::after { content: '-'; }
+    .faq-answer-content { padding: 0 16px 16px 16px; color: #475569; line-height: 1.6; border-top: 1px solid #f8fafc; margin-top: 8px; padding-top: 16px; }
+    
+    /* Checkmarks */
+    .check-list-simple li { padding-left: 32px; position: relative; margin-bottom: 16px; font-size: 1.1rem; }
+    .check-list-simple li::before { content: '✓'; position: absolute; left: 0; color: #10b981; font-weight: bold; font-size: 1.4rem; top: -2px; }
+
+  </style>
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "BhumiRecord",
-        "url": "https://akhairkar.github.io/BhumiRecord/",
-        "description": "भारत के सभी राज्यों के भूमि रिकॉर्ड की जानकारी हिंदी में",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://akhairkar.github.io/BhumiRecord/search.html?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Organization",
-        "name": "BhumiRecord",
-        "url": "https://akhairkar.github.io/BhumiRecord/"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "भूमि रिकॉर्ड ऑनलाइन कैसे देखें?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "अपने राज्य का चयन करें और राज्य के आधिकारिक भूलेख पोर्टल पर जाएं। वहां जिला, तहसील, और ग्राम चुनकर खसरा या खाता नंबर डालें। आपका भूमि रिकॉर्ड स्क्रीन पर दिखेगा।"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "क्या भूमि रिकॉर्ड देखना मुफ़्त है?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "हाँ, सभी राज्यों के सरकारी पोर्टल पर भूमि रिकॉर्ड देखना बिल्कुल मुफ़्त है। किसी भी तीसरे पक्ष को पैसे न दें।"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "म्यूटेशन (नामांतरण) क्या होता है?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "म्यूटेशन (नामांतरण) वह प्रक्रिया है जिसके द्वारा जमीन खरीदने के बाद नए मालिक का नाम सरकारी रिकॉर्ड में दर्ज किया जाता है। यह प्रक्रिया तहसील कार्यालय में होती है।"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "जमाबंदी और भूलेख में क्या फ़र्क है?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "भूलेख एक सामान्य शब्द है जो भूमि रिकॉर्ड के लिए प्रयोग होता है। जमाबंदी उत्तर भारत (Haryana, Punjab, Rajasthan) में एक विशेष दस्तावेज़ है जिसमें भूमि स्वामित्व और खेती की जानकारी होती है।"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "खसरा नंबर कैसे पता करें?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "खसरा नंबर अपने राज्य के भूलेख पोर्टल पर अपने नाम से खोजकर पता कर सकते हैं। पुराने जमीन के कागज़ों में या पटवारी के पास भी खसरा नंबर मिलता है।"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "क्या मोबाइल से land record देख सकते हैं?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "हाँ, सभी राज्यों के भूलेख पोर्टल मोबाइल पर खुलते हैं। कई राज्यों के पास अपने मोबाइल App भी हैं जैसे UP Bhulekh App, Bhoomi App (Karnataka)।"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ULPIN (भू-आधार) क्या है?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "ULPIN (Unique Land Parcel Identification Number) एक 14-अंकीय unique ID है जो हर भूमि खंड को दिया जाएगा — जैसे Aadhaar कार्ड हर व्यक्ति को मिलता है। यह 2026 में पूरे भारत में लागू हो रहा है।"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "EC Certificate (भार मुक्त प्रमाण पत्र) क्या है?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Encumbrance Certificate (EC) एक दस्तावेज़ है जो यह प्रमाणित करता है कि किसी संपत्ति पर कोई कर्ज़ या कानूनी बंधन नहीं है। जमीन खरीदने से पहले EC ज़रूर चेक करें।"
-            }
-          }
-        ]
+    "@type": "WebSite",
+    "url": "https://akhairkar.github.io/BhumiRecord/",
+    "name": "BhumiRecord",
+    "description": "अपने राज्य का 7/12, खसरा-खतौनी, जमाबंदी, और भूमि रिकॉर्ड कैसे देखें — आसान हिंदी में जानें।",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://akhairkar.github.io/BhumiRecord/#state-selection",
+      "query-input": "required name=search_term_string"
+    }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "भूमि रिकॉर्ड ऑनलाइन कैसे देखें?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "भूमि रिकॉर्ड देखने के लिए सबसे पहले अपना राज्य चुनें, फिर आधिकारिक सरकारी पोर्टल पर जाएं। वहां अपना जिला, तहसील और गांव चुनकर सर्वे नंबर या नाम दर्ज करें।"
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "7/12 उतारा क्या होता है?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7/12 (सातबारा) उतारा महाराष्ट्र और गुजरात में इस्तेमाल होने वाला एक महत्वपूर्ण भूमि रिकॉर्ड है, जिसमें जमीन के मालिक का नाम, क्षेत्रफल और कर्ज़ की जानकारी होती है।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "खसरा और खतौनी में क्या अंतर है?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "खसरा एक विशिष्ट जमीन (प्लॉट) का विवरण होता है, जबकि खतौनी किसी व्यक्ति या परिवार के नाम पर दर्ज सभी जमीनों का सारांश (Summary) होता है।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "जमाबंदी क्या होती है?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "जमाबंदी उत्तर भारत (जैसे राजस्थान, हरियाणा, पंजाब) में भूमि रिकॉर्ड (Record of Rights) को कहा जाता है, जिसमें जमीन के स्वामित्व और खेती का विवरण होता है।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "फेरफार / Mutation कैसे करें?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "जमीन खरीदने या विरासत के बाद सरकारी रिकॉर्ड में अपना नाम दर्ज करवाने की प्रक्रिया को फेरफार (नामांतरण) कहते हैं। इसे आप आधिकारिक पोर्टल या स्थानीय तहसील कार्यालय के माध्यम से कर सकते हैं।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "भू-नक्शा ऑनलाइन कैसे देखें?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "लगभग सभी राज्यों ने भू-नक्शा देखने के लिए अलग पोर्टल बनाए हैं। आप अपने राज्य के आधिकारिक Bhu Naksha पोर्टल पर जाकर अपना जिला और सर्वे नंबर चुनकर नक्शा देख सकते हैं।"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "क्या भूमि रिकॉर्ड ऑनलाइन देखने के लिए पैसे लगते हैं?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "केवल जानकारी देखने (Informational View) के लिए कोई शुल्क नहीं लगता। लेकिन बैंक लोन या कानूनी कार्यों के लिए 'डिजिटली साइंड' (Digitally Signed) कॉपी डाउनलोड करने पर सरकारी शुल्क (लगभग ₹15 से ₹30) देना पड़ सकता है।"
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
-
   <div class="tricolor-rule"></div>
   <a class="skip-link" href="#main-content">मुख्य सामग्री पर जाएं</a>
 
-  <!-- ===== HEADER ===== -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <span class="brand-mark">🏛️</span>
-        <span class="brand-text">
-          <span class="brand-name">BhumiRecord</span>
-          <span class="brand-tagline">हर राज्य का भूमि रिकॉर्ड — सरल हिंदी में</span>
+  <!-- ===== 1. HEADER ===== -->
+  <header class="site-header" id="site-header" style="border-bottom: 1px solid #e2e8f0; padding: 12px 0;">
+    <div class="container header-inner" style="display:flex; justify-content:space-between; align-items:center;">
+      <a href="index.html" class="brand" style="text-decoration:none;">
+        <span class="brand-mark" style="font-size:1.8rem;">🏛️</span>
+        <span class="brand-text" style="display:flex; flex-direction:column;">
+          <span class="brand-name" style="font-size:1.4rem; font-weight:bold; color:#1b6b3a;">BhumiRecord</span>
+          <span style="font-size:0.75rem; color:#64748b;">हर राज्य का भूमि रिकॉर्ड — सरल हिंदी में</span>
         </span>
       </a>
 
       <nav class="main-nav" aria-label="मुख्य नेविगेशन">
-        <ul>
-          <li><a href="index.html">🏠 होम</a></li>
-          <li class="nav-dropdown">
-            <a href="states/" class="nav-dropdown-toggle">📍 राज्यवार ▾</a>
-            <ul class="nav-dropdown-menu">
-              <li><a href="states/uttar-pradesh.html">उत्तर प्रदेश</a></li>
-              <li><a href="states/bihar.html">बिहार</a></li>
-              <li><a href="states/rajasthan.html">राजस्थान</a></li>
-              <li><a href="states/madhya-pradesh.html">मध्य प्रदेश</a></li>
-              <li><a href="states/maharashtra.html">महाराष्ट्र</a></li>
-              <li><a href="states/karnataka.html">कर्नाटक</a></li>
-              <li><a href="states/gujarat.html">गुजरात</a></li>
-              <li><a href="states/haryana.html">हरियाणा</a></li>
-              <li><a href="states/">सभी राज्य →</a></li>
-            </ul>
-          </li>
-          <li class="nav-dropdown">
-            <a href="service/" class="nav-dropdown-toggle">📋 सेवाएं ▾</a>
-            <ul class="nav-dropdown-menu">
-              <li><a href="service/bhulekh-kaise-dekhen.html">भूलेख कैसे देखें</a></li>
-              <li><a href="service/mutation-kaise-karein.html">म्यूटेशन गाइड</a></li>
-              <li><a href="service/ec-certificate-guide.html">EC Certificate</a></li>
-              <li><a href="service/bhu-naksha-kaise-dekhen.html">भू-नक्शा</a></li>
-              <li><a href="service/jamabandi-nakal.html">जमाबंदी नकल</a></li>
-            </ul>
-          </li>
-          <li><a href="glossary/">📖 शब्दकोश</a></li>
-          <li><a href="tools/">🔧 टूल्स</a></li>
-          <li><a href="blog/">📰 Blog</a></li>
+        <ul style="display:flex; gap:20px; list-style:none; margin:0; padding:0;">
+          <li><a href="index.html" style="text-decoration:none; color:#1e293b; font-weight:500;">Home</a></li>
+          <li><a href="#state-selection" style="text-decoration:none; color:#1e293b; font-weight:500;">राज्य चुनें</a></li>
+          <li><a href="states/index.html" style="text-decoration:none; color:#1e293b; font-weight:500;">सभी राज्य</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button class="nav-toggle icon-btn" id="nav-toggle" aria-label="मेनू खोलें">☰</button>
+        <button class="nav-toggle icon-btn" id="nav-toggle" aria-label="मेनू खोलें" style="background:none; border:none; font-size:1.5rem; color:#1e293b; padding:8px;">☰</button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="मोबाइल मेनू">
-    <div class="mobile-nav-header">
-      <a href="index.html" class="brand">
-        <span class="brand-mark">🏛️</span>
-        <span class="brand-text"><span class="brand-name">BhumiRecord</span></span>
+  <div class="mobile-nav" id="mobile-nav" role="dialog" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#fff; z-index:1000; padding:20px; overflow-y:auto;">
+    <div class="mobile-nav-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:32px;">
+      <a href="index.html" class="brand" style="text-decoration:none;">
+        <span class="brand-mark" style="font-size:1.5rem;">🏛️</span>
+        <span class="brand-text"><span class="brand-name" style="font-size:1.3rem; font-weight:bold; color:#1b6b3a;">BhumiRecord</span></span>
       </a>
-      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="बंद करें">✕</button>
+      <button class="mobile-nav-close" id="mobile-nav-close" style="background:none; border:none; font-size:1.5rem; padding:8px;">✕</button>
     </div>
-    <span class="mobile-section-title">राज्यवार गाइड</span>
-    <a href="states/uttar-pradesh.html">उत्तर प्रदेश भूलेख</a>
-    <a href="states/bihar.html">बिहार भूमि</a>
-    <a href="states/rajasthan.html">राजस्थान अपना खाता</a>
-    <a href="states/madhya-pradesh.html">MP भूलेख</a>
-    <a href="states/maharashtra.html">महाराष्ट्र 7/12</a>
-    <a href="states/karnataka.html">Karnataka Bhoomi</a>
-    <a href="states/gujarat.html">गुजरात AnyRoR</a>
-    <a href="states/haryana.html">हरियाणा जमाबंदी</a>
-    <a href="states/">सभी राज्य →</a>
-    <span class="mobile-section-title">उपयोगी सेवाएं</span>
-    <a href="service/bhulekh-kaise-dekhen.html">भूलेख कैसे देखें</a>
-    <a href="service/mutation-kaise-karein.html">म्यूटेशन गाइड</a>
-    <a href="service/ec-certificate-guide.html">EC Certificate गाइड</a>
-    <a href="glossary/">📖 शब्दकोश</a>
-    <a href="tools/">🔧 टूल्स</a>
-    <span class="mobile-section-title">जानकारी</span>
-    <a href="about.html">हमारे बारे में</a>
-    <a href="disclaimer.html">अस्वीकरण</a>
-    <a href="contact.html">संपर्क</a>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <a href="index.html" style="text-decoration:none; color:#1e293b; font-size:1.2rem; font-weight:500; padding:12px; background:#f8fafc; border-radius:8px;">🏠 Home</a>
+      <a href="#state-selection" onclick="document.getElementById('mobile-nav').style.display='none'" style="text-decoration:none; color:#1e293b; font-size:1.2rem; font-weight:500; padding:12px; background:#f8fafc; border-radius:8px;">📍 अपना राज्य चुनें</a>
+      <a href="states/index.html" style="text-decoration:none; color:#1e293b; font-size:1.2rem; font-weight:500; padding:12px; background:#f8fafc; border-radius:8px;">🌐 सभी 36 राज्य और UTs</a>
+      <a href="disclaimer.html" style="text-decoration:none; color:#1e293b; font-size:1.2rem; font-weight:500; padding:12px; background:#f8fafc; border-radius:8px;">⚠️ अस्वीकरण (Disclaimer)</a>
+    </div>
   </div>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-nav').style.display = 'block';
+    });
+    document.getElementById('mobile-nav-close').addEventListener('click', () => {
+      document.getElementById('mobile-nav').style.display = 'none';
+    });
+  </script>
+
+  <!-- ===== 3. HERO & 4. SEARCH ===== -->
+  <section class="hero-simple" id="main-content">
     <div class="container">
-      <h1>भारत का <span>भूमि रिकॉर्ड</span> — सरल हिंदी में</h1>
-      <p class="hero-sub">36 राज्यों और केंद्र शासित प्रदेशों के भूलेख, खसरा, जमाबंदी की step-by-step गाइड — बिल्कुल मुफ़्त</p>
-      <div class="hero-actions">
-        <select id="state-select" class="state-selector" aria-label="अपना राज्य चुनें">
-<option value="">— अपना राज्य चुनें —</option>
-          <option value="andhra-pradesh">आंध्र प्रदेश</option>
-          <option value="arunachal-pradesh">अरुणाचल प्रदेश</option>
-          <option value="assam">असम</option>
-          <option value="bihar">बिहार</option>
-          <option value="chhattisgarh">छत्तीसगढ़</option>
-          <option value="goa">गोवा</option>
-          <option value="gujarat">गुजरात</option>
-          <option value="haryana">हरियाणा</option>
-          <option value="himachal-pradesh">हिमाचल प्रदेश</option>
-          <option value="jharkhand">झारखंड</option>
-          <option value="karnataka">कर्नाटक</option>
-          <option value="kerala">केरल</option>
-          <option value="madhya-pradesh">मध्य प्रदेश</option>
-          <option value="maharashtra">महाराष्ट्र</option>
-          <option value="manipur">मणिपुर</option>
-          <option value="meghalaya">मेघालय</option>
-          <option value="mizoram">मिज़ोरम</option>
-          <option value="nagaland">नागालैंड</option>
-          <option value="odisha">ओडिशा</option>
-          <option value="punjab">पंजाब</option>
-          <option value="rajasthan">राजस्थान</option>
-          <option value="sikkim">सिक्किम</option>
-          <option value="tamil-nadu">तमिलनाडु</option>
-          <option value="telangana">तेलंगाना</option>
-          <option value="tripura">त्रिपुरा</option>
-          <option value="uttar-pradesh">उत्तर प्रदेश</option>
-          <option value="uttarakhand">उत्तराखंड</option>
-          <option value="west-bengal">पश्चिम बंगाल</option>
-          <option value="andaman-and-nicobar-islands">अंडमान और निकोबार</option>
-          <option value="chandigarh">चंडीगढ़</option>
-          <option value="dadra-and-nagar-haveli-and-daman-and-diu">दादरा और नगर हवेली और दमन और दीव</option>
-          <option value="delhi">दिल्ली</option>
-          <option value="jammu-and-kashmir">जम्मू और कश्मीर</option>
-          <option value="ladakh">लद्दाख</option>
-          <option value="lakshadweep">लक्षद्वीप</option>
-          <option value="puducherry">पुडुचेरी</option>
-        </select>
-        <a href="states/" class="btn btn-primary btn-lg">सभी राज्य देखें →</a>
+      <h1>भूमि रिकॉर्ड ऑनलाइन देखें</h1>
+      <p>अपने राज्य का 7/12, खसरा-खतौनी, जमाबंदी, प्रॉपर्टी कार्ड और अन्य भूमि रिकॉर्ड कैसे देखें — आसान हिंदी में जानें।</p>
+      
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="heroSearch" class="search-box" placeholder="अपना राज्य खोजें (उदा: Maharashtra)..." aria-label="अपना राज्य खोजें">
+        <div class="search-examples">उदाहरण: "Maharashtra 7/12", "UP Bhulekh", "Bihar Khatauni"</div>
       </div>
     </div>
   </section>
 
-  <!-- ===== STATE GRID ===== -->
-  <section id="main-content">
-    <div class="container">
-      <div class="section-header">
-        <h2>📍 राज्यवार भूमि रिकॉर्ड गाइड</h2>
-        <p>अपने राज्य पर click करें और step-by-step गाइड पाएं</p>
-      </div>
-      <div class="state-grid">
-        <a href="states/andhra-pradesh.html" class="state-card">
-          <span class="state-emoji">🏛️</span>
-          <span class="state-name-hi">आंध्र प्रदेश</span>
-          <span class="state-name-en">Andhra Pradesh</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/arunachal-pradesh.html" class="state-card">
-          <span class="state-emoji">🌄</span>
-          <span class="state-name-hi">अरुणाचल प्रदेश</span>
-          <span class="state-name-en">Arunachal Pradesh</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/assam.html" class="state-card">
-          <span class="state-emoji">🦏</span>
-          <span class="state-name-hi">असम</span>
-          <span class="state-name-en">Assam</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/bihar.html" class="state-card">
-          <span class="state-emoji">🌾</span>
-          <span class="state-name-hi">बिहार</span>
-          <span class="state-name-en">Bihar</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/chhattisgarh.html" class="state-card">
-          <span class="state-emoji">🌳</span>
-          <span class="state-name-hi">छत्तीसगढ़</span>
-          <span class="state-name-en">Chhattisgarh</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/goa.html" class="state-card">
-          <span class="state-emoji">🏖️</span>
-          <span class="state-name-hi">गोवा</span>
-          <span class="state-name-en">Goa</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/gujarat.html" class="state-card">
-          <span class="state-emoji">💎</span>
-          <span class="state-name-hi">गुजरात</span>
-          <span class="state-name-en">Gujarat</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/haryana.html" class="state-card">
-          <span class="state-emoji">🚜</span>
-          <span class="state-name-hi">हरियाणा</span>
-          <span class="state-name-en">Haryana</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/himachal-pradesh.html" class="state-card">
-          <span class="state-emoji">🏔️</span>
-          <span class="state-name-hi">हिमाचल प्रदेश</span>
-          <span class="state-name-en">Himachal Pradesh</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/jharkhand.html" class="state-card">
-          <span class="state-emoji">⛏️</span>
-          <span class="state-name-hi">झारखंड</span>
-          <span class="state-name-en">Jharkhand</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/karnataka.html" class="state-card">
-          <span class="state-emoji">🌴</span>
-          <span class="state-name-hi">कर्नाटक</span>
-          <span class="state-name-en">Karnataka</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/kerala.html" class="state-card">
-          <span class="state-emoji">🥥</span>
-          <span class="state-name-hi">केरल</span>
-          <span class="state-name-en">Kerala</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/madhya-pradesh.html" class="state-card">
-          <span class="state-emoji">🐅</span>
-          <span class="state-name-hi">मध्य प्रदेश</span>
-          <span class="state-name-en">Madhya Pradesh</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/maharashtra.html" class="state-card">
-          <span class="state-emoji">🏯</span>
-          <span class="state-name-hi">महाराष्ट्र</span>
-          <span class="state-name-en">Maharashtra</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/manipur.html" class="state-card">
-          <span class="state-emoji">🌸</span>
-          <span class="state-name-hi">मणिपुर</span>
-          <span class="state-name-en">Manipur</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/meghalaya.html" class="state-card">
-          <span class="state-emoji">🌧️</span>
-          <span class="state-name-hi">मेघालय</span>
-          <span class="state-name-en">Meghalaya</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/mizoram.html" class="state-card">
-          <span class="state-emoji">⛰️</span>
-          <span class="state-name-hi">मिज़ोरम</span>
-          <span class="state-name-en">Mizoram</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/nagaland.html" class="state-card">
-          <span class="state-emoji">🦅</span>
-          <span class="state-name-hi">नागालैंड</span>
-          <span class="state-name-en">Nagaland</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/odisha.html" class="state-card">
-          <span class="state-emoji">🛕</span>
-          <span class="state-name-hi">ओडिशा</span>
-          <span class="state-name-en">Odisha</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/punjab.html" class="state-card">
-          <span class="state-emoji">🌻</span>
-          <span class="state-name-hi">पंजाब</span>
-          <span class="state-name-en">Punjab</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/rajasthan.html" class="state-card">
-          <span class="state-emoji">🏜️</span>
-          <span class="state-name-hi">राजस्थान</span>
-          <span class="state-name-en">Rajasthan</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/sikkim.html" class="state-card">
-          <span class="state-emoji">🏔️</span>
-          <span class="state-name-hi">सिक्किम</span>
-          <span class="state-name-en">Sikkim</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/tamil-nadu.html" class="state-card">
-          <span class="state-emoji">🛕</span>
-          <span class="state-name-hi">तमिलनाडु</span>
-          <span class="state-name-en">Tamil Nadu</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/telangana.html" class="state-card">
-          <span class="state-emoji">🕌</span>
-          <span class="state-name-hi">तेलंगाना</span>
-          <span class="state-name-en">Telangana</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/tripura.html" class="state-card">
-          <span class="state-emoji">🌿</span>
-          <span class="state-name-hi">त्रिपुरा</span>
-          <span class="state-name-en">Tripura</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/uttar-pradesh.html" class="state-card">
-          <span class="state-emoji">🏙️</span>
-          <span class="state-name-hi">उत्तर प्रदेश</span>
-          <span class="state-name-en">Uttar Pradesh</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/uttarakhand.html" class="state-card">
-          <span class="state-emoji">⛰️</span>
-          <span class="state-name-hi">उत्तराखंड</span>
-          <span class="state-name-en">Uttarakhand</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/west-bengal.html" class="state-card">
-          <span class="state-emoji">🐯</span>
-          <span class="state-name-hi">पश्चिम बंगाल</span>
-          <span class="state-name-en">West Bengal</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/andaman-and-nicobar-islands.html" class="state-card">
-          <span class="state-emoji">🏝️</span>
-          <span class="state-name-hi">अंडमान और निकोबार</span>
-          <span class="state-name-en">Andaman and Nicobar Islands</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/chandigarh.html" class="state-card">
-          <span class="state-emoji">🏙️</span>
-          <span class="state-name-hi">चंडीगढ़</span>
-          <span class="state-name-en">Chandigarh</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/dadra-and-nagar-haveli-and-daman-and-diu.html" class="state-card">
-          <span class="state-emoji">🏖️</span>
-          <span class="state-name-hi">दादरा और नगर हवेली और दमन और दीव</span>
-          <span class="state-name-en">Dadra and Nagar Haveli and Daman and Diu</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/delhi.html" class="state-card">
-          <span class="state-emoji">🏛️</span>
-          <span class="state-name-hi">दिल्ली</span>
-          <span class="state-name-en">Delhi</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/jammu-and-kashmir.html" class="state-card">
-          <span class="state-emoji">🏔️</span>
-          <span class="state-name-hi">जम्मू और कश्मीर</span>
-          <span class="state-name-en">Jammu and Kashmir</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/ladakh.html" class="state-card">
-          <span class="state-emoji">⛰️</span>
-          <span class="state-name-hi">लद्दाख</span>
-          <span class="state-name-en">Ladakh</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/lakshadweep.html" class="state-card">
-          <span class="state-emoji">🏝️</span>
-          <span class="state-name-hi">लक्षद्वीप</span>
-          <span class="state-name-en">Lakshadweep</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-        <a href="states/puducherry.html" class="state-card">
-          <span class="state-emoji">🏖️</span>
-          <span class="state-name-hi">पुडुचेरी</span>
-          <span class="state-name-en">Puducherry</span>
-          <span class="state-link-text">पोर्टल देखें →</span>
-        </a>
-      </div>
-      <div class="text-center mt-24">
-        <a href="states/" class="btn btn-outline">सभी 36 राज्य और UTs देखें →</a>
-      </div>
-    </div>
-  </section>
+  <script>
+    // Simple script to redirect search to the state selection block
+    document.getElementById('heroSearch').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            document.getElementById('state-selection').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+  </script>
 
-  <!-- ===== SERVICES ===== -->
-  <section class="section-alt">
+  <!-- ===== 5. आपको क्या चाहिए? (QUICK ACTIONS) ===== -->
+  <!-- Using safe non-clickable divs with "Coming Soon" for non-existent service pages -->
+  <section style="padding: 64px 0; background: #f8fafc;">
     <div class="container">
-      <div class="section-header">
-        <h2>📋 उपयोगी सेवाएं और गाइड</h2>
-        <p>जमीन से जुड़ी हर जानकारी — एक जगह</p>
-      </div>
-      <div class="service-grid">
-        <a href="service/bhulekh-kaise-dekhen.html" class="service-card">
-          <span class="card-icon">📋</span>
-          <h3>भूलेख / खसरा-खतौनी</h3>
-          <p>किसी भी राज्य का भूलेख ऑनलाइन कैसे देखें — खसरा नंबर, खतौनी, RoR निकालने की पूरी guide।</p>
-        </a>
-        <a href="service/bhu-naksha-kaise-dekhen.html" class="service-card">
-          <span class="card-icon">🗺️</span>
-          <h3>भू-नक्शा (Plot Map)</h3>
-          <p>अपने खेत या प्लॉट का नक्शा ऑनलाइन कैसे देखें और download करें — Bhu Naksha portal guide।</p>
-        </a>
-        <a href="service/mutation-kaise-karein.html" class="service-card">
-          <span class="card-icon">✍️</span>
-          <h3>म्यूटेशन / नामांतरण</h3>
-          <p>जमीन खरीदने के बाद नाम कैसे दर्ज करें — दस्तावेज़, फीस, और प्रक्रिया की पूरी जानकारी।</p>
-        </a>
-        <a href="service/ec-certificate-guide.html" class="service-card">
-          <span class="card-icon">📜</span>
-          <h3>EC Certificate</h3>
-          <p>Encumbrance Certificate (भार मुक्त प्रमाण पत्र) क्या है और ऑनलाइन कैसे निकालें — पूरी guide।</p>
-        </a>
-        <a href="service/jamabandi-nakal.html" class="service-card">
-          <span class="card-icon">📄</span>
-          <h3>जमाबंदी नकल</h3>
-          <p>Haryana, Punjab, Rajasthan में जमाबंदी नकल ऑनलाइन कैसे निकालें — step-by-step guide।</p>
-        </a>
-        <a href="service/ulpin-bhu-aadhaar.html" class="service-card">
-          <span class="card-icon">🔢</span>
-          <h3>ULPIN / भू-आधार</h3>
-          <p>हर जमीन को मिलेगा unique ID — ULPIN (Unique Land Parcel Identification Number) की पूरी जानकारी।</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== HOW IT WORKS ===== -->
-  <section class="section-green">
-    <div class="container">
-      <div class="section-header">
-        <h2>🔍 BhumiRecord कैसे काम करता है?</h2>
-        <p>तीन आसान steps में अपनी जमीन की जानकारी पाएं</p>
-      </div>
-      <div style="max-width:600px;margin:0 auto;">
-        <ol class="steps">
-          <li class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h4>अपना राज्य चुनें</h4>
-              <p>ऊपर dropdown से या state cards में से अपना राज्य select करें।</p>
-            </div>
-          </li>
-          <li class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h4>हमारी guide पढ़ें</h4>
-              <p>हम आपको बताएंगे कि आपके राज्य का portal कहाँ है और कैसे use करें — step-by-step, हिंदी में।</p>
-            </div>
-          </li>
-          <li class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h4>सरकारी पोर्टल पर जाएं</h4>
-              <p>हमारे दिए गए direct link से राज्य के official govt portal पर जाएं और अपना रिकॉर्ड देखें — मुफ़्त में।</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TRUST ===== -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <h2>✅ BhumiRecord क्यों?</h2>
-      </div>
-      <div class="trust-grid">
-        <div class="trust-item">
-          <span class="trust-icon">🗺️</span>
-          <h4>36 राज्यों और UTs की गाइड</h4>
-          <p>भारत के सभी प्रमुख राज्यों के भूलेख पोर्टल की जानकारी एक जगह।</p>
+      <h2 class="section-title">आपको क्या चाहिए?</h2>
+      
+      <div class="action-grid">
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">📄</span>
+          <h3>7/12 उतारा</h3>
+          <p>भूमि की जानकारी और रिकॉर्ड (महाराष्ट्र/गुजरात)</p>
         </div>
-        <div class="trust-item">
-          <span class="trust-icon">🇮🇳</span>
-          <h4>सरल हिंदी में</h4>
-          <p>तकनीकी शब्द आसान भाषा में समझाए जाते हैं — कोई confusion नहीं।</p>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">📋</span>
+          <h3>8A उतारा</h3>
+          <p>खाता और जमीन की जानकारी का सारांश</p>
         </div>
-        <div class="trust-item">
-          <span class="trust-icon">🔄</span>
-          <h4>हर महीने Update</h4>
-          <p>सरकारी पोर्टल बदलते रहते हैं — हम हमेशा updated रहते हैं।</p>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">🔄</span>
+          <h3>फेरफार / Mutation</h3>
+          <p>नाम परिवर्तन और भूमि रिकॉर्ड अपडेट की जानकारी</p>
         </div>
-        <div class="trust-item">
-          <span class="trust-icon">💰</span>
-          <h4>बिल्कुल मुफ़्त</h4>
-          <p>कोई registration नहीं, कोई fees नहीं — सब कुछ free में।</p>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">🗺️</span>
+          <h3>भू-नक्शा</h3>
+          <p>अपनी जमीन, खेत या प्लॉट का आधिकारिक नक्शा देखें</p>
+        </div>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">🏠</span>
+          <h3>Property Card</h3>
+          <p>शहरी संपत्ति (घर/प्लॉट) का रिकॉर्ड और मालिकाना हक</p>
+        </div>
+        
+        <div class="action-card">
+          <span class="badge-soon">जल्द उपलब्ध</span>
+          <span class="icon">📑</span>
+          <h3>खसरा-खतौनी / जमाबंदी</h3>
+          <p>उत्तर भारत के राज्यों के अनुसार भूमि रिकॉर्ड</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- AD SLOT -->
-  <div class="container">
-    <div class="ad-slot">Advertisement</div>
-  </div>
-
-  <!-- ===== GLOSSARY TEASER ===== -->
-  <section class="section-alt">
+  <!-- ===== 6. अपना राज्य चुनें (STATE SELECTION) ===== -->
+  <!-- Direct links to existing state pages -->
+  <section id="state-selection" style="padding: 64px 0; background: #ffffff;">
     <div class="container">
-      <div class="section-header">
-        <h2>📖 भूमि शब्दकोश — ये शब्द जानते हैं आप?</h2>
-        <p>भूमि रिकॉर्ड में आने वाले कठिन शब्दों की सरल हिंदी व्याख्या</p>
+      <h2 class="section-title" style="margin-bottom: 8px;">अपना राज्य चुनें</h2>
+      <p style="text-align: center; color: #475569; margin-bottom: 32px; font-size: 1.1rem;">अपने राज्य के अनुसार भूमि रिकॉर्ड की जानकारी देखें।</p>
+      
+      <div class="state-simple-grid">
+        <a href="states/maharashtra.html" class="state-btn">महाराष्ट्र</a>
+        <a href="states/uttar-pradesh.html" class="state-btn">उत्तर प्रदेश</a>
+        <a href="states/bihar.html" class="state-btn">बिहार</a>
+        <a href="states/madhya-pradesh.html" class="state-btn">मध्य प्रदेश</a>
+        <a href="states/rajasthan.html" class="state-btn">राजस्थान</a>
+        <a href="states/gujarat.html" class="state-btn">गुजरात</a>
+        <a href="states/karnataka.html" class="state-btn">कर्नाटक</a>
+        <a href="states/haryana.html" class="state-btn">हरियाणा</a>
       </div>
-      <div class="glossary-grid">
-        <a href="glossary/khasra-number.html" class="glossary-card">
-          <span class="glossary-term">खसरा नंबर</span>
-          <span class="glossary-term-en">Khasra Number — भूमि की unique ID</span>
-        </a>
-        <a href="glossary/khatauni.html" class="glossary-card">
-          <span class="glossary-term">खतौनी</span>
-          <span class="glossary-term-en">Khatauni — मालिकाना हक का रिकॉर्ड</span>
-        </a>
-        <a href="glossary/mutation.html" class="glossary-card">
-          <span class="glossary-term">म्यूटेशन</span>
-          <span class="glossary-term-en">Mutation / नामांतरण — नाम बदलना</span>
-        </a>
-        <a href="glossary/jamabandi.html" class="glossary-card">
-          <span class="glossary-term">जमाबंदी</span>
-          <span class="glossary-term-en">Jamabandi — भूमि का प्रमुख रिकॉर्ड</span>
-        </a>
-        <a href="glossary/patta.html" class="glossary-card">
-          <span class="glossary-term">पट्टा</span>
-          <span class="glossary-term-en">Patta — भूमि स्वामित्व का प्रमाण</span>
-        </a>
-        <a href="glossary/encumbrance-certificate.html" class="glossary-card">
-          <span class="glossary-term">EC Certificate</span>
-          <span class="glossary-term-en">Encumbrance Certificate — भार मुक्त प्रमाण</span>
-        </a>
-      </div>
-      <div class="text-center mt-24">
-        <a href="glossary/" class="btn btn-outline">पूरा शब्दकोश देखें →</a>
+      
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="states/index.html" style="display: inline-block; padding: 12px 32px; background: #f1f5f9; color: #334155; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 1.1rem; border: 1px solid #cbd5e1;">सभी 36 राज्य और UTs देखें →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== BLOG ===== -->
-  <section>
+  <!-- ===== 7. आपको कौन-सी जानकारी चाहिए? (DECISION NAV) ===== -->
+  <section style="padding: 64px 0; background: #f8fafc;">
     <div class="container">
-      <div class="section-header">
-        <h2>📰 ताज़ा जानकारी और समाचार</h2>
-        <p>भूमि कानून और सरकारी योजनाओं के बारे में latest updates</p>
-      </div>
-      <div class="blog-grid">
-        <a href="blog/ulpin-kya-hai-2026.html" class="blog-card">
-          <div class="blog-card-body">
-            <span class="blog-category">नई योजना</span>
-            <h3>ULPIN (भू-आधार) क्या है? हर ज़मीन को मिलेगा अपना Aadhaar</h3>
-            <p class="blog-excerpt">ULPIN एक 14-अंकीय unique ID है जो 2026 में हर भूमि खंड को मिलेगी — जानें इससे आपको क्या फायदा होगा।</p>
-            <span class="blog-date">सितंबर 2026</span>
-          </div>
+      <h2 class="section-title">आपको कौन-सी जानकारी चाहिए?</h2>
+      
+      <div class="decision-list">
+        <a href="#state-selection" class="decision-link">
+          मुझे 7/12 देखना है <span class="arrow">→</span>
         </a>
-        <a href="blog/property-fraud-kaise-rokein.html" class="blog-card">
-          <div class="blog-card-body">
-            <span class="blog-category">सावधानी</span>
-            <h3>जमीन फ्रॉड से कैसे बचें — 10 Important Tips</h3>
-            <p class="blog-excerpt">जमीन खरीदने से पहले ये 10 जांचें ज़रूर करें — EC, mutation status, court case — सब कुछ जानें।</p>
-            <span class="blog-date">अगस्त 2026</span>
-          </div>
+        <a href="#state-selection" class="decision-link">
+          मुझे जमीन का नक्शा (Bhu Naksha) देखना है <span class="arrow">→</span>
         </a>
-        <a href="blog/property-registration-rules-2026.html" class="blog-card">
-          <div class="blog-card-body">
-            <span class="blog-category">नए नियम</span>
-            <h3>2026 में प्रॉपर्टी रजिस्ट्रेशन के नए नियम — पूरी जानकारी</h3>
-            <p class="blog-excerpt">इस साल property registration के नियमों में क्या बदला? Stamp Duty, online registration, और नए दस्तावेज़।</p>
-            <span class="blog-date">जुलाई 2026</span>
-          </div>
+        <a href="#state-selection" class="decision-link">
+          मुझे नामांतरण / फेरफार की जानकारी चाहिए <span class="arrow">→</span>
+        </a>
+        <a href="#state-selection" class="decision-link">
+          मुझे Property Card चाहिए <span class="arrow">→</span>
+        </a>
+        <a href="#state-selection" class="decision-link">
+          मुझे अपने राज्य का Bhulekh Portal चाहिए <span class="arrow">→</span>
         </a>
       </div>
-      <div class="text-center mt-24">
-        <a href="blog/" class="btn btn-outline">सभी लेख देखें →</a>
+      <p style="text-align: center; margin-top: 16px; color: #64748b; font-size: 0.9rem;"><em>जानकारी देखने के लिए पहले अपना राज्य चुनें।</em></p>
+    </div>
+  </section>
+
+  <!-- ===== 8. POPULAR SERVICES ===== -->
+  <section style="padding: 64px 0; background: #ffffff;">
+    <div class="container">
+      <h2 class="section-title">सबसे ज्यादा खोजी जाने वाली सेवाएं</h2>
+      
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+        <a href="states/maharashtra.html" class="btn btn-outline" style="border-radius: 20px;">Maharashtra 7/12</a>
+        <a href="states/uttar-pradesh.html" class="btn btn-outline" style="border-radius: 20px;">UP Bhulekh</a>
+        <a href="states/bihar.html" class="btn btn-outline" style="border-radius: 20px;">Bihar Land Record</a>
+        <a href="states/madhya-pradesh.html" class="btn btn-outline" style="border-radius: 20px;">MP Bhulekh</a>
+        <a href="states/rajasthan.html" class="btn btn-outline" style="border-radius: 20px;">Rajasthan Jamabandi</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="section-alt">
+  <!-- ===== 9. भूमि रिकॉर्ड कैसे देखें? (HOW IT WORKS) ===== -->
+  <section style="padding: 64px 0; background: #f8fafc;">
     <div class="container">
-      <div class="section-header">
-        <h2>❓ अक्सर पूछे जाने वाले सवाल</h2>
-        <p>भूमि रिकॉर्ड से जुड़े सबसे common सवालों के जवाब</p>
+      <h2 class="section-title">भूमि रिकॉर्ड कैसे देखें?</h2>
+      
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">अपना राज्य चुनें</h3>
+          <p style="color: #475569; font-size: 0.95rem;">ऊपर दी गई सूची से अपने राज्य के नाम पर क्लिक करें।</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">आधिकारिक वेबसाइट खोलें</h3>
+          <p style="color: #475569; font-size: 0.95rem;">हमारी गाइड में दिए गए सरकार के असली (Official) लिंक पर जाएं।</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">जानकारी भरें</h3>
+          <p style="color: #475569; font-size: 0.95rem;">पोर्टल पर अपना जिला, तहसील, गांव और सर्वे नंबर/नाम डालें।</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 8px;">रिकॉर्ड देखें</h3>
+          <p style="color: #475569; font-size: 0.95rem;">अपनी जमीन का रिकॉर्ड स्क्रीन पर देखें और डाउनलोड करें।</p>
+        </div>
       </div>
-      <ul class="faq-list" style="max-width:800px;margin:0 auto;">
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            भूमि रिकॉर्ड ऑनलाइन कैसे देखें?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            अपने राज्य का चयन करें और राज्य के आधिकारिक भूलेख पोर्टल पर जाएं। वहां जिला, तहसील, और ग्राम चुनकर खसरा या खाता नंबर डालें। आपका भूमि रिकॉर्ड स्क्रीन पर दिखेगा। BhumiRecord पर हर राज्य की step-by-step guide उपलब्ध है।
-          </div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            क्या भूमि रिकॉर्ड देखना मुफ़्त है?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            हाँ, सभी राज्यों के सरकारी पोर्टल पर भूमि रिकॉर्ड देखना बिल्कुल मुफ़्त है। यदि कोई व्यक्ति या website आपसे पैसे मांगे तो वह fraud हो सकता है। केवल official .gov.in portals का ही उपयोग करें।
-          </div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            म्यूटेशन (नामांतरण) क्या होता है और क्यों ज़रूरी है?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            म्यूटेशन (नामांतरण) वह प्रक्रिया है जिसके द्वारा जमीन खरीदने के बाद नए मालिक का नाम सरकारी रिकॉर्ड में दर्ज किया जाता है। बिना mutation के आप legally जमीन के मालिक नहीं माने जाएंगे — इसलिए हर खरीद के बाद यह करना आवश्यक है।
-          </div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            जमाबंदी और भूलेख में क्या फ़र्क है?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            भूलेख एक सामान्य शब्द है जो सभी प्रकार के भूमि रिकॉर्ड के लिए प्रयोग होता है। जमाबंदी उत्तर भारत (Haryana, Punjab, Rajasthan) में एक विशेष दस्तावेज़ है जिसमें भूमि स्वामित्व, खेती, और लगान की जानकारी होती है।
-          </div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            खसरा नंबर कैसे पता करें?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            खसरा नंबर तीन तरीकों से पता करें: (1) अपने राज्य के भूलेख पोर्टल पर नाम से खोजें, (2) पुराने जमीन के कागज़ों में देखें, (3) अपने गाँव के पटवारी से पूछें। हमारी <a href="glossary/khasra-number.html">खसरा नंबर guide</a> में पूरी जानकारी दी गई है।
-          </div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            क्या मोबाइल से land record देख सकते हैं?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            हाँ, सभी राज्यों के भूलेख पोर्टल मोबाइल browser पर खुलते हैं। कई राज्यों के अपने Mobile Apps भी हैं — जैसे UP Bhulekh App, Karnataka Bhoomi App, Mahabhulekh App। इन्हें Google Play Store से download कर सकते हैं।
-          </div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            ULPIN (भू-आधार) क्या है?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            ULPIN (Unique Land Parcel Identification Number) एक 14-अंकीय unique ID है जो हर भूमि खंड को दिया जाएगा — ठीक जैसे Aadhaar कार्ड हर व्यक्ति को मिलता है। यह 2026 में पूरे भारत में लागू हो रहा है और भूमि fraud को रोकने में मदद करेगा।
-          </div>
-        </li>
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            EC Certificate (भार मुक्त प्रमाण पत्र) कैसे निकालें?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-answer">
-            EC (Encumbrance Certificate) अधिकांश राज्यों में online निकाल सकते हैं — Registration Department के portal पर जाएं, property details भरें, और certificate download करें। विस्तृत जानकारी के लिए हमारी <a href="service/ec-certificate-guide.html">EC Certificate Guide</a> देखें।
-          </div>
-        </li>
+      
+      <div class="trust-note" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+        <strong>ध्यान दें:</strong> BhumiRecord सरकारी वेबसाइट नहीं है। हम सरकारी सेवाओं और आधिकारिक पोर्टल तक पहुंचने की जानकारी आसान भाषा में देते हैं। हम कोई दस्तावेज जारी नहीं करते।
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 10. BhumiRecord क्यों? (WHY BHUMIRECORD) ===== -->
+  <section style="padding: 64px 0; background: #ffffff;">
+    <div class="container" style="max-width: 600px;">
+      <h2 class="section-title">BhumiRecord क्यों?</h2>
+      
+      <ul class="check-list-simple" style="list-style: none; padding: 0;">
+        <li>आसान हिंदी में जानकारी</li>
+        <li>राज्य के अनुसार सटीक गाइड</li>
+        <li>सही आधिकारिक पोर्टल तक पहुंचने में मदद</li>
+        <li>मोबाइल पर उपयोग करने में बेहद आसान</li>
       </ul>
     </div>
   </section>
 
-  <!-- DISCLAIMER -->
-  <div class="container">
-    <div class="disclaimer-banner">
-      ⚠️ <strong>महत्वपूर्ण सूचना:</strong> BhumiRecord एक स्वतंत्र सूचना पोर्टल है। यह भारत सरकार या किसी राज्य सरकार का आधिकारिक पोर्टल नहीं है। यहाँ दी गई जानकारी केवल शैक्षिक उद्देश्य के लिए है। कोई भी महत्वपूर्ण निर्णय लेने से पहले संबंधित राज्य के आधिकारिक पोर्टल से जानकारी सत्यापित करें।
-    </div>
-  </div>
+  <!-- ===== 11. FAQ ===== -->
+  <section style="padding: 64px 0; background: #f8fafc;">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-title">सामान्यतः पूछे जाने वाले प्रश्न (FAQ)</h2>
+      
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer" id="site-footer">
+      <details class="faq-item">
+        <summary>भूमि रिकॉर्ड ऑनलाइन कैसे देखें?</summary>
+        <div class="faq-answer-content">
+          भूमि रिकॉर्ड देखने के लिए सबसे पहले अपना राज्य चुनें, फिर आधिकारिक सरकारी पोर्टल पर जाएं। वहां अपना जिला, तहसील और गांव चुनकर सर्वे नंबर या नाम दर्ज करें।
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>7/12 उतारा क्या होता है?</summary>
+        <div class="faq-answer-content">
+          7/12 (सातबारा) उतारा महाराष्ट्र और गुजरात में इस्तेमाल होने वाला एक महत्वपूर्ण भूमि रिकॉर्ड है, जिसमें जमीन के मालिक का नाम, क्षेत्रफल और कर्ज़ की जानकारी होती है।
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>खसरा और खतौनी में क्या अंतर है?</summary>
+        <div class="faq-answer-content">
+          खसरा एक विशिष्ट जमीन (प्लॉट) का विवरण होता है, जबकि खतौनी किसी व्यक्ति या परिवार के नाम पर दर्ज सभी जमीनों का सारांश (Summary) होता है।
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>जमाबंदी क्या होती है?</summary>
+        <div class="faq-answer-content">
+          जमाबंदी उत्तर भारत (जैसे राजस्थान, हरियाणा, पंजाब) में भूमि रिकॉर्ड (Record of Rights) को कहा जाता है, जिसमें जमीन के स्वामित्व और खेती का विवरण होता है।
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>फेरफार / Mutation कैसे करें?</summary>
+        <div class="faq-answer-content">
+          जमीन खरीदने या विरासत के बाद सरकारी रिकॉर्ड में अपना नाम दर्ज करवाने की प्रक्रिया को फेरफार (नामांतरण) कहते हैं। इसे आप आधिकारिक पोर्टल या स्थानीय तहसील कार्यालय के माध्यम से कर सकते हैं।
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>भू-नक्शा ऑनलाइन कैसे देखें?</summary>
+        <div class="faq-answer-content">
+          लगभग सभी राज्यों ने भू-नक्शा देखने के लिए अलग पोर्टल बनाए हैं। आप अपने राज्य के आधिकारिक Bhu Naksha पोर्टल पर जाकर अपना जिला और सर्वे नंबर चुनकर नक्शा देख सकते हैं।
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>क्या भूमि रिकॉर्ड ऑनलाइन देखने के लिए पैसे लगते हैं?</summary>
+        <div class="faq-answer-content">
+          केवल जानकारी देखने (Informational View) के लिए कोई शुल्क नहीं लगता। लेकिन बैंक लोन या कानूनी कार्यों के लिए 'डिजिटली साइंड' (Digitally Signed) कॉपी डाउनलोड करने पर सरकारी शुल्क (लगभग ₹15 से ₹30) देना पड़ सकता है।
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ===== 12. TRUST / DISCLAIMER ===== -->
+  <section style="padding: 48px 0; background: #ffffff;">
+    <div class="container" style="max-width: 800px;">
+      <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 24px; border-radius: 8px;">
+        <h3 style="color: #b45309; margin-bottom: 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+          <span>⚠️</span> स्वतंत्र जानकारी पोर्टल
+        </h3>
+        <p style="color: #78350f; line-height: 1.6; margin: 0; font-size: 0.95rem;">
+          BhumiRecord एक स्वतंत्र जानकारी पोर्टल है। यह किसी सरकारी विभाग, राजस्व विभाग या सरकारी वेबसाइट का आधिकारिक हिस्सा नहीं है। हमारा उद्देश्य केवल जटिल सरकारी प्रक्रियाओं को आसान हिंदी भाषा में समझाना है। सरकारी रिकॉर्ड, आधिकारिक दस्तावेजों या सेवाओं के लिए कृपया संबंधित राज्य के आधिकारिक सरकारी पोर्टल का ही उपयोग करें।
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 14. FINAL CTA ===== -->
+  <section style="padding: 64px 0; background: #1b6b3a; color: white; text-align: center;">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="brand">
-            <span class="brand-mark">🏛️</span>
-            <span class="brand-text"><span class="brand-name">BhumiRecord</span></span>
+      <h2 style="font-size: 2rem; margin-bottom: 16px; color: white;">अपने राज्य का भूमि रिकॉर्ड खोजें</h2>
+      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 32px auto; opacity: 0.9;">राज्य चुनें और अपने भूमि रिकॉर्ड की जानकारी आसान हिंदी में देखें।</p>
+      <a href="#state-selection" class="btn" style="background: white; color: #1b6b3a; font-size: 1.1rem; padding: 14px 32px; border-radius: 30px; font-weight: bold;">अपना राज्य चुनें</a>
+    </div>
+  </section>
+
+  <!-- ===== 15. FOOTER ===== -->
+  <footer class="site-footer" id="site-footer" style="background: #0f172a; color: #cbd5e1; padding: 48px 0 24px 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-bottom: 32px;">
+        
+        <div>
+          <a href="index.html" class="brand" style="text-decoration:none; margin-bottom:16px; display:inline-block;">
+            <span class="brand-mark" style="font-size:1.5rem;">🏛️</span>
+            <span class="brand-text"><span class="brand-name" style="color:white; font-size:1.3rem;">BhumiRecord</span></span>
           </a>
-          <p>भारत के सभी राज्यों के भूमि रिकॉर्ड की सरल हिंदी गाइड। हम सरकारी पोर्टल नहीं हैं — हम आपकी मदद करते हैं।</p>
+          <p style="font-size:0.9rem; line-height:1.6; color:#94a3b8;">भारत के सभी राज्यों के भूमि रिकॉर्ड की सरल हिंदी गाइड। हम सरकारी पोर्टल नहीं हैं — हम आपकी मदद करते हैं।</p>
         </div>
+        
         <div>
-          <h4>राज्यवार गाइड</h4>
-          <ul>
-            <li><a href="states/uttar-pradesh.html">उत्तर प्रदेश भूलेख</a></li>
-            <li><a href="states/bihar.html">बिहार भूमि</a></li>
-            <li><a href="states/rajasthan.html">अपना खाता राजस्थान</a></li>
-            <li><a href="states/madhya-pradesh.html">MP भूलेख</a></li>
-            <li><a href="states/maharashtra.html">महाराष्ट्र 7/12</a></li>
-            <li><a href="states/">सभी राज्य →</a></li>
+          <h4 style="color:white; margin-bottom:16px; font-size:1.1rem;">प्रमुख राज्य</h4>
+          <ul style="list-style:none; padding:0; margin:0; line-height:2;">
+            <li><a href="states/maharashtra.html" style="color:#cbd5e1; text-decoration:none;">महाराष्ट्र 7/12</a></li>
+            <li><a href="states/uttar-pradesh.html" style="color:#cbd5e1; text-decoration:none;">उत्तर प्रदेश भूलेख</a></li>
+            <li><a href="states/bihar.html" style="color:#cbd5e1; text-decoration:none;">बिहार भूमि</a></li>
+            <li><a href="states/index.html" style="color:#38bdf8; text-decoration:none;">सभी राज्य →</a></li>
           </ul>
         </div>
+        
         <div>
-          <h4>उपयोगी गाइड</h4>
-          <ul>
-            <li><a href="service/mutation-kaise-karein.html">म्यूटेशन गाइड</a></li>
-            <li><a href="service/ec-certificate-guide.html">EC Certificate</a></li>
-            <li><a href="service/bhulekh-kaise-dekhen.html">भूलेख कैसे देखें</a></li>
-            <li><a href="glossary/">भूमि शब्दकोश</a></li>
-            <li><a href="tools/">कैलकुलेटर</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>जानकारी</h4>
-          <ul>
-            <li><a href="about.html">हमारे बारे में</a></li>
-            <li><a href="contact.html">संपर्क</a></li>
-            <li><a href="disclaimer.html">अस्वीकरण</a></li>
-            <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
-            <li><a href="sitemap.html">साइटमैप</a></li>
+          <h4 style="color:white; margin-bottom:16px; font-size:1.1rem;">महत्वपूर्ण लिंक</h4>
+          <ul style="list-style:none; padding:0; margin:0; line-height:2;">
+            <li><a href="disclaimer.html" style="color:#cbd5e1; text-decoration:none;">अस्वीकरण (Disclaimer)</a></li>
+            <li><a href="privacy-policy.html" style="color:#cbd5e1; text-decoration:none;">गोपनीयता नीति</a></li>
+            <li><a href="sitemap.html" style="color:#cbd5e1; text-decoration:none;">साइटमैप</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-disclaimer">
-        ⚠️ <strong>अस्वीकरण:</strong> BhumiRecord.github.io एक स्वतंत्र सूचना वेबसाइट है। यह भारत सरकार या किसी राज्य सरकार का आधिकारिक पोर्टल नहीं है। यहाँ दी गई जानकारी केवल शैक्षिक उद्देश्य के लिए है। किसी भी कानूनी या वित्तीय निर्णय से पहले संबंधित सरकारी विभाग से संपर्क करें।
-      </div>
-      <div class="footer-bottom">
-        <span>© <span id="footer-year">2026</span> BhumiRecord — All Rights Reserved</span>
-        <div style="display:flex;gap:16px;">
-          <a href="sitemap.html">Sitemap</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="disclaimer.html">Disclaimer</a>
-        </div>
+      
+      <div style="border-top: 1px solid #334155; padding-top: 24px; text-align: center; font-size: 0.85rem; color: #64748b;">
+        <span>© <span id="footer-year">2026</span> BhumiRecord.in — All Rights Reserved</span>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
