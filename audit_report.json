@@ -5,6 +5,11 @@
       "canonical": "https://akhairkar.github.io/BhumiRecord/disclaimer.html",
       "h1_count": 1
     },
+    "google3d97747d4af174a7.html": {
+      "title": null,
+      "canonical": null,
+      "h1_count": 0
+    },
     "index.html": {
       "title": "BhumiRecord: \u092d\u0942\u092e\u093f \u0930\u093f\u0915\u0949\u0930\u094d\u0921 \u0911\u0928\u0932\u093e\u0907\u0928 \u0926\u0947\u0916\u0947\u0902 | 7/12, \u0916\u0938\u0930\u093e-\u0916\u0924\u094c\u0928\u0940, \u091c\u092e\u093e\u092c\u0902\u0926\u0940",
       "canonical": "https://akhairkar.github.io/BhumiRecord/index.html",
@@ -18,6 +23,11 @@
     "sitemap.html": {
       "title": "\u0938\u093e\u0907\u091f\u092e\u0948\u092a (Sitemap) | BhumiRecord",
       "canonical": "https://akhairkar.github.io/BhumiRecord/sitemap.html",
+      "h1_count": 1
+    },
+    "districts/maharashtra/nagpur.html": {
+      "title": "Nagpur Land Records Online | 7/12, 8A, Ferfar & Bhu Naksha | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/districts/maharashtra/nagpur.html",
       "h1_count": 1
     },
     "states/maharashtra.html": {
@@ -160,6 +170,21 @@
     [
       "sitemap.html",
       "index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "districts/maharashtra/nagpur.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "districts/maharashtra/nagpur.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "districts/maharashtra/nagpur.html",
+      "../../index.html#state-selection",
       "index.html#state-selection"
     ],
     [
@@ -444,11 +469,19 @@
     ]
   ],
   "placeholder_links": [],
-  "missing_canonicals": [],
+  "missing_canonicals": [
+    "google3d97747d4af174a7.html"
+  ],
   "mismatched_canonicals": [],
-  "missing_titles": [],
-  "missing_descriptions": [],
+  "missing_titles": [
+    "google3d97747d4af174a7.html"
+  ],
+  "missing_descriptions": [
+    "google3d97747d4af174a7.html"
+  ],
   "noindex_pages": [],
   "multiple_h1": [],
-  "missing_h1": []
+  "missing_h1": [
+    "google3d97747d4af174a7.html"
+  ]
 }
