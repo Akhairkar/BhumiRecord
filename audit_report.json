@@ -45,6 +45,36 @@
       "canonical": "https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh.html",
       "h1_count": 1
     },
+    "states/madhya-pradesh/bhu-naksha.html": {
+      "title": "MP Bhu Naksha Online | \u092e\u0927\u094d\u092f \u092a\u094d\u0930\u0926\u0947\u0936 \u091c\u092e\u0940\u0928 \u0915\u093e \u0928\u0915\u094d\u0936\u093e (\u0936\u091c\u0930\u093e) \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/madhya-pradesh/bhu-naksha.html",
+      "h1_count": 1
+    },
+    "states/madhya-pradesh/khasra.html": {
+      "title": "MP Bhulekh Khasra Online | \u092e\u0927\u094d\u092f \u092a\u094d\u0930\u0926\u0947\u0936 \u0916\u0938\u0930\u093e \u0928\u0915\u0932 (P-II) \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/madhya-pradesh/khasra.html",
+      "h1_count": 1
+    },
+    "states/madhya-pradesh/khatauni-b1.html": {
+      "title": "MP Kistbandi Khatauni B-1 Online | \u092e\u0927\u094d\u092f \u092a\u094d\u0930\u0926\u0947\u0936 \u0916\u0924\u094c\u0928\u0940 B-1 \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/madhya-pradesh/khatauni-b1.html",
+      "h1_count": 1
+    },
+    "states/madhya-pradesh/namantaran.html": {
+      "title": "MP Namantaran RCMS Status | \u092e\u0927\u094d\u092f \u092a\u094d\u0930\u0926\u0947\u0936 \u0928\u093e\u092e\u093e\u0902\u0924\u0930\u0923 \u0935 \u092c\u091f\u0935\u093e\u0930\u093e \u0911\u0928\u0932\u093e\u0907\u0928 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/madhya-pradesh/namantaran.html",
+      "h1_count": 1
+    },
+    "states/madhya-pradesh/nazul-bhoomi.html": {
+      "title": "MP Nazul Bhoomi Record Online | \u092e\u0927\u094d\u092f \u092a\u094d\u0930\u0926\u0947\u0936 \u0928\u091c\u0942\u0932 \u092d\u0942\u092e\u093f \u0930\u093f\u0915\u0949\u0930\u094d\u0921 \u0935 \u092a\u091f\u094d\u091f\u093e | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/madhya-pradesh/nazul-bhoomi.html",
+      "h1_count": 1
+    },
+    "states/madhya-pradesh/rin-pustika.html": {
+      "title": "MP Rin Pustika Online | \u092e\u0927\u094d\u092f \u092a\u094d\u0930\u0926\u0947\u0936 \u092d\u0942-\u0905\u0927\u093f\u0915\u093e\u0930 \u090f\u0935\u0902 \u090b\u0923 \u092a\u0941\u0938\u094d\u0924\u093f\u0915\u093e (\u0915\u093f\u0938\u093e\u0928 \u0915\u093f\u0924\u093e\u092c) | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/madhya-pradesh/rin-pustika.html",
+      "h1_count": 1
+    },
     "states/maharashtra/7-12.html": {
       "title": "Maharashtra 7/12 Utara Online: \u092e\u0939\u093e\u092d\u0941\u0932\u0947\u0916 7/12 \u0909\u0924\u093e\u0930\u093e \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
       "canonical": "https://akhairkar.github.io/BhumiRecord/states/maharashtra/7-12.html",
@@ -68,6 +98,36 @@
     "states/maharashtra/property-card.html": {
       "title": "Maharashtra Property Card Online: \u092e\u093e\u0932\u092e\u0924\u094d\u0924\u093e \u092a\u0924\u094d\u0930\u0915 \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
       "canonical": "https://akhairkar.github.io/BhumiRecord/states/maharashtra/property-card.html",
+      "h1_count": 1
+    },
+    "states/uttar-pradesh/bhu-naksha.html": {
+      "title": "UP Bhu Naksha Online | \u0909\u0924\u094d\u0924\u0930 \u092a\u094d\u0930\u0926\u0947\u0936 \u091c\u092e\u0940\u0928 \u0915\u093e \u0928\u0915\u094d\u0936\u093e (\u0936\u091c\u0930\u093e) \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh/bhu-naksha.html",
+      "h1_count": 1
+    },
+    "states/uttar-pradesh/dakhil-kharij.html": {
+      "title": "UP Dakhil Kharij Status | \u0909\u0924\u094d\u0924\u0930 \u092a\u094d\u0930\u0926\u0947\u0936 \u0926\u093e\u0916\u093f\u0932 \u0916\u093e\u0930\u093f\u091c (\u0928\u093e\u092e\u093e\u0902\u0924\u0930\u0923) \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e \u0935 \u0938\u094d\u0925\u093f\u0924\u093f | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh/dakhil-kharij.html",
+      "h1_count": 1
+    },
+    "states/uttar-pradesh/khatauni.html": {
+      "title": "UP Bhulekh Khatauni Online | \u0909\u0924\u094d\u0924\u0930 \u092a\u094d\u0930\u0926\u0947\u0936 \u0916\u0924\u094c\u0928\u0940 \u0928\u0915\u0932 \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh/khatauni.html",
+      "h1_count": 1
+    },
+    "states/uttar-pradesh/unique-code.html": {
+      "title": "UP 16 Digit Land Code | 16 \u0905\u0902\u0915\u094b\u0902 \u0915\u093e \u092f\u0942\u0928\u093f\u0915 \u0917\u093e\u091f\u093e \u0915\u094b\u0921 \u0915\u0948\u0938\u0947 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh/unique-code.html",
+      "h1_count": 1
+    },
+    "states/uttar-pradesh/virasat.html": {
+      "title": "UP E-Virasat Online | \u0909\u0924\u094d\u0924\u0930 \u092a\u094d\u0930\u0926\u0947\u0936 \u0935\u0930\u093e\u0938\u0924 (\u092b\u094c\u0924\u0940 \u0928\u093e\u092e\u093e\u0902\u0924\u0930\u0923) \u0906\u0935\u0947\u0926\u0928 \u0935 \u0938\u094d\u0925\u093f\u0924\u093f | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh/virasat.html",
+      "h1_count": 1
+    },
+    "states/uttar-pradesh/vivadit-gata.html": {
+      "title": "UP Vivadit Gata Status | \u092d\u0942\u0916\u0902\u0921 \u0915\u0947 \u0935\u093e\u0926 \u0917\u094d\u0930\u0938\u094d\u0924 \u0939\u094b\u0928\u0947 \u0915\u0940 \u0938\u094d\u0925\u093f\u0924\u093f \u0915\u0948\u0938\u0947 \u091c\u093e\u0928\u0947\u0902 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh/vivadit-gata.html",
       "h1_count": 1
     }
   },
@@ -298,6 +358,96 @@
       "index.html#state-selection"
     ],
     [
+      "states/madhya-pradesh/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/khasra.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/khasra.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/khasra.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/khatauni-b1.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/khatauni-b1.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/khatauni-b1.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/namantaran.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/namantaran.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/namantaran.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/nazul-bhoomi.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/nazul-bhoomi.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/nazul-bhoomi.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/rin-pustika.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/rin-pustika.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh/rin-pustika.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
       "states/maharashtra/7-12.html",
       "../../index.html#state-selection",
       "index.html#state-selection"
@@ -519,6 +669,96 @@
     ],
     [
       "states/maharashtra/property-card.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/bhu-naksha.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/dakhil-kharij.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/dakhil-kharij.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/dakhil-kharij.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/khatauni.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/khatauni.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/khatauni.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/unique-code.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/unique-code.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/unique-code.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/virasat.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/virasat.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/virasat.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/vivadit-gata.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/vivadit-gata.html",
+      "../../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh/vivadit-gata.html",
       "../../index.html#state-selection",
       "index.html#state-selection"
     ]
