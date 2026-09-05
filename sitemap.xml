@@ -25,11 +25,27 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/andhra-pradesh.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/assam.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://akhairkar.github.io/BhumiRecord/states/bihar.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://akhairkar.github.io/BhumiRecord/states/chhattisgarh.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/delhi.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/goa.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
@@ -41,11 +57,23 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/himachal-pradesh.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/jammu-and-kashmir.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://akhairkar.github.io/BhumiRecord/states/jharkhand.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://akhairkar.github.io/BhumiRecord/states/karnataka.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/kerala.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
@@ -101,11 +129,23 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/odisha.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://akhairkar.github.io/BhumiRecord/states/punjab.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://akhairkar.github.io/BhumiRecord/states/rajasthan.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/tamil-nadu.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/telangana.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
@@ -135,5 +175,13 @@
   <url>
     <loc>https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh/vivadit-gata.html</loc>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/uttarakhand.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/states/west-bengal.html</loc>
+    <priority>0.9</priority>
   </url>
 </urlset>
