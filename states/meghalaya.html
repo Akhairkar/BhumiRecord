@@ -40,9 +40,9 @@
     /* Semantic Accordion */
     details.faq-item { background: #fff; border: 1px solid #eee; border-radius: 8px; margin-bottom: 12px; padding: 0; box-shadow: var(--shadow-sm); transition: all 0.2s; }
     details.faq-item summary { font-weight: 600; padding: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-    details.faq-item summary::-webkit-details-marker { display: none; }
-    details.faq-item summary::after { content: '▼'; font-size: 0.8rem; color: var(--primary-color); transition: transform 0.2s; }
-    details.faq-item[open] summary::after { transform: rotate(180deg); }
+    details.faq-item summary:-webkit-details-marker { display: none; }
+    details.faq-item summary:after { content: '▼'; font-size: 0.8rem; color: var(--primary-color); transition: transform 0.2s; }
+    details.faq-item[open] summary:after { transform: rotate(180deg); }
     details.faq-item[open] { border-left: 4px solid var(--primary-color); }
     .faq-answer-content { padding: 0 16px 16px 16px; color: #4b5563; line-height: 1.6; border-top: 1px solid #f9fafb; margin-top: 8px; padding-top: 16px; }
     
@@ -53,7 +53,7 @@
     .doc-meta span { background: #f3f4f6; padding: 4px 12px; border-radius: 12px; }
     
     .checklist li { position: relative; padding-left: 28px; margin-bottom: 12px; }
-    .checklist li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #10b981; font-weight: bold; font-size: 1.1rem; }
+    .checklist li:before { content: '✓'; position: absolute; left: 0; top: 0; color: #10b981; font-weight: bold; font-size: 1.1rem; }
   </style>
 
   <!-- Structured Data -->
@@ -239,7 +239,7 @@
         <p class="hero-sub mt-16 mx-auto" style="max-width:750px;">राजस्व एवं आपदा प्रबंधन विभाग मेघालय सरकार तथा स्वायत्त जिला परिषदों (KHADC, GHADC, JHADC) के भूमि अधिकार, छठी अनुसूची व लैंड ट्रांसफर एक्ट की प्रामाणिक जानकारी।</p>
         
         <div class="hero-cta-group mt-24" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-          <a href="#quick-services" class="btn btn-primary">भूलेख सेवाएं देखें ↓</a>
+          <a href="#how-to-check" class="btn btn-primary">ऑनलाइन प्रक्रिया देखें ↓</a>
           <a href="#district-directory" class="btn btn-outline">जिले चुनें (12 Districts)</a>
           <a href="#official-portal" class="btn btn-outline" style="border-color:#10b981; color:#047857;">आधिकारिक पोर्टल →</a>
         </div>
@@ -360,7 +360,64 @@
       </div>
     </section>
 
-    <!-- ===== 7. DOCUMENT COMPARISON ===== -->
+    <!-- ===== 6. IMPORTANT DOCUMENTS (DEEP DIVE) ===== -->
+    <section class="container mt-48">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2>मेघालय के प्रमुख भूमि दस्तावेज़ (विस्तृत जानकारी)</h2>
+        <p class="text-muted mb-24">मेघालय के राजस्व रिकॉर्ड में उपयोग होने वाले 4 सबसे महत्वपूर्ण दस्तावेज़</p>
+
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>1. लैंड होल्डिंग सर्टिफिकेट (Land Holding Certificate - LHC)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: पारंपरिक अधिकार अभिलेख</span>
+            <span>विभाग: स्वायत्त जिला परिषद (KHADC / JHADC / GHADC)</span>
+            <span>पहचान: LHC Number / Clan Record</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            मेघालय में पारंपरिक जनजातीय भूमि स्वामित्व का आधिकारिक प्रमाण पत्र जो संबंधित स्वायत्त जिला परिषद द्वारा जारी किया जाता है।
+          </p>
+        </div>
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>2. क्लैन / कम्युनिटी लैंड रिकॉर्ड (Raid / Ri Kynti Land Record)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: पारंपरिक कबीलाई भूमि अभिलेख</span>
+            <span>विभाग: पारंपरिक मुखिया (Syiem / Nokma)</span>
+            <span>पहचान: Clan Allotment ID</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            समुदाय, कबीले और पारंपरिक मुखिया द्वारा आवंटित भूमि अधिकार जो खासी, जयंतिया और गारो समाज के प्रथागत कानूनों पर आधारित हैं।
+          </p>
+        </div>
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>3. म्यूटेशन ऑर्डर (Mutation Order)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: स्वामित्व हस्तांतरण आदेश</span>
+            <span>विभाग: जिला परिषद / उपायुक्त कार्यालय</span>
+            <span>पहचान: Case Number</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            पारंपरिक मातृसत्तात्मक उत्तराधिकार (का खडु / Nokna) के तहत नाम हस्तांतरण का विधिक आदेश।
+          </p>
+        </div>
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>4. कैडस्ट्रल फील्ड स्केच (Cadastral Survey Map)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: फील्ड पैमाइश मैप</span>
+            <span>विभाग: डायरेक्टरेट ऑफ लैंड रिकॉर्ड्स एंड सर्वे</span>
+            <span>पहचान: Plot Number</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            शहरी व छावनी क्षेत्रों का डिजिटल फील्ड पैमाइश स्केच।
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!-- ===== 7. DOCUMENT COMPARISON ===== -->
     <section class="container mt-48">
       <div style="max-width: 900px; margin: 0 auto;">
         <h2>मेघालय भूमि दस्तावेज़ों की तुलना</h2>
@@ -437,7 +494,61 @@
       </div>
     </section>
 
-    <!-- ===== 11. DISTRICT DIRECTORY ===== -->
+    <!-- ===== 9. HOW TO CHECK LAND RECORDS ===== -->
+    <section class="section-green mt-48" id="how-to-check" style="background: #f0fdf4; padding: 48px 0; border-top: 1px solid #bbf7d0; border-bottom: 1px solid #bbf7d0;">
+      <div class="container">
+        <div class="section-header text-center mb-32">
+          <h2>ऑनलाइन मेघालय लैंड होल्डिंग सर्टिफिकेट कैसे जांचें? (Step-by-Step Guide)</h2>
+          <p class="text-muted">आधिकारिक मेघालय पोर्टल पर लैंड रिकॉर्ड खोजने की 5-चरणीय सरल प्रक्रिया</p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 32px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid #e5e7eb;">
+          <ol class="steps" style="list-style: none; padding: 0; margin: 0;">
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">आधिकारिक मेघालय पोर्टल खोलें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">ब्राउज़र में <strong>meghalaya.gov.in</strong> अथवा <strong>meglandrecords.gov.in</strong> पर जाएं।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">सेवा का चयन करें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">'Citizen Services' में <strong>'Land Holding Certificate / Land Records'</strong> विकल्प चुनें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">जिला और ब्लॉक चुनें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">अपना जिला (East Khasi Hills, West Garo Hills, आदि) और संबंधित <strong>'Block'</strong> चुनें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">सर्टिफिकेट नंबर दर्ज करें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">अपना <strong>'LHC Number'</strong> अथवा भू-स्वामी का नाम दर्ज करें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">5</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">विवरण देखें और सुरक्षित करें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">स्क्रीन पर अपने लैंड रिकॉर्ड का विवरण देखें और सुरक्षित करें।</p>
+              </div>
+            </li>
+          </ol>
+          
+          <div class="mt-24 p-16" style="background: #f0fdfa; border-left: 4px solid #14b8a6; border-radius: 4px;">
+            <strong>💡 टिप (गैर-जनजातीय प्रतिबंध):</strong> मेघालय लैंड ट्रांसफर एक्ट 1971 के तहत गैर-जनजातीय व्यक्तियों को भूमि विक्रय पर पूर्ण प्रतिबंध है; सभी सौदों हेतु जिला परिषद और स्यिम/नोकमा की सहमति अनिवार्य है।
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ===== 11. DISTRICT DIRECTORY ===== -->
     <section class="container mt-48" id="district-directory">
       <div class="section-header text-center mb-16">
         <h2>मेघालय के जिले (12 Districts Directory)</h2>
@@ -572,27 +683,27 @@
 
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">री किंती (Ri Kynti)::</strong>
+            <strong style="color:var(--primary-color);">री किंती (Ri Kynti):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">खासी हिल्स में किसी कुल अथवा परिवार की निजी स्वामित्व वाली भूमि।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">री रैद (Ri Raid)::</strong>
+            <strong style="color:var(--primary-color);">री रैद (Ri Raid):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">सामुदायिक अथवा ग्राम सभा की भूमि जिस पर पूरे समुदाय का साझा अधिकार होता है।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">नोकमा (Nokma)::</strong>
+            <strong style="color:var(--primary-color);">नोकमा (Nokma):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">गारो समाज में अकिंग भूमि का पारंपरिक संरक्षक व कबीला प्रमुख।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">रंगबाह शनोंग (Rangbah Shnong)::</strong>
+            <strong style="color:var(--primary-color);">रंगबाह शनोंग (Rangbah Shnong):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">खासी गांवों के निर्वाचित पारंपरिक ग्राम प्रधान।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">का खद्दुह (Ka Khadduh)::</strong>
+            <strong style="color:var(--primary-color);">का खद्दुह (Ka Khadduh):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">खासी परंपरा में परिवार की सबसे छोटी पुत्री जिसे पुश्तैनी संपत्ति मिलती है।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">छठी अनुसूची (Sixth Schedule)::</strong>
+            <strong style="color:var(--primary-color);">छठी अनुसूची (Sixth Schedule):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">संविधान का वह अनुच्छेद जो मेघालय की जिला परिषदों को भूमि का पूर्ण नियंत्रण देता है।</p>
           </div>
         </div>
@@ -624,18 +735,47 @@
       </div>
     </section>
 
+    
     <!-- ===== 14 & 15. OFFICIAL PORTAL & TRUST (E-E-A-T) ===== -->
     <section class="container mt-48" id="official-portal">
-      <div style="max-width: 900px; margin: 0 auto; background:rgba(16, 185, 129, 0.08); border-left:4px solid #10b981; padding:24px; border-radius:4px;">
-        <h3 style="color:#047857; margin-bottom:8px;">मेघालय भूलेख का आधिकारिक सरकारी पोर्टल</h3>
-        <p class="text-muted mb-16" style="line-height:1.7;">
-          नागरिकों की सुरक्षा और प्रामाणिकता हेतु हमेशा राज्य सरकार के अधिकृत वेब पोर्टल का ही उपयोग करें:
-        </p>
-        <ul style="list-style:none; padding:0; margin:0; line-height:2;">
-          <li>🏛️ <strong>आधिकारिक पोर्टल:</strong> <a href="https://megrevenue.gov.in/" target="_blank" rel="noopener noreferrer" style="color:#047857; font-weight:bold; text-decoration:underline;">https://megrevenue.gov.in/ (Official Website)</a></li>
-        </ul>
-        <div class="mt-16 text-muted" style="font-size:0.85rem; border-top:1px solid #a7f3d0; padding-top:12px;">
-          ⚠️ <strong>महत्वपूर्ण अस्वीकरण:</strong> BhumiRecord एक स्वतंत्र शैक्षिक एवं सूचनात्मक पोर्टल है। यह किसी भी राज्य सरकार या राजस्व विभाग की आधिकारिक वेबसाइट नहीं है। किसी भी कानूनी साक्ष्य, रजिस्ट्री अथवा न्यायालयीन कार्य हेतु संबंधित राजस्व कार्यालय से जारी प्रमाणित प्रति ही मान्य होगी।
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="two-col" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: start;">
+          <div>
+            <h2>विश्वास और पारदर्शिता (Trust & Independence)</h2>
+            <p class="mt-16 text-muted" style="line-height: 1.8;">
+              <strong>BhumiRecord एक स्वतंत्र और गैर-सरकारी सूचनात्मक पोर्टल है।</strong> हमारा एकमात्र उद्देश्य मेघालय के किसानों और नागरिकों को राज्य के भूमि रिकॉर्ड, खाता-खसरा और राजस्व प्रक्रियाओं को सरल व स्पष्ट हिंदी भाषा में समझाना है।
+            </p>
+            <p class="mt-16 text-muted" style="line-height: 1.8;">
+              हम किसी भी सरकारी विभाग अथवा स्वायत्त जिला परिषदें (KHADC/JHADC/GHADC) व राजस्व विभाग मेघालय से संबद्ध नहीं हैं। भूमि का वास्तविक डेटा केवल राज्य सरकार के अधिकृत सर्वरों द्वारा अनुरक्षित किया जाता है। किसी भी कानूनी साक्ष्य, बैंक ऋण, रजिस्ट्री अथवा अदालती कार्यों के लिए संबंधित राजस्व तहसील अथवा अधिकृत सरकारी पोर्टल से जारी डिजिटल हस्ताक्षरित प्रमाणित प्रति ही मान्य होगी।
+            </p>
+            <div class="mt-24">
+              <a href="../disclaimer.html" style="color: var(--primary-color); font-weight: 600; text-decoration: underline;">हमारी पूरी अस्वीकरण नीति (Disclaimer) पढ़ें →</a>
+            </div>
+          </div>
+          
+          <div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; box-shadow: var(--shadow-sm);">
+              <h4 style="color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-top: 0; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;">✅</span> आधिकारिक सरकारी पोर्टल्स (Meghalaya Official)
+              </h4>
+              
+              <div class="mt-16">
+                <span class="text-muted" style="font-size: 0.85rem; display: block;">Meghalaya Land Records</span>
+                <span style="font-size: 1.05rem; color: #1e293b; font-weight: 600; display: block;">meglandrecords.gov.in</span>
+                <a href="https://meglandrecords.gov.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mt-8" style="width: 100%; display: block; text-align: center; box-sizing: border-box;">आधिकारिक पोर्टल पर जाएं →</a>
+              </div>
+              
+              <div class="mt-24">
+                <span class="text-muted" style="font-size: 0.85rem; display: block;">Meghalaya Cadastral Maps</span>
+                <span style="font-size: 1.05rem; color: #1e293b; font-weight: 600; display: block;">meghalaya.gov.in</span>
+                <a href="https://meghalaya.gov.in/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm mt-8" style="width: 100%; display: block; text-align: center; box-sizing: border-box;">भू-नक्शा पोर्टल खोलें →</a>
+              </div>
+              
+              <p class="mt-24 text-muted" style="font-size: 0.8rem; text-align: center; margin-bottom: 0;">
+                🔒 उपरोक्त लिंक आपको मेघालय सरकार के आधिकारिक सर्वरों पर ले जाएंगे।
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -713,20 +853,22 @@
       </div>
     </section>
 
-    <!-- ===== 23. FINAL CTA ===== -->
-    <section class="section-green text-center mt-48" style="padding: 48px 0; background:var(--primary-light);">
+    
+    <!-- ===== 18. FINAL CTA ===== -->
+    <section style="background: var(--primary-color); color: white; padding: 64px 0; text-align: center; margin-top: 48px;">
       <div class="container">
-        <h2>अन्य राज्यों के भूमि रिकॉर्ड की जानकारी</h2>
-        <p class="text-muted mt-8 mb-24" style="max-width:600px; margin-left:auto; margin-right:auto;">
-          भारत के विभिन्न राज्यों के भूलेख, खसरा, खतौनी, जमाबंदी और 7/12 उतारा की प्रामाणिक गाइड्स देखें।
+        <h2 style="color: white; margin-bottom: 16px;">मेघालय भूमि रिकॉर्ड की जानकारी खोजें</h2>
+        <p style="opacity: 0.9; max-width: 650px; margin: 0 auto 32px auto; font-size: 1.1rem; line-height: 1.6;">
+          मेघालय ट्रांसफर ऑफ लैंड (रेगुलेशन) एक्ट 1971 व स्वायत्त जिला परिषद नियम के नियमों, ऑनलाइन प्रक्रियाओं और अपने 12 जिलों की विशिष्ट राजस्व जानकारी को आसानी से समझें।
         </p>
-        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-          <a href="../states.html" class="btn btn-primary">सभी 36 राज्य देखें →</a>
-          <a href="uttar-pradesh.html" class="btn btn-outline">उत्तर प्रदेश भूलेख</a>
-          <a href="maharashtra.html" class="btn btn-outline">महाराष्ट्र 7/12</a>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="#how-to-check" class="btn" style="background: white; color: var(--primary-color); font-weight: 600;">प्रक्रिया दोबारा पढ़ें ↑</a>
+          <a href="#district-directory" class="btn" style="border: 1px solid white; color: white;">12 जिलेवार सूची देखें</a>
+          <a href="../states.html" class="btn" style="border: 1px solid transparent; color: white; text-decoration: underline;">सभी 36 राज्य देखें →</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- ===== FOOTER ===== -->

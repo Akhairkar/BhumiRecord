@@ -40,9 +40,9 @@
     /* Semantic Accordion */
     details.faq-item { background: #fff; border: 1px solid #eee; border-radius: 8px; margin-bottom: 12px; padding: 0; box-shadow: var(--shadow-sm); transition: all 0.2s; }
     details.faq-item summary { font-weight: 600; padding: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-    details.faq-item summary::-webkit-details-marker { display: none; }
-    details.faq-item summary::after { content: '▼'; font-size: 0.8rem; color: var(--primary-color); transition: transform 0.2s; }
-    details.faq-item[open] summary::after { transform: rotate(180deg); }
+    details.faq-item summary:-webkit-details-marker { display: none; }
+    details.faq-item summary:after { content: '▼'; font-size: 0.8rem; color: var(--primary-color); transition: transform 0.2s; }
+    details.faq-item[open] summary:after { transform: rotate(180deg); }
     details.faq-item[open] { border-left: 4px solid var(--primary-color); }
     .faq-answer-content { padding: 0 16px 16px 16px; color: #4b5563; line-height: 1.6; border-top: 1px solid #f9fafb; margin-top: 8px; padding-top: 16px; }
     
@@ -53,7 +53,7 @@
     .doc-meta span { background: #f3f4f6; padding: 4px 12px; border-radius: 12px; }
     
     .checklist li { position: relative; padding-left: 28px; margin-bottom: 12px; }
-    .checklist li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #10b981; font-weight: bold; font-size: 1.1rem; }
+    .checklist li:before { content: '✓'; position: absolute; left: 0; top: 0; color: #10b981; font-weight: bold; font-size: 1.1rem; }
   </style>
 
   <!-- Structured Data -->
@@ -239,7 +239,7 @@
         <p class="hero-sub mt-16 mx-auto" style="max-width:750px;">भू-राजस्व निदेशालय नागालैंड सरकार एवं उपायुक्त कार्यालयों से 16 जिलों के LPC, अनुच्छेद 371A, विलेज काउंसिल एनओसी और दीमापुर पट्टे की प्रामाणिक जानकारी।</p>
         
         <div class="hero-cta-group mt-24" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-          <a href="#quick-services" class="btn btn-primary">भूलेख सेवाएं देखें ↓</a>
+          <a href="#how-to-check" class="btn btn-primary">ऑनलाइन प्रक्रिया देखें ↓</a>
           <a href="#district-directory" class="btn btn-outline">जिले चुनें (16 Districts)</a>
           <a href="#official-portal" class="btn btn-outline" style="border-color:#10b981; color:#047857;">आधिकारिक पोर्टल →</a>
         </div>
@@ -360,7 +360,64 @@
       </div>
     </section>
 
-    <!-- ===== 7. DOCUMENT COMPARISON ===== -->
+    <!-- ===== 6. IMPORTANT DOCUMENTS (DEEP DIVE) ===== -->
+    <section class="container mt-48">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2>नागालैंड के प्रमुख भूमि दस्तावेज़ (विस्तृत जानकारी)</h2>
+        <p class="text-muted mb-24">नागालैंड के राजस्व रिकॉर्ड में उपयोग होने वाले 4 सबसे महत्वपूर्ण दस्तावेज़</p>
+
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>1. लैंड होल्डिंग सर्टिफिकेट (Land Holding Certificate - LHC)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: शहरी स्वामित्व अधिकार पत्र</span>
+            <span>विभाग: लैंड रेवेन्यू विभाग / जिला प्रशासन</span>
+            <span>पहचान: LHC Number / Plot No.</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            दीमापुर और कोहिमा के नगरीय क्षेत्रों में भूमि स्वामित्व और विधिक टाइटल का आधिकारिक अधिकार पत्र।
+          </p>
+        </div>
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>2. विलेज काउंसिल लैंड रिकॉर्ड (Village Council Land Record)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: पारंपरिक सामुदायिक भूमि अभिलेख</span>
+            <span>विभाग: पारंपरिक नागा ग्राम परिषदें</span>
+            <span>पहचान: Clan Allotment ID</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            ग्रामीण क्षेत्रों में अनुच्छेद 371A के तहत कबीले और परिवार के पैतृक प्रथागत भूमि अधिकार।
+          </p>
+        </div>
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>3. म्यूटेशन व ट्रांसफर सर्टिफिकेट (Mutation Certificate)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: स्वामित्व हस्तांतरण आदेश</span>
+            <span>विभाग: उपायुक्त (DC) कार्यालय</span>
+            <span>पहचान: DC Order Number</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            शहरी क्षेत्रों में डीड ऑफ ट्रांसफर के आधार पर नाम परिवर्तन का कानूनी आदेश।
+          </p>
+        </div>
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>4. टाउन कैडस्ट्रल सर्वे मैप (Town Cadastral Survey Plan)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: डिजिटल फील्ड मैप</span>
+            <span>विभाग: लैंड रिकॉर्ड्स एवं सर्वे विभाग</span>
+            <span>पहचान: Plot / Ward Number</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            दीमापुर और कोहिमा टाउनशिप का आधिकारिक फील्ड स्केच।
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!-- ===== 7. DOCUMENT COMPARISON ===== -->
     <section class="container mt-48">
       <div style="max-width: 900px; margin: 0 auto;">
         <h2>नागालैंड भूमि दस्तावेज़ों की तुलना</h2>
@@ -437,7 +494,61 @@
       </div>
     </section>
 
-    <!-- ===== 11. DISTRICT DIRECTORY ===== -->
+    <!-- ===== 9. HOW TO CHECK LAND RECORDS ===== -->
+    <section class="section-green mt-48" id="how-to-check" style="background: #f0fdf4; padding: 48px 0; border-top: 1px solid #bbf7d0; border-bottom: 1px solid #bbf7d0;">
+      <div class="container">
+        <div class="section-header text-center mb-32">
+          <h2>ऑनलाइन नागालैंड Land Holding Certificate कैसे जांचें? (Step-by-Step Guide)</h2>
+          <p class="text-muted">आधिकारिक Nagaland Land Revenue पोर्टल पर रिकॉर्ड देखने की 5-चरणीय सरल प्रक्रिया</p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 32px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid #e5e7eb;">
+          <ol class="steps" style="list-style: none; padding: 0; margin: 0;">
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">आधिकारिक लैंड रेवेन्यू पोर्टल खोलें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">ब्राउज़र में <strong>landrevenue.nagaland.gov.in</strong> पर जाएं।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">सेवा का चयन करें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">'Citizen Services' में <strong>'Land Holding Certificate Verification'</strong> विकल्प चुनें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">जिला चुनें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">ड्रॉपडाउन से अपना <strong>'District'</strong> (जैसे Kohima, Dimapur, Mokokchung) चुनें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">LHC नंबर दर्ज करें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">अपना <strong>'LHC Number'</strong> अथवा <strong>'Plot Reference Number'</strong> दर्ज करें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">5</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">सर्टिफिकेट विवरण देखें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">स्क्रीन पर अपने लैंड होल्डिंग सर्टिफिकेट की वैधता और विवरण देखें।</p>
+              </div>
+            </li>
+          </ol>
+          
+          <div class="mt-24 p-16" style="background: #f0fdfa; border-left: 4px solid #14b8a6; border-radius: 4px;">
+            <strong>💡 टिप (अनुच्छेद 371A विशेष प्रावधान):</strong> संविधान के अनुच्छेद 371A के तहत नागालैंड में भूमि और उसके संसाधनों का पूर्ण स्वामित्व स्थानीय नागा जनजातियों के पास है; गैर-नागा व्यक्तियों द्वारा भूमि क्रय प्रतिबंधित है।
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ===== 11. DISTRICT DIRECTORY ===== -->
     <section class="container mt-48" id="district-directory">
       <div class="section-header text-center mb-16">
         <h2>नागालैंड के जिले (16 Districts Directory)</h2>
@@ -604,27 +715,27 @@
 
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">अनुच्छेद 371A::</strong>
+            <strong style="color:var(--primary-color);">अनुच्छेद 371A:</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">संविधान का वह अनुच्छेद जो नागालैंड की भूमि व संसाधनों को पूर्ण स्वायत्तता देता है।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">LPC (Land Possession Certificate)::</strong>
+            <strong style="color:var(--primary-color);">LPC (Land Possession Certificate):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">उपायुक्त द्वारा जारी आधिकारिक भूमि अधिकार पत्र।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">गांवबूढ़ा (Gaonbura / GB)::</strong>
+            <strong style="color:var(--primary-color);">गांवबूढ़ा (Gaonbura / GB):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">नागा गांवों के पारंपरिक मुखिया जिन्हें सरकार द्वारा आधिकारिक मान्यता प्राप्त है।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">विलेज काउंसिल (Village Council)::</strong>
+            <strong style="color:var(--primary-color);">विलेज काउंसिल (Village Council):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">गाँव की सर्वोच्च स्वायत्त प्रशासनिक और पारंपरिक न्यायिक संस्था।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">आंग (Ang)::</strong>
+            <strong style="color:var(--primary-color);">आंग (Ang):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">मोन जिले के कोन्याक नागाओं के पारंपरिक कबीलाई राजा/प्रमुख।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">खेल (Khel)::</strong>
+            <strong style="color:var(--primary-color);">खेल (Khel):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">नागा गांवों के पारंपरिक कबीलाई मोहल्ले/क्लैन जिनका अपनी भूमि पर साझा अधिकार होता है।</p>
           </div>
         </div>
@@ -656,18 +767,47 @@
       </div>
     </section>
 
+    
     <!-- ===== 14 & 15. OFFICIAL PORTAL & TRUST (E-E-A-T) ===== -->
     <section class="container mt-48" id="official-portal">
-      <div style="max-width: 900px; margin: 0 auto; background:rgba(16, 185, 129, 0.08); border-left:4px solid #10b981; padding:24px; border-radius:4px;">
-        <h3 style="color:#047857; margin-bottom:8px;">नागालैंड भूलेख का आधिकारिक सरकारी पोर्टल</h3>
-        <p class="text-muted mb-16" style="line-height:1.7;">
-          नागरिकों की सुरक्षा और प्रामाणिकता हेतु हमेशा राज्य सरकार के अधिकृत वेब पोर्टल का ही उपयोग करें:
-        </p>
-        <ul style="list-style:none; padding:0; margin:0; line-height:2;">
-          <li>🏛️ <strong>आधिकारिक पोर्टल:</strong> <a href="https://landrevenue.nagaland.gov.in/" target="_blank" rel="noopener noreferrer" style="color:#047857; font-weight:bold; text-decoration:underline;">https://landrevenue.nagaland.gov.in/ (Official Website)</a></li>
-        </ul>
-        <div class="mt-16 text-muted" style="font-size:0.85rem; border-top:1px solid #a7f3d0; padding-top:12px;">
-          ⚠️ <strong>महत्वपूर्ण अस्वीकरण:</strong> BhumiRecord एक स्वतंत्र शैक्षिक एवं सूचनात्मक पोर्टल है। यह किसी भी राज्य सरकार या राजस्व विभाग की आधिकारिक वेबसाइट नहीं है। किसी भी कानूनी साक्ष्य, रजिस्ट्री अथवा न्यायालयीन कार्य हेतु संबंधित राजस्व कार्यालय से जारी प्रमाणित प्रति ही मान्य होगी।
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="two-col" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: start;">
+          <div>
+            <h2>विश्वास और पारदर्शिता (Trust & Independence)</h2>
+            <p class="mt-16 text-muted" style="line-height: 1.8;">
+              <strong>BhumiRecord एक स्वतंत्र और गैर-सरकारी सूचनात्मक पोर्टल है।</strong> हमारा एकमात्र उद्देश्य नागालैंड के किसानों और नागरिकों को राज्य के भूमि रिकॉर्ड, खाता-खसरा और राजस्व प्रक्रियाओं को सरल व स्पष्ट हिंदी भाषा में समझाना है।
+            </p>
+            <p class="mt-16 text-muted" style="line-height: 1.8;">
+              हम किसी भी सरकारी विभाग अथवा लैंड रेवेन्यू विभाग, नागालैंड सरकार से संबद्ध नहीं हैं। भूमि का वास्तविक डेटा केवल राज्य सरकार के अधिकृत सर्वरों द्वारा अनुरक्षित किया जाता है। किसी भी कानूनी साक्ष्य, बैंक ऋण, रजिस्ट्री अथवा अदालती कार्यों के लिए संबंधित राजस्व तहसील अथवा अधिकृत सरकारी पोर्टल से जारी डिजिटल हस्ताक्षरित प्रमाणित प्रति ही मान्य होगी।
+            </p>
+            <div class="mt-24">
+              <a href="../disclaimer.html" style="color: var(--primary-color); font-weight: 600; text-decoration: underline;">हमारी पूरी अस्वीकरण नीति (Disclaimer) पढ़ें →</a>
+            </div>
+          </div>
+          
+          <div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; box-shadow: var(--shadow-sm);">
+              <h4 style="color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-top: 0; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;">✅</span> आधिकारिक सरकारी पोर्टल्स (Nagaland Official)
+              </h4>
+              
+              <div class="mt-16">
+                <span class="text-muted" style="font-size: 0.85rem; display: block;">Nagaland Land Revenue Portal</span>
+                <span style="font-size: 1.05rem; color: #1e293b; font-weight: 600; display: block;">landrevenue.nagaland.gov.in</span>
+                <a href="https://landrevenue.nagaland.gov.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mt-8" style="width: 100%; display: block; text-align: center; box-sizing: border-box;">आधिकारिक पोर्टल पर जाएं →</a>
+              </div>
+              
+              <div class="mt-24">
+                <span class="text-muted" style="font-size: 0.85rem; display: block;">Nagaland Cadastral Maps</span>
+                <span style="font-size: 1.05rem; color: #1e293b; font-weight: 600; display: block;">landrevenue.nagaland.gov.in</span>
+                <a href="https://landrevenue.nagaland.gov.in/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm mt-8" style="width: 100%; display: block; text-align: center; box-sizing: border-box;">भू-नक्शा पोर्टल खोलें →</a>
+              </div>
+              
+              <p class="mt-24 text-muted" style="font-size: 0.8rem; text-align: center; margin-bottom: 0;">
+                🔒 उपरोक्त लिंक आपको नागालैंड सरकार के आधिकारिक सर्वरों पर ले जाएंगे।
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -745,20 +885,22 @@
       </div>
     </section>
 
-    <!-- ===== 23. FINAL CTA ===== -->
-    <section class="section-green text-center mt-48" style="padding: 48px 0; background:var(--primary-light);">
+    
+    <!-- ===== 18. FINAL CTA ===== -->
+    <section style="background: var(--primary-color); color: white; padding: 64px 0; text-align: center; margin-top: 48px;">
       <div class="container">
-        <h2>अन्य राज्यों के भूमि रिकॉर्ड की जानकारी</h2>
-        <p class="text-muted mt-8 mb-24" style="max-width:600px; margin-left:auto; margin-right:auto;">
-          भारत के विभिन्न राज्यों के भूलेख, खसरा, खतौनी, जमाबंदी और 7/12 उतारा की प्रामाणिक गाइड्स देखें।
+        <h2 style="color: white; margin-bottom: 16px;">नागालैंड भूमि रिकॉर्ड की जानकारी खोजें</h2>
+        <p style="opacity: 0.9; max-width: 650px; margin: 0 auto 32px auto; font-size: 1.1rem; line-height: 1.6;">
+          भारत का संविधान (अनुच्छेद 371A) व नागालैंड लैंड (रिक्विजिशन एंड एक्विजिशन) एक्ट के नियमों, ऑनलाइन प्रक्रियाओं और अपने 16 जिलों की विशिष्ट राजस्व जानकारी को आसानी से समझें।
         </p>
-        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-          <a href="../states.html" class="btn btn-primary">सभी 36 राज्य देखें →</a>
-          <a href="uttar-pradesh.html" class="btn btn-outline">उत्तर प्रदेश भूलेख</a>
-          <a href="maharashtra.html" class="btn btn-outline">महाराष्ट्र 7/12</a>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="#how-to-check" class="btn" style="background: white; color: var(--primary-color); font-weight: 600;">प्रक्रिया दोबारा पढ़ें ↑</a>
+          <a href="#district-directory" class="btn" style="border: 1px solid white; color: white;">16 जिलेवार सूची देखें</a>
+          <a href="../states.html" class="btn" style="border: 1px solid transparent; color: white; text-decoration: underline;">सभी 36 राज्य देखें →</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- ===== FOOTER ===== -->
