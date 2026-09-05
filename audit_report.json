@@ -30,9 +30,19 @@
       "canonical": "https://akhairkar.github.io/BhumiRecord/districts/maharashtra/nagpur.html",
       "h1_count": 1
     },
+    "states/madhya-pradesh.html": {
+      "title": "MP Bhulekh (\u090f\u092e\u092a\u0940 \u092d\u0942\u0932\u0947\u0916 \u0916\u0938\u0930\u093e \u0916\u0924\u094c\u0928\u0940) \u092e\u0927\u094d\u092f \u092a\u094d\u0930\u0926\u0947\u0936 \u0932\u0948\u0902\u0921 \u0930\u093f\u0915\u0949\u0930\u094d\u0921\u094d\u0938 \u0911\u0928\u0932\u093e\u0907\u0928 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/madhya-pradesh.html",
+      "h1_count": 1
+    },
     "states/maharashtra.html": {
       "title": "Maharashtra Bhulekh (\u092e\u0939\u093e\u092d\u0941\u0932\u0947\u0916 7/12) \u0932\u0948\u0902\u0921 \u0930\u093f\u0915\u0949\u0930\u094d\u0921 \u0911\u0928\u0932\u093e\u0907\u0928 \u0926\u0947\u0916\u0947\u0902 | BhumiRecord",
       "canonical": "https://akhairkar.github.io/BhumiRecord/states/maharashtra.html",
+      "h1_count": 1
+    },
+    "states/uttar-pradesh.html": {
+      "title": "UP Bhulekh (\u092f\u0942\u092a\u0940 \u092d\u0942\u0932\u0947\u0916 \u0916\u0924\u094c\u0928\u0940) \u0909\u0924\u094d\u0924\u0930 \u092a\u094d\u0930\u0926\u0947\u0936 \u0932\u0948\u0902\u0921 \u0930\u093f\u0915\u0949\u0930\u094d\u0921\u094d\u0938 \u0911\u0928\u0932\u093e\u0907\u0928 | BhumiRecord",
+      "canonical": "https://akhairkar.github.io/BhumiRecord/states/uttar-pradesh.html",
       "h1_count": 1
     },
     "states/maharashtra/7-12.html": {
@@ -96,21 +106,6 @@
       "index.html",
       "index.html#state-selection",
       "index.html#state-selection"
-    ],
-    [
-      "index.html",
-      "states/gujarat.html",
-      "states/gujarat.html"
-    ],
-    [
-      "index.html",
-      "states/karnataka.html",
-      "states/karnataka.html"
-    ],
-    [
-      "index.html",
-      "states/haryana.html",
-      "states/haryana.html"
     ],
     [
       "index.html",
@@ -188,7 +183,32 @@
       "index.html#state-selection"
     ],
     [
-      "states/maharashtra.html",
+      "states/madhya-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/madhya-pradesh.html",
       "../index.html#state-selection",
       "index.html#state-selection"
     ],
@@ -239,6 +259,41 @@
     ],
     [
       "states/maharashtra.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh.html",
+      "../index.html#state-selection",
+      "index.html#state-selection"
+    ],
+    [
+      "states/uttar-pradesh.html",
       "../index.html#state-selection",
       "index.html#state-selection"
     ],
