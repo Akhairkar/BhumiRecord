@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>भारत के सभी 36 राज्य और UTs भूमि रिकॉर्ड गाइड | BhumiRecord</title>
+  <meta name="description" content="भारत के सभी 28 राज्यों और 8 केंद्र शासित प्रदेशों (UTs) के भूमि रिकॉर्ड, भूलेख, खसरा, खतौनी, जमाबंदी और भू-नक्शा की राज्यवार सूची व डायरेक्ट गाइड्स।">
+  
+  <link rel="canonical" href="https://akhairkar.github.io/BhumiRecord/states.html">
+  
+  <meta property="og:title" content="भारत के सभी 36 राज्य और UTs भूमि रिकॉर्ड गाइड | BhumiRecord">
+  <meta property="og:description" content="भारत के सभी 28 राज्यों और 8 केंद्र शासित प्रदेशों (UTs) के भूमि रिकॉर्ड, भूलेख और जमाबंदी की संपूर्ण राज्यवार सूची।">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akhairkar.github.io/BhumiRecord/states.html">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    .breadcrumb { font-size: 0.9rem; color: var(--color-text-muted); padding: 16px 0; }
+    .breadcrumb a { color: var(--color-primary); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-separator { margin: 0 8px; color: var(--color-text-muted); }
+    
+    .state-search-box { width: 100%; max-width: 500px; padding: 14px 20px; border: 2px solid var(--color-border); border-radius: 30px; font-size: 1.05rem; box-shadow: var(--shadow-sm); outline: none; transition: var(--transition); }
+    .state-search-box:focus { border-color: var(--color-primary); box-shadow: 0 0 0 4px rgba(27, 107, 58, 0.15); }
+    
+    .region-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 24px 0 32px 0; }
+    .region-pill { background: var(--color-bg-card); border: 1px solid var(--color-border); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+    .region-pill:hover, .region-pill.active { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+    
+    .all-states-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .badge-soon { background: #fef3c7; color: #d97706; font-size: 0.75rem; padding: 3px 8px; border-radius: 12px; font-weight: bold; display: inline-block; border: 1px solid #fde68a; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://akhairkar.github.io/BhumiRecord/" },
+      { "@type": "ListItem", "position": 2, "name": "All States", "item": "https://akhairkar.github.io/BhumiRecord/states.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="tricolor-rule"></div>
+  <a class="skip-link" href="#main-content">मुख्य सामग्री पर जाएं</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">🏛️</span>
+        <span class="brand-text">
+          <span class="brand-name">BhumiRecord</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="मुख्य नेविगेशन">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="states.html" aria-current="page" style="color:var(--color-primary);font-weight:bold;">सभी 36 राज्य</a></li>
+          <li><a href="states/maharashtra.html">महाराष्ट्र</a></li>
+          <li><a href="states/uttar-pradesh.html">उत्तर प्रदेश</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle icon-btn" id="theme-toggle" aria-label="डार्क/लाइट मोड टॉगल करें">🌙</button>
+        <button class="nav-toggle icon-btn" id="nav-toggle" aria-label="मेनू खोलें">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">🏛️</span>
+        <span class="brand-text"><span class="brand-name">BhumiRecord</span></span>
+      </a>
+      <button class="mobile-nav-close" id="mobile-nav-close">✕</button>
+    </div>
+    <span class="mobile-section-title">नेविगेशन</span>
+    <a href="index.html">🏠 Home</a>
+    <a href="states.html" style="font-weight:bold;">📍 सभी 36 राज्य एवं UTs</a>
+    <a href="states/maharashtra.html">महाराष्ट्र 7/12</a>
+    <a href="states/uttar-pradesh.html">उत्तर प्रदेश भूलेख</a>
+    <span class="mobile-section-title">जानकारी</span>
+    <a href="disclaimer.html">⚠️ अस्वीकरण</a>
+    <a href="privacy-policy.html">🔒 गोपनीयता नीति</a>
+  </div>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> 
+      <span class="breadcrumb-separator">›</span> 
+      <span aria-current="page" style="color: var(--color-text);">All States & UTs Directory</span>
+    </nav>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="main-content" style="padding-bottom: 32px;">
+    <div class="container text-center">
+      <div class="hero-label">अखिल भारतीय भूमि अभिलेख निर्देशिका</div>
+      <h1 class="mt-16">भारत के सभी 36 राज्यों एवं UTs के भूमि रिकॉर्ड</h1>
+      <p class="hero-sub mt-16 mx-auto" style="max-width:700px;">
+        अपने राज्य का नाम खोजें और भूलेख, खसरा, खतौनी, जमाबंदी, 7/12 उतारा, भू-नक्शा एवं नामांतरण की प्रामाणिक सरकारी गाइड प्राप्त करें।
+      </p>
+      
+      <div class="mt-32">
+        <input type="text" id="stateSearch" class="state-search-box" placeholder="अपने राज्य या केंद्र शासित प्रदेश का नाम खोजें (उदा: Bihar, UP, Maharashtra)..." aria-label="राज्य का नाम खोजें">
+      </div>
+
+      <!-- Region Filter Pills -->
+      <div class="region-pills">
+        <button class="region-pill active" data-filter="all">सभी राज्य (All 36)</button>
+        <button class="region-pill" data-filter="उत्तर भारत">उत्तर भारत</button>
+        <button class="region-pill" data-filter="पश्चिम भारत">पश्चिम भारत</button>
+        <button class="region-pill" data-filter="मध्य भारत">मध्य भारत</button>
+        <button class="region-pill" data-filter="पूर्व भारत">पूर्व भारत</button>
+        <button class="region-pill" data-filter="दक्षिण भारत">दक्षिण भारत</button>
+        <button class="region-pill" data-filter="पूर्वोत्तर भारत">पूर्वोत्तर भारत</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN DIRECTORY GRID ===== -->
+  <div class="container mb-48">
+    <div class="all-states-grid" id="statesGrid">
+        <a href="states/uttar-pradesh.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Uttar Pradesh</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">उत्तर प्रदेश (UP)</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <a href="states/rajasthan.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Rajasthan</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">राजस्थान</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <a href="states/haryana.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Haryana</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">हरियाणा</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <a href="states/punjab.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Punjab</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">पंजाब</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Uttarakhand</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">उत्तराखंड</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Himachal Pradesh</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">हिमाचल प्रदेश</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Delhi</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">दिल्ली (NCT)</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Jammu and Kashmir</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">जम्मू और कश्मीर</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Ladakh</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">लद्दाख</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="उत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Chandigarh</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">चंडीगढ़</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">उत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <a href="states/maharashtra.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="पश्चिम भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Maharashtra</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">महाराष्ट्र</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">पश्चिम भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <a href="states/gujarat.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="पश्चिम भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Gujarat</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">गुजरात</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">पश्चिम भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पश्चिम भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Goa</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">गोवा</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पश्चिम भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पश्चिम भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Dadra and Nagar Haveli and Daman and Diu</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">दादरा और नगर हवेली एवं दमन और दीव</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पश्चिम भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <a href="states/madhya-pradesh.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="मध्य भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Madhya Pradesh</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">मध्य प्रदेश (MP)</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">मध्य भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <a href="states/chhattisgarh.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="मध्य भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Chhattisgarh</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">छत्तीसगढ़</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">मध्य भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <a href="states/bihar.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="पूर्व भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Bihar</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">बिहार</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्व भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्व भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">West Bengal</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">पश्चिम बंगाल (WB)</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्व भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्व भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Odisha</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">ओडिशा</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्व भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <a href="states/jharkhand.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="पूर्व भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Jharkhand</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">झारखंड</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्व भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <a href="states/karnataka.html" class="state-card state-item" style="text-decoration: none; padding: 20px; display: block; border-color: var(--color-primary);" data-region="दक्षिण भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Karnataka</span>
+            <span style="color:var(--color-primary); font-size:1.2rem;">→</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block; color:var(--color-primary); font-weight:600;">कर्नाटक</span>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center;">
+            <span class="text-muted" style="font-size: 0.8rem;">दक्षिण भारत</span>
+            <span class="badge" style="background:#dcfce7; color:#15803d; font-size:0.75rem; padding:3px 8px; border-radius:12px; font-weight:bold;">उपलब्ध (Live Hub)</span>
+          </div>
+        </a>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="दक्षिण भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Tamil Nadu</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">तमिलनाडु</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">दक्षिण भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="दक्षिण भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Andhra Pradesh</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">आंध्र प्रदेश</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">दक्षिण भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="दक्षिण भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Telangana</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">तेलंगाना</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">दक्षिण भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="दक्षिण भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Kerala</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">केरल</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">दक्षिण भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="दक्षिण भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Puducherry</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">पुदुचेरी</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">दक्षिण भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="दक्षिण भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Andaman and Nicobar Islands</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">अंडमान और निकोबार द्वीपसमूह</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">दक्षिण भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="दक्षिण भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Lakshadweep</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">लक्षद्वीप</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">दक्षिण भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्वोत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Assam</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">असम</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्वोत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्वोत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Tripura</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">त्रिपुरा</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्वोत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्वोत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Meghalaya</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">मेघालय</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्वोत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्वोत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Manipur</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">मणिपुर</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्वोत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्वोत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Nagaland</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">नागालैंड</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्वोत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्वोत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Mizoram</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">मिजोरम</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्वोत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्वोत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Arunachal Pradesh</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">अरुणाचल प्रदेश</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्वोत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+        <div class="state-card state-item" style="cursor: default; padding: 20px;" data-region="पूर्वोत्तर भारत">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start;">
+            <span class="state-name-en" style="color: var(--color-text); font-weight:700; font-size:1.15rem;">Sikkim</span>
+            <span class="badge-soon" style="margin-top:0; font-size:0.75rem;">Coming Soon</span>
+          </div>
+          <span class="state-name-hi text-muted mt-8" style="font-size: 0.95rem; display:block;">सिक्किम</span>
+          <div style="margin-top:12px;">
+            <span class="text-muted" style="font-size: 0.8rem;">पूर्वोत्तर भारत • भूलेख गाइड प्रगति पर</span>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">🏛️</span>
+            <span class="brand-text"><span class="brand-name">BhumiRecord</span></span>
+          </a>
+          <p>भारत के सभी राज्यों के भूमि रिकॉर्ड की सरल हिंदी गाइड। हम सरकारी पोर्टल नहीं हैं — हम आपकी मदद करते हैं।</p>
+        </div>
+        <div>
+          <h4>शीर्ष राज्यवार गाइड</h4>
+          <ul>
+            <li><a href="states/uttar-pradesh.html">उत्तर प्रदेश भूलेख</a></li>
+            <li><a href="states/maharashtra.html">महाराष्ट्र 7/12</a></li>
+            <li><a href="states/madhya-pradesh.html">मध्य प्रदेश भूलेख</a></li>
+            <li><a href="states/bihar.html">बिहार भूमि</a></li>
+            <li><a href="states/rajasthan.html">अपना खाता राजस्थान</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>जानकारी</h4>
+          <ul>
+            <li><a href="disclaimer.html">अस्वीकरण</a></li>
+            <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+            <li><a href="sitemap.html">साइटमैप</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="footer-year">2026</span> BhumiRecord — All Rights Reserved</span>
+        <div style="display:flex;gap:16px;">
+          <a href="sitemap.html">Sitemap</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Client-side search and region filter
+    const searchInput = document.getElementById('stateSearch');
+    const stateItems = document.querySelectorAll('.state-item');
+    const pills = document.querySelectorAll('.region-pill');
+    let activeRegion = 'all';
+
+    function filterStates() {
+      const query = searchInput.value.toLowerCase().trim();
+      stateItems.forEach(item => {
+        const en = item.querySelector('.state-name-en').textContent.toLowerCase();
+        const hi = item.querySelector('.state-name-hi').textContent.toLowerCase();
+        const region = item.getAttribute('data-region');
+        
+        const matchesQuery = en.includes(query) || hi.includes(query);
+        const matchesRegion = (activeRegion === 'all') || (region === activeRegion);
+        
+        if (matchesQuery && matchesRegion) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterStates);
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        activeRegion = pill.getAttribute('data-filter');
+        filterStates();
+      });
+    });
+  </script>
+</body>
+</html>

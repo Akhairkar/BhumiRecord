@@ -177,7 +177,7 @@
       <nav class="main-nav" aria-label="मुख्य नेविगेशन">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="#state-selection">राज्य चुनें</a></li>
+          <li><a href="states.html">राज्य चुनें (36 States)</a></li>
           <li><a href="index.html#state-selection">सभी राज्य</a></li>
         </ul>
       </nav>
@@ -280,19 +280,31 @@
       <h2 class="section-title" style="margin-bottom: 8px;">अपना राज्य चुनें</h2>
       <p style="text-align: center; color: var(--color-text-muted); margin-bottom: 32px; font-size: 1.1rem;">अपने राज्य के अनुसार भूमि रिकॉर्ड की जानकारी देखें।</p>
       
-      <div class="state-simple-grid">
-        <a href="states/maharashtra.html" class="state-btn-ux">महाराष्ट्र</a>
-        <a href="states/uttar-pradesh.html" class="state-btn-ux">उत्तर प्रदेश</a>
-        <a href="states/madhya-pradesh.html" class="state-btn-ux">मध्य प्रदेश</a>
-        <a href="index.html#state-selection" class="state-btn-ux">बिहार</a>
-        <a href="index.html#state-selection" class="state-btn-ux">राजस्थान</a>
-        <a href="index.html#state-selection" class="state-btn-ux">गुजरात</a>
-        <a href="index.html#state-selection" class="state-btn-ux">कर्नाटक</a>
-        <a href="index.html#state-selection" class="state-btn-ux">हरियाणा</a>
+      <div class="state-simple-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+        <a href="states/maharashtra.html" class="state-btn-ux">
+          <span style="font-size:1.5rem;margin-bottom:6px;">📍</span>
+          महाराष्ट्र
+        </a>
+        <a href="states/uttar-pradesh.html" class="state-btn-ux">
+          <span style="font-size:1.5rem;margin-bottom:6px;">📍</span>
+          उत्तर प्रदेश
+        </a>
+        <a href="states/madhya-pradesh.html" class="state-btn-ux">
+          <span style="font-size:1.5rem;margin-bottom:6px;">📍</span>
+          मध्य प्रदेश
+        </a>
+        <a href="states/bihar.html" class="state-btn-ux">
+          <span style="font-size:1.5rem;margin-bottom:6px;">📍</span>
+          बिहार
+        </a>
+        <a href="states/rajasthan.html" class="state-btn-ux">
+          <span style="font-size:1.5rem;margin-bottom:6px;">📍</span>
+          राजस्थान
+        </a>
       </div>
       
       <div style="text-align: center; margin-top: 32px;">
-        <a href="index.html#state-selection" class="btn btn-outline" style="border-radius: 30px; font-weight: 600;">सभी 36 राज्य और UTs देखें →</a>
+        <a href="states.html" class="btn btn-outline" style="border-radius: 30px; font-weight: 600; padding: 12px 32px;">सभी 36 राज्य और UTs देखें →</a>
       </div>
     </div>
   </section>
