@@ -461,6 +461,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="land-calculator.html" aria-current="page" style="color:var(--color-primary);font-weight:700;">🧮 जमीन कैलकुलेटर</a></li>
+          <li><a href="forms.html">📑 आवेदन प्रारूप</a></li>
           <li><a href="states.html">राज्य चुनें (36 States)</a></li>
           <li><a href="index.html#state-selection">भूलेख पोर्टल</a></li>
         </ul>
@@ -485,6 +486,7 @@
     <span class="mobile-section-title">नेविगेशन</span>
     <a href="index.html">🏠 Home</a>
     <a href="land-calculator.html" style="font-weight:bold;color:var(--color-primary);">🧮 जमीन कैलकुलेटर (4-in-1 Master Tool)</a>
+    <a href="forms.html">📑 राजस्व आवेदन फॉर्म व प्रारूप</a>
     <a href="states.html">🌐 सभी 36 राज्य एवं UTs</a>
     <a href="index.html#state-selection">📍 भूलेख पोर्टल लिंक</a>
     <span class="mobile-section-title">जानकारी</span>
@@ -1360,6 +1362,7 @@
           <h4>जमीन टूल्स व कैलकुलेटर</h4>
           <ul>
             <li><a href="land-calculator.html">जमीन नापने का कैलकुलेटर</a></li>
+            <li><a href="forms.html">राजस्व आवेदन प्रारूप केंद्र</a></li>
             <li><a href="states/tripura/kani-ganda-calculator.html">कानि-गंडा कनवर्टर (त्रिपुरा)</a></li>
             <li><a href="states/manipur/pari-sangam-calculator.html">पारी-संगाम कनवर्टर (मणिपुर)</a></li>
             <li><a href="states.html">सभी 36 राज्य भूलेख गाइड</a></li>
@@ -2074,12 +2077,55 @@
       setTimeout(() => { slipContainer.style.display = 'none'; }, 1000);
     }
 
-    // Initialize on Load
+    // Initialize on Load with URL Parameter and Hash Support
     document.addEventListener('DOMContentLoaded', function() {
+      // 1. Check URL parameters and Hash
+      const urlParams = new URLSearchParams(window.location.search);
+      const hash = window.location.hash ? window.location.hash.replace('#', '') : '';
+      const tabParam = urlParams.get('tab') || hash;
+      const stateParam = urlParams.get('state');
+
+      // State pre-selection for converter and registry
+      if (stateParam) {
+        const stateSelect = document.getElementById('convState');
+        if (stateSelect) {
+          for (let i = 0; i < stateSelect.options.length; i++) {
+            if (stateSelect.options[i].value.toLowerCase() === stateParam.toLowerCase()) {
+              stateSelect.value = stateSelect.options[i].value;
+              break;
+            }
+          }
+        }
+        const regSelect = document.getElementById('regState');
+        if (regSelect) {
+          for (let i = 0; i < regSelect.options.length; i++) {
+            if (regSelect.options[i].value.toLowerCase() === stateParam.toLowerCase()) {
+              regSelect.value = regSelect.options[i].value;
+              break;
+            }
+          }
+        }
+      }
+
       updateConverterUnits();
       calculateFieldArea();
       calculatePartition();
       calculateRegistry();
+
+      // Switch tab if specified
+      if (tabParam) {
+        const cleanTab = tabParam.startsWith('tab-') ? tabParam : 'tab-' + tabParam;
+        if (document.getElementById(cleanTab)) {
+          switchTab(cleanTab);
+          // Scroll gently to the tab box
+          const box = document.getElementById(cleanTab);
+          if (box) {
+            setTimeout(() => {
+              box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+          }
+        }
+      }
     });
   </script>
 </body>
