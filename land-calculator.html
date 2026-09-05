@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>जमीन नापने का कैलकुलेटर (Land Area & Unit Converter Calculator) | BhumiRecord</title>
+  <meta name="description" content="जमीन नापने का ऑल-इन-वन ऑनलाइन कैलकुलेटर: बीघा, बिस्वा, कट्ठा, धुर, गुंठा, कनाल, एकड़, वर्ग गज कनवर्टर, 4-भुजाओं वाले खेत का रकबा, पारिवारिक जमीन बंटवारा और रजिस्ट्री स्टाम्प ड्यूटी गणना।">
+  <meta name="keywords" content="जमीन नापने का कैलकुलेटर, bigha to acre converter, land area calculator, jamin napne ka calculator, khet ka naksha nap, parivarik batwara calculator, registry stamp duty calculator, guntha to sq ft">
+  
+  <link rel="canonical" href="https://akhairkar.github.io/BhumiRecord/land-calculator.html">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="जमीन नापने का ऑल-इन-वन कैलकुलेटर (Land Area Calculator) | BhumiRecord">
+  <meta property="og:description" content="बीघा, बिस्वा, कट्ठा, गुंठा, एकड़ कनवर्टर, टेढ़े-मेढ़े खेत का रकबा, पारिवारिक हिस्सा बंटवारा और रजिस्ट्री स्टाम्प ड्यूटी कैलकुलेटर आसान हिंदी में।">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akhairkar.github.io/BhumiRecord/land-calculator.html">
+  <meta property="og:image" content="https://akhairkar.github.io/BhumiRecord/assets/img/og-preview.png">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="जमीन नापने का कैलकुलेटर - BhumiRecord Land Calculator">
+  <meta name="twitter:description" content="बीघा, एकड़, वर्ग गज कनवर्टर, खेत नापने का फॉर्मूला, पारिवारिक बंटवारा व रजिस्ट्री खर्च कैलकुलेटर।">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    /* Calculator Page Specific Styles */
+    :root {
+      --calc-primary: #1B6B3A;
+      --calc-primary-dark: #124D2A;
+      --calc-accent: #D97706;
+      --calc-bg-card: var(--color-bg-card, #ffffff);
+      --calc-border: var(--color-border, #E5E7EB);
+    }
+    
+    .breadcrumb { font-size: 0.9rem; color: var(--color-text-muted); padding: 16px 0; }
+    .breadcrumb a { color: var(--color-primary); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-separator { margin: 0 8px; color: var(--color-text-muted); }
+    
+    .calc-hero {
+      background: linear-gradient(135deg, #1B6B3A 0%, #0d3d20 100%);
+      color: #ffffff;
+      padding: 48px 20px;
+      text-align: center;
+      border-radius: var(--radius-md, 12px);
+      margin-bottom: 32px;
+    }
+    .calc-hero h1 { font-size: 2.3rem; margin-bottom: 14px; font-weight: 700; color: #ffffff; }
+    .calc-hero p { font-size: 1.15rem; max-width: 760px; margin: 0 auto; opacity: 0.95; line-height: 1.6; color: #e8f5ed; }
+    
+    /* Navigation Tabs */
+    .tab-nav-wrapper {
+      background: var(--color-bg-alt, #f3f4f2);
+      border-radius: 40px;
+      padding: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0 auto 32px auto;
+      max-width: 960px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .tab-btn {
+      flex: 1 1 200px;
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      color: var(--color-text);
+      border-radius: 30px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+      font-family: var(--font-body);
+    }
+    .tab-btn:hover {
+      background: rgba(255,255,255,0.6);
+      color: var(--color-primary);
+    }
+    .tab-btn.active {
+      background: var(--color-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(27,107,58,0.3);
+    }
+    
+    /* Tab Content Box */
+    .calc-box {
+      background: var(--color-bg-card, #ffffff);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      padding: 32px;
+      margin-bottom: 48px;
+      transition: all 0.3s ease;
+    }
+    .calc-tab-panel { display: none; }
+    .calc-tab-panel.active { display: block; animation: fadeIn 0.3s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    
+    /* Grid Inputs */
+    .calc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .calc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .calc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    
+    @media (max-width: 768px) {
+      .calc-grid-2, .calc-grid-3, .calc-grid-4 { grid-template-columns: 1fr; }
+      .calc-hero h1 { font-size: 1.8rem; }
+      .calc-box { padding: 20px; }
+    }
+    
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; color: var(--color-text); }
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 1.05rem;
+      border: 2px solid var(--color-border);
+      border-radius: 10px;
+      background: var(--color-bg);
+      color: var(--color-text);
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      font-family: var(--font-body);
+    }
+    .form-control:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(27,107,58,0.15);
+    }
+    .form-hint { font-size: 0.82rem; color: var(--color-text-muted); margin-top: 6px; }
+    
+    /* Results Display Card */
+    .results-card {
+      background: linear-gradient(to bottom right, #f8fdf9, #f1f8f3);
+      border: 2px solid #c7e8d3;
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 28px;
+    }
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 1px solid #d5edd9;
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+    .results-title { font-size: 1.25rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 8px; }
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+    .result-item {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #d5edd9;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      text-align: center;
+    }
+    .result-value { font-size: 1.45rem; font-weight: 700; color: #124D2A; word-break: break-word; }
+    .result-unit { font-size: 0.85rem; color: #4b5563; margin-top: 4px; font-weight: 500; }
+    
+    /* Action Bar (Viral Features) */
+    .action-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px dashed #c7e8d3;
+      justify-content: center;
+    }
+    .btn-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+      border: none;
+      padding: 11px 22px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .btn-whatsapp:hover { background: #1eb956; transform: translateY(-2px); color: #ffffff; }
+    
+    .btn-print {
+      background: #374151;
+      color: #ffffff;
+      border: none;
+      padding: 11px 22px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .btn-print:hover { background: #1f2937; transform: translateY(-2px); }
+    
+    .btn-copy {
+      background: #ffffff;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .btn-copy:hover { background: var(--color-primary-light); }
+    
+    /* Heir Visual Bar */
+    .heir-bar-container {
+      margin-top: 24px;
+      background: #e5e7eb;
+      height: 28px;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+    }
+    .heir-bar-segment {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: bold;
+      transition: width 0.3s ease;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+    
+    /* Table Styling for Content */
+    .seo-table-wrap { overflow-x: auto; margin: 24px 0; }
+    .seo-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--color-bg-card);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .seo-table th, .seo-table td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.95rem;
+    }
+    .seo-table th {
+      background: var(--color-primary);
+      color: #ffffff;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .seo-table tr:hover { background: var(--color-primary-light); }
+    
+    /* FAQ Accordion Semantic */
+    details.faq-item-ux {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+    details.faq-item-ux summary {
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 18px 20px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--color-text);
+      transition: background 0.2s ease;
+    }
+    details.faq-item-ux summary:hover { background: var(--color-primary-light); }
+    details.faq-item-ux summary::-webkit-details-marker { display: none; }
+    details.faq-item-ux summary::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: var(--color-primary);
+    }
+    details.faq-item-ux[open] summary::after { content: '−'; }
+    details.faq-item-ux .faq-answer-content {
+      padding: 0 20px 20px 20px;
+      color: var(--color-text);
+      line-height: 1.7;
+      border-top: 1px solid var(--color-border);
+      margin-top: 6px;
+      padding-top: 16px;
+      font-size: 0.95rem;
+    }
+    
+    /* Toast Notification */
+    #copyToast {
+      visibility: hidden;
+      min-width: 250px;
+      background-color: #1f2937;
+      color: #fff;
+      text-align: center;
+      border-radius: 30px;
+      padding: 12px 24px;
+      position: fixed;
+      z-index: 1000;
+      left: 50%;
+      bottom: 30px;
+      transform: translateX(-50%);
+      font-size: 0.95rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    #copyToast.show { visibility: visible; animation: fadein 0.3s, fadeout 0.3s 2.2s; }
+    @keyframes fadein { from { bottom: 0; opacity: 0; } to { bottom: 30px; opacity: 1; } }
+    @keyframes fadeout { from { bottom: 30px; opacity: 1; } to { bottom: 0; opacity: 0; } }
+
+    /* Printable Slip Styles */
+    @media print {
+      body * { visibility: hidden; }
+      #printableSlip, #printableSlip * { visibility: visible; }
+      #printableSlip {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: white;
+        color: black;
+        padding: 20px;
+      }
+    }
+  </style>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "होम (Home)",
+        "item": "https://akhairkar.github.io/BhumiRecord/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "जमीन कैलकुलेटर (Land Calculator)",
+        "item": "https://akhairkar.github.io/BhumiRecord/land-calculator.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BhumiRecord Land Area & Partition Calculator",
+    "url": "https://akhairkar.github.io/BhumiRecord/land-calculator.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "description": "भारत के सभी राज्यों के लिए ऑल-इन-वन जमीन नापने, बीघा-एकड़ कनवर्टर, पारिवारिक बंटवारा व रजिस्ट्री स्टाम्प ड्यूटी कैलकुलेटर।",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "1 बीघा में कितने वर्ग फुट (Square Feet) और एकड़ होते हैं?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "भारत में 1 बीघा का मान राज्य और क्षेत्र के अनुसार भिन्न होता है। मानक पक्का बीघा (उत्तर प्रदेश, राजस्थान, पंजाब) में 27,225 वर्ग फुट (3,025 वर्ग गज या 0.625 एकड़) होते हैं। वहीं मध्य प्रदेश में 1 बीघा 12,000 वर्ग फुट (0.275 एकड़), पश्चिम बंगाल व असम में 14,400 वर्ग फुट (0.33 एकड़), तथा पश्चिमी उत्तर प्रदेश में कच्चा बीघा 9,075 वर्ग फुट (0.208 एकड़) होता है।"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "टेढ़े-मेढ़े या 4 अलग-अलग भुजाओं वाले खेत का रकबा कैसे निकाला जाता है?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "पटवारी व राजस्व विभाग में 4 अलग-अलग भुजाओं वाले खेत का रकबा औसत विधि (Average Formula) से निकाला जाता है: औसत लंबाई = (उत्तर + दक्षिण) ÷ 2 और औसत चौड़ाई = (पूर्व + पश्चिम) ÷ 2। फिर कुल रकबा = औसत लंबाई × औसत चौड़ाई। अधिक सटीक व कानूनी सीमांकन के लिए खेत के बीच एक विकर्ण (Diagonal) खींचकर उसे दो त्रिभुजों में बांटा जाता है और हेरॉन सूत्र [S = √s(s-a)(s-b)(s-c)] से दोनों का रकबा जोड़ दिया जाता है।"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "पारिवारिक जमीन का कानूनी बंटवारा (Partition) कैसे करें?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "पारिवारिक जमीन बंटवारे के दो प्रमुख तरीके हैं: 1. आपसी सहमति से पारिवारिक समझौता (Family Settlement Deed) बनाकर सब-रजिस्ट्रार कार्यालय में पंजीकृत करवाना और तहसील में धारा 34 नामांतरण कराना। 2. सहमति न होने पर राजस्व न्यायालय (SDM Court) में धारा 116 / 176 के तहत कुर्रा बंटवारा वाद (Partition Suit) दायर करना, जिसमें कोर्ट पटवारी से कुर्रा बनवाकर प्रत्येक हिस्सेदार को अलग खतौनी खाता जारी करता है।"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "जमीन रजिस्ट्री में स्टाम्प ड्यूटी और रजिस्ट्री खर्च कैसे तय होता है?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "रजिस्ट्री खर्च जमीन के सर्किल रेट (सरकारी न्यूनतम मूल्य) या वास्तविक बिक्री मूल्य (जो भी अधिक हो) पर तय होता है। स्टाम्प ड्यूटी राज्यों के अनुसार सामान्यतः 5% से 7.5% होती है। अधिकांश राज्यों (जैसे यूपी, राजस्थान, एमपी, दिल्ली) में महिला खरीददार को 1% से 2% की विशेष छूट मिलती है। इसके अतिरिक्त 1% से 2% पंजीकरण शुल्क (Registration Fee) देय होता है।"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "1 एकड़, 1 हेक्टेयर और 1 गुंठा में क्या संबंध है?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 एकड़ में 43,560 वर्ग फुट (4,840 वर्ग गज या 40 गुंठा) होते हैं। 1 हेक्टेयर में 10,000 वर्ग मीटर (1,07,639 वर्ग फुट या 2.471 एकड़ या लगभग 98.84 गुंठा) होते हैं। 1 गुंठा (महाराष्ट्र व गुजरात में प्रचलित) 1,089 वर्ग फुट (121 वर्ग गज या 1 आर) के बराबर होता है।"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "जमीन खरीदते समय सरकारी रिकॉर्ड में रकबा कैसे सत्यापित करें?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "जमीन का सौदा करने से पहले अपने राज्य के आधिकारिक भूलेख पोर्टल (जैसे upbhulekh.gov.in, mahabhulekh.maharashtra.gov.in) पर जाकर खसरा-खतौनी नकल देखें। वहां दर्ज क्षेत्रफल (हेक्टेयर या बीघा में) का मिलान विक्रेता के बैनामे से करें, भू-नक्शा पोर्टल पर गाटा का नक्शा देखें, और उप-पंजीयक कार्यालय में पिछले 12 से 30 वर्षों का भार-मुक्त प्रमाण पत्र (Encumbrance Certificate - Form 15/16) अवश्य जांचें।"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="tricolor-rule"></div>
+  <a class="skip-link" href="#main-content">मुख्य सामग्री पर जाएं</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">🏛️</span>
+        <span class="brand-text">
+          <span class="brand-name">BhumiRecord</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="मुख्य नेविगेशन">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="land-calculator.html" aria-current="page" style="color:var(--color-primary);font-weight:700;">🧮 जमीन कैलकुलेटर</a></li>
+          <li><a href="states.html">राज्य चुनें (36 States)</a></li>
+          <li><a href="index.html#state-selection">भूलेख पोर्टल</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle icon-btn" id="theme-toggle" aria-label="डार्क/लाइट मोड टॉगल करें">🌙</button>
+        <button class="nav-toggle icon-btn" id="nav-toggle" aria-label="मेनू खोलें">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">🏛️</span>
+        <span class="brand-text"><span class="brand-name">BhumiRecord</span></span>
+      </a>
+      <button class="mobile-nav-close" id="mobile-nav-close">✕</button>
+    </div>
+    <span class="mobile-section-title">नेविगेशन</span>
+    <a href="index.html">🏠 Home</a>
+    <a href="land-calculator.html" style="font-weight:bold;color:var(--color-primary);">🧮 जमीन कैलकुलेटर (4-in-1 Master Tool)</a>
+    <a href="states.html">🌐 सभी 36 राज्य एवं UTs</a>
+    <a href="index.html#state-selection">📍 भूलेख पोर्टल लिंक</a>
+    <span class="mobile-section-title">जानकारी</span>
+    <a href="disclaimer.html">⚠️ अस्वीकरण</a>
+    <a href="privacy-policy.html">🔒 गोपनीयता नीति</a>
+  </div>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> 
+      <span class="breadcrumb-separator">›</span> 
+      <span aria-current="page" style="color: var(--color-text); font-weight:600;">जमीन नापने का ऑल-इन-वन कैलकुलेटर</span>
+    </nav>
+  </div>
+
+  <!-- ===== MAIN CONTAINER ===== -->
+  <main class="container" id="main-content">
+    
+    <!-- Hero Banner -->
+    <div class="calc-hero">
+      <h1>जमीन नापने का कैलकुलेटर (Master Land Calculator)</h1>
+      <p>खेत व प्लॉट का सटीक क्षेत्रफल नापें, राज्यवार बीघा-एकड़-गुंठा बदलें, भाइयों और वारिसों का पारिवारिक हिस्सा बांटें, और जमीन रजिस्ट्री स्टाम्प ड्यूटी का तुरंत आकलन करें।</p>
+    </div>
+
+    <!-- 4 Tabs Switcher -->
+    <div class="tab-nav-wrapper" role="tablist">
+      <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab('tab-converter')">
+        <span>🔄</span> 1. इकाई कनवर्टर (Unit Converter)
+      </button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('tab-field')">
+        <span>📐</span> 2. खेत व प्लॉट रकबा (Plot Area)
+      </button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('tab-partition')">
+        <span>👨‍👩‍👧‍👦</span> 3. पारिवारिक बंटवारा (Land Share)
+      </button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('tab-registry')">
+        <span>📑</span> 4. रजिस्ट्री व स्टाम्प ड्यूटी (Stamp Duty)
+      </button>
+    </div>
+
+    <!-- ===== TAB 1: राज्यवार इकाई कनवर्टर ===== -->
+    <div id="tab-converter" class="calc-box calc-tab-panel active">
+      <h2 style="font-size: 1.4rem; color: var(--color-primary); margin-bottom: 8px;">
+        🔄 राज्यवार जमीन इकाई कनवर्टर (State-Wise Land Unit Converter)
+      </h2>
+      <p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+        उत्तर प्रदेश, बिहार, मध्य प्रदेश, राजस्थान, हरियाणा, महाराष्ट्र आदि राज्यों के अनुसार स्थानीय इकाइयों को वर्ग फुट, वर्ग गज, एकड़ और हेक्टेयर में तुरंत बदलें।
+      </p>
+
+      <div class="calc-grid-3">
+        <div class="form-group">
+          <label class="form-label" for="convState">अपना राज्य चुनें:</label>
+          <select id="convState" class="form-control" onchange="updateConverterUnits()">
+            <option value="national">राष्ट्रीय / मानक (National Standard)</option>
+            <option value="up">उत्तर प्रदेश (UP - पक्का/कच्चा बीघा, बिस्वा)</option>
+            <option value="bihar">बिहार (Bihar - बीघा, कट्ठा, धुर)</option>
+            <option value="mp">मध्य प्रदेश (MP - बीघा, बिस्वा)</option>
+            <option value="rajasthan">राजस्थान (Rajasthan - पक्का/कच्चा बीघा)</option>
+            <option value="punjab_haryana">पंजाब / हरियाणा (किल्ला, कनाल, मरला)</option>
+            <option value="maharashtra">महाराष्ट्र / गोवा (गुंठा, आर, हेक्टेयर)</option>
+            <option value="gujarat">गुजरात (वीघा, गुंठा, एकड़)</option>
+            <option value="wb">पश्चिम बंगाल (बीघा, कट्ठा, छटाक, डेसिमल)</option>
+            <option value="assam">असम (बीघा, कथा, लेसा)</option>
+            <option value="tripura">त्रिपुरा (द्रोण, कानि, गंडा, करा)</option>
+            <option value="manipur">मणिपुर (पारी, संगाम, लूकराक)</option>
+            <option value="south">दक्षिण भारत (ग्राउंड, सेंट, अंकनम, कुझी)</option>
+          </select>
+          <div class="form-hint">राज्य के अनुसार स्थानीय इकाइयां अपने आप लोड हो जाएंगी।</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="convValue">रकबा (क्षेत्रफल मान दर्ज करें):</label>
+          <input type="number" id="convValue" class="form-control" value="1" min="0" step="any" oninput="calculateUnitConversion()">
+          <div class="form-hint">उदा. 1 बीघा, 2.5 एकड़, 5 कट्ठा, 1200 वर्ग फुट</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="convUnit">माप की वर्तमान इकाई (From Unit):</label>
+          <select id="convUnit" class="form-control" onchange="calculateUnitConversion()">
+            <!-- Populated via JS -->
+          </select>
+          <div class="form-hint">जिस इकाई में आपकी जमीन दर्ज है।</div>
+        </div>
+      </div>
+
+      <!-- Live Conversion Results -->
+      <div class="results-card" id="convResultBox">
+        <div class="results-header">
+          <div class="results-title">
+            <span>📊</span> रूपांतरण परिणाम (Instant Converted Results)
+          </div>
+          <span style="font-size:0.85rem; background:#e8f5ed; color:#124D2A; padding:4px 12px; border-radius:20px; font-weight:600;">
+            लाइव गणना (Zero Reload)
+          </span>
+        </div>
+
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="result-value" id="resSqFt">0</div>
+            <div class="result-unit">वर्ग फुट (Square Feet)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resGaj">0</div>
+            <div class="result-unit">वर्ग गज (Square Yards / गज)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resSqMt">0</div>
+            <div class="result-unit">वर्ग मीटर (Square Meters)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resAcre">0</div>
+            <div class="result-unit">एकड़ (Acres)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resHectare">0</div>
+            <div class="result-unit">हेक्टेयर (Hectares)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resLocal1">0</div>
+            <div class="result-unit" id="resLocal1Name">स्थानीय बीघा (Bigha)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resLocal2">0</div>
+            <div class="result-unit" id="resLocal2Name">स्थानीय उप-इकाई (Subunit)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resGuntha">0</div>
+            <div class="result-unit">गुंठा / सेंट (Guntha / Cent)</div>
+          </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div class="action-bar">
+          <button class="btn-whatsapp" onclick="shareWhatsApp('converter')">
+            <span>📲</span> व्हाट्सएप पर शेयर करें
+          </button>
+          <button class="btn-copy" onclick="copyResults('converter')">
+            <span>📋</span> परिणाम कॉपी करें
+          </button>
+          <button class="btn-print" onclick="printSlip('converter')">
+            <span>🖨️</span> पर्ची प्रिंट / PDF सेव करें
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 2: खेत व प्लॉट क्षेत्रफल नाप ===== -->
+    <div id="tab-field" class="calc-box calc-tab-panel">
+      <h2 style="font-size: 1.4rem; color: var(--color-primary); margin-bottom: 8px;">
+        📐 खेत व प्लॉट का रकबा नापें (Plot & Field Area Calculator)
+      </h2>
+      <p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+        सीधे आयताकार खेत अथवा 4 अलग-अलग भुजाओं (उत्तर, दक्षिण, पूर्व, पश्चिम) वाले टेढ़े-मेढ़े खेत का वास्तविक क्षेत्रफल व बीघा-एकड़ निकालें।
+      </p>
+
+      <div class="form-group" style="max-width: 400px; margin-bottom: 24px;">
+        <label class="form-label">खेत या प्लॉट का आकार चुनें:</label>
+        <div style="display:flex; gap:16px;">
+          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-weight:600;">
+            <input type="radio" name="plotShape" value="rect" checked onchange="togglePlotShape()"> सीधा आयताकार (L × W)
+          </label>
+          <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-weight:600;">
+            <input type="radio" name="plotShape" value="quad" onchange="togglePlotShape()"> 4-भुजाओं वाला टेढ़ा-मेढ़ा
+          </label>
+        </div>
+      </div>
+
+      <!-- Unit of input -->
+      <div class="form-group" style="max-width: 320px; margin-bottom: 24px;">
+        <label class="form-label" for="fieldDimUnit">नापने का पैमाना (इकाई):</label>
+        <select id="fieldDimUnit" class="form-control" onchange="calculateFieldArea()">
+          <option value="feet">फुट (Feet - फीट)</option>
+          <option value="meter">मीटर (Meters)</option>
+          <option value="gaj">गज (Yards - गज़)</option>
+          <option value="kadi">कड़ी / जरीब (Gunter's Link - 0.66 ft)</option>
+        </select>
+      </div>
+
+      <!-- Mode A: Rectangular -->
+      <div id="rectPlotInputs" class="calc-grid-2">
+        <div class="form-group">
+          <label class="form-label" for="rectLength">लंबाई (Length):</label>
+          <input type="number" id="rectLength" class="form-control" value="120" min="0" step="any" oninput="calculateFieldArea()">
+          <div class="form-hint">खेत या प्लॉट की सीधी लंबाई</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="rectWidth">चौड़ाई (Width):</label>
+          <input type="number" id="rectWidth" class="form-control" value="80" min="0" step="any" oninput="calculateFieldArea()">
+          <div class="form-hint">खेत या प्लॉट की सीधी चौड़ाई</div>
+        </div>
+      </div>
+
+      <!-- Mode B: Irregular Quadrilateral -->
+      <div id="quadPlotInputs" class="calc-grid-4" style="display:none;">
+        <div class="form-group">
+          <label class="form-label" for="quadNorth">उत्तर भुजा (North Side):</label>
+          <input type="number" id="quadNorth" class="form-control" value="120" min="0" step="any" oninput="calculateFieldArea()">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="quadSouth">दक्षिण भुजा (South Side):</label>
+          <input type="number" id="quadSouth" class="form-control" value="130" min="0" step="any" oninput="calculateFieldArea()">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="quadEast">पूर्व भुजा (East Side):</label>
+          <input type="number" id="quadEast" class="form-control" value="85" min="0" step="any" oninput="calculateFieldArea()">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="quadWest">पश्चिम भुजा (West Side):</label>
+          <input type="number" id="quadWest" class="form-control" value="75" min="0" step="any" oninput="calculateFieldArea()">
+        </div>
+      </div>
+
+      <!-- State for bigha representation -->
+      <div class="form-group" style="max-width: 360px; margin-top: 16px;">
+        <label class="form-label" for="fieldStateRef">बीघा में दिखाने के लिए राज्य चुनें:</label>
+        <select id="fieldStateRef" class="form-control" onchange="calculateFieldArea()">
+          <option value="up_pucca">उत्तर प्रदेश / राजस्थान (मानक पक्का बीघा = 27,225 sq ft)</option>
+          <option value="up_kacha">उत्तर प्रदेश (कच्चा बीघा = 9,075 sq ft)</option>
+          <option value="bihar">बिहार (बीघा = 27,220 sq ft, 20 कट्ठा)</option>
+          <option value="mp">मध्य प्रदेश (बीघा = 12,000 sq ft)</option>
+          <option value="haryana_killa">हरियाणा / पंजाब (1 किल्ला = 8 कनाल = 43,560 sq ft)</option>
+          <option value="mh_guntha">महाराष्ट्र (1 एकड़ = 40 गुंठा = 1,089 sq ft/गुंठा)</option>
+          <option value="wb">पश्चिम बंगाल (बीघा = 14,400 sq ft, 20 कट्ठा)</option>
+          <option value="gujarat_vigha">गुजरात (वीघा = 17,424 sq ft)</option>
+        </select>
+      </div>
+
+      <!-- Plot Result Box -->
+      <div class="results-card" id="fieldResultBox">
+        <div class="results-header">
+          <div class="results-title">
+            <span>🗺️</span> खेत / प्लॉट क्षेत्रफल गणना (Calculated Land Area)
+          </div>
+          <span style="font-size:0.85rem; background:#dbeafe; color:#1e40af; padding:4px 12px; border-radius:20px; font-weight:600;" id="fieldCalcMethodBadge">
+            सीधा आयताकार (L × W)
+          </span>
+        </div>
+
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="result-value" id="resFieldSqFt">0</div>
+            <div class="result-unit">कुल वर्ग फुट (Sq. Ft.)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resFieldGaj">0</div>
+            <div class="result-unit">कुल वर्ग गज (Gaj / Sq. Yards)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resFieldSqMt">0</div>
+            <div class="result-unit">कुल वर्ग मीटर (Sq. Meters)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resFieldAcre">0</div>
+            <div class="result-unit">एकड़ (Acres)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resFieldHectare">0</div>
+            <div class="result-unit">हेक्टेयर (Hectares)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resFieldBigha">0</div>
+            <div class="result-unit" id="resFieldBighaLabel">बीघा / किल्ला</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resFieldSubunit">0</div>
+            <div class="result-unit" id="resFieldSubunitLabel">बिस्वा / कट्ठा / कनाल</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resFieldGuntha">0</div>
+            <div class="result-unit">गुंठा (Guntha - MH/GJ)</div>
+          </div>
+        </div>
+
+        <div class="action-bar">
+          <button class="btn-whatsapp" onclick="shareWhatsApp('field')">
+            <span>📲</span> व्हाट्सएप पर शेयर करें
+          </button>
+          <button class="btn-copy" onclick="copyResults('field')">
+            <span>📋</span> परिणाम कॉपी करें
+          </button>
+          <button class="btn-print" onclick="printSlip('field')">
+            <span>🖨️</span> पर्ची प्रिंट / PDF सेव करें
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 3: पारिवारिक जमीन बंटवारा व हिस्सा ===== -->
+    <div id="tab-partition" class="calc-box calc-tab-panel">
+      <h2 style="font-size: 1.4rem; color: var(--color-primary); margin-bottom: 8px;">
+        👨‍👩‍👧‍👦 पारिवारिक जमीन बंटवारा कैलकुलेटर (Land Partition & Heir Shares)
+      </h2>
+      <p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+        पैतृक भूमि का सभी कानूनी वारिसों, भाइयों या बहनों में सटीक रकबा (वर्ग फुट, गज, बीघा व एकड़) में बंटवारा करें।
+      </p>
+
+      <div class="calc-grid-3">
+        <div class="form-group">
+          <label class="form-label" for="partTotalArea">कुल पैतृक जमीन का रकबा दर्ज करें:</label>
+          <input type="number" id="partTotalArea" class="form-control" value="5" min="0" step="any" oninput="calculatePartition()">
+          <div class="form-hint">खतौनी या बैनामे में दर्ज कुल क्षेत्रफल</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="partUnit">रकबे की इकाई (Unit):</label>
+          <select id="partUnit" class="form-control" onchange="calculatePartition()">
+            <option value="bigha_pucca">बीघा (पक्का - 27,225 sq ft)</option>
+            <option value="bigha_kacha">बीघा (कच्चा - 9,075 sq ft)</option>
+            <option value="bigha_mp">बीघा (मध्य प्रदेश - 12,000 sq ft)</option>
+            <option value="acre" selected>एकड़ (Acre - 43,560 sq ft)</option>
+            <option value="hectare">हेक्टेयर (Hectare - 10,000 sq mt)</option>
+            <option value="guntha">गुंठा (Guntha - 1,089 sq ft)</option>
+            <option value="sqft">वर्ग फुट (Square Feet)</option>
+            <option value="gaj">वर्ग गज (Gaj / Sq. Yards)</option>
+            <option value="katha_bihar">कट्ठा (बिहार - 1,361 sq ft)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="partMode">बंटवारे का प्रकार:</label>
+          <select id="partMode" class="form-control" onchange="togglePartitionMode()">
+            <option value="equal" selected>बराबर हिस्सेदार (Equal Heirs: 1/2, 1/3, 1/4...)</option>
+            <option value="custom">असमान / कस्टम हिस्सा (Custom Fractions / %)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Equal Heirs Input -->
+      <div id="equalHeirsDiv" class="form-group" style="max-width: 320px;">
+        <label class="form-label" for="partHeirCount">कुल हिस्सेदारों / वारिसों की संख्या:</label>
+        <input type="number" id="partHeirCount" class="form-control" value="3" min="1" max="20" step="1" oninput="calculatePartition()">
+        <div class="form-hint">उदा. 2 भाई, 3 वारिस, 4 हिस्सेदार आदि</div>
+      </div>
+
+      <!-- Custom Heirs Input -->
+      <div id="customHeirsDiv" style="display:none; margin-bottom: 24px;">
+        <p style="font-weight:600; font-size:0.95rem; margin-bottom:8px;">हिस्सेदारों के नाम व अंश/अनुपात दर्ज करें (जैसे 1/2, 1/4, 1/4 या 50, 25, 25):</p>
+        <div id="customHeirsList">
+          <!-- Populated by JS -->
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="addCustomHeirRow()" style="margin-top:8px;">+ एक और हिस्सेदार जोड़ें</button>
+      </div>
+
+      <!-- Partition Result Box -->
+      <div class="results-card" id="partResultBox">
+        <div class="results-header">
+          <div class="results-title">
+            <span>🤝</span> हिस्सेदारी का सटीक विवरण (Partition Breakdown)
+          </div>
+          <span style="font-size:0.85rem; background:#fef3c7; color:#92400e; padding:4px 12px; border-radius:20px; font-weight:600;" id="partShareBadge">
+            प्रति हिस्सेदार: 1/3 हिस्सा (33.33%)
+          </span>
+        </div>
+
+        <!-- Visual Distribution Bar -->
+        <div style="margin-bottom: 20px;">
+          <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--color-text-muted);">
+            विज़ुअल भूमि हिस्सेदारी (Visual Land Share Distribution):
+          </div>
+          <div class="heir-bar-container" id="heirVisualBar">
+            <!-- Segments populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Table of shares -->
+        <div class="seo-table-wrap" style="margin: 16px 0;">
+          <table class="seo-table" id="heirShareTable">
+            <thead>
+              <tr>
+                <th>हिस्सेदार / वारिस</th>
+                <th>हिस्सा अनुपात (%)</th>
+                <th>रकबा (वर्ग फुट)</th>
+                <th>रकबा (वर्ग गज)</th>
+                <th>रकबा (एकड़ में)</th>
+                <th>मूल इकाई में हिस्सा</th>
+              </tr>
+            </thead>
+            <tbody id="heirTableBody">
+              <!-- Populated via JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="action-bar">
+          <button class="btn-whatsapp" onclick="shareWhatsApp('partition')">
+            <span>📲</span> व्हाट्सएप पर शेयर करें
+          </button>
+          <button class="btn-copy" onclick="copyResults('partition')">
+            <span>📋</span> परिणाम कॉपी करें
+          </button>
+          <button class="btn-print" onclick="printSlip('partition')">
+            <span>🖨️</span> बंटवारा पर्ची प्रिंट करें
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 4: रजिस्ट्री व स्टाम्प ड्यूटी अनुमानक ===== -->
+    <div id="tab-registry" class="calc-box calc-tab-panel">
+      <h2 style="font-size: 1.4rem; color: var(--color-primary); margin-bottom: 8px;">
+        📑 जमीन रजिस्ट्री व स्टाम्प ड्यूटी अनुमानक (Stamp Duty & Registration Calculator)
+      </h2>
+      <p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+        प्लॉट, मकान या खेत की खरीद पर लगने वाले स्टाम्प शुल्क (Stamp Duty), पंजीयन फीस और महिला खरीददार की छूट का तुरंत हिसाब लगाएं।
+      </p>
+
+      <div class="calc-grid-4">
+        <div class="form-group">
+          <label class="form-label" for="regState">राज्य चुनें:</label>
+          <select id="regState" class="form-control" onchange="calculateRegistry()">
+            <option value="up">उत्तर प्रदेश (UP)</option>
+            <option value="mp">मध्य प्रदेश (MP)</option>
+            <option value="bihar">बिहार (Bihar)</option>
+            <option value="rajasthan">राजस्थान (Rajasthan)</option>
+            <option value="maharashtra">महाराष्ट्र (Maharashtra)</option>
+            <option value="haryana">हरियाणा (Haryana)</option>
+            <option value="punjab">पंजाब (Punjab)</option>
+            <option value="delhi">दिल्ली (Delhi)</option>
+            <option value="gujarat">गुजरात (Gujarat)</option>
+            <option value="wb">पश्चिम बंगाल (West Bengal)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regLocality">क्षेत्र का प्रकार:</label>
+          <select id="regLocality" class="form-control" onchange="calculateRegistry()">
+            <option value="urban">शहरी / नगर निगम (Urban)</option>
+            <option value="rural">ग्रामीण (Rural)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regGender">खरीददार का प्रकार:</label>
+          <select id="regGender" class="form-control" onchange="calculateRegistry()">
+            <option value="male">पुरुष (Male Buyer)</option>
+            <option value="female">महिला (Female Buyer - छूट के साथ)</option>
+            <option value="joint">संयुक्त / Joint (पुरुष + महिला)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regPropValue">संपत्ति का मूल्य (सर्किल रेट या सौदा ₹):</label>
+          <input type="number" id="regPropValue" class="form-control" value="2000000" min="0" step="10000" oninput="calculateRegistry()">
+          <div class="form-hint">उदा. ₹ 20,00,000 (20 लाख)</div>
+        </div>
+      </div>
+
+      <!-- Registry Result Box -->
+      <div class="results-card" id="registryResultBox">
+        <div class="results-header">
+          <div class="results-title">
+            <span>💰</span> अनुमानित सरकारी शुल्क (Estimated Government Charges)
+          </div>
+          <span style="font-size:0.85rem; background:#fee2e2; color:#991b1b; padding:4px 12px; border-radius:20px; font-weight:600;" id="regDutyRateBadge">
+            स्टाम्प ड्यूटी दर: 7%
+          </span>
+        </div>
+
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="result-value" id="resStampDuty">₹ 0</div>
+            <div class="result-unit" id="resStampDutyPercent">स्टाम्प ड्यूटी (Stamp Duty)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resRegFee">₹ 0</div>
+            <div class="result-unit">पंजीयन शुल्क (Registration Fee - 1%)</div>
+          </div>
+          <div class="result-item" style="border:2px solid #1B6B3A; background:#f0faf4;">
+            <div class="result-value" id="resTotalGovt" style="color:#1B6B3A;">₹ 0</div>
+            <div class="result-unit" style="font-weight:700; color:#1B6B3A;">कुल सरकारी खर्च (Total Govt. Fee)</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value" id="resFemaleSavings" style="color:#059669;">₹ 0</div>
+            <div class="result-unit">महिला छूट से बचत (Savings)</div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px; font-size:0.85rem; color:var(--color-text-muted); background:var(--color-bg-card); padding:12px 16px; border-radius:8px; border:1px solid var(--color-border);">
+          📌 <em>नोट: यह अनुमान मानक राज्य राजस्व दरों पर आधारित है। स्थानीय नगर निगम विकास उपकर (Cess) या अधिवक्ता/डीड राइटर ड्राफ्टिंग शुल्क अलग से देय हो सकते हैं।</em>
+        </div>
+
+        <div class="action-bar">
+          <button class="btn-whatsapp" onclick="shareWhatsApp('registry')">
+            <span>📲</span> व्हाट्सएप पर शेयर करें
+          </button>
+          <button class="btn-copy" onclick="copyResults('registry')">
+            <span>📋</span> परिणाम कॉपी करें
+          </button>
+          <button class="btn-print" onclick="printSlip('registry')">
+            <span>🖨️</span> रजिस्ट्री पर्ची प्रिंट करें
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden Printable Slip Container -->
+    <div id="printableSlip" style="display:none;">
+      <!-- Generated dynamically during print -->
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="copyToast">परिणाम सफलतापूर्वक कॉपी हो गया!</div>
+
+    <!-- ========================================================================= -->
+    <!-- HIGH-VALUE SEO CONTENT SECTION (>1200 Words of In-Depth Guidance) -->
+    <!-- ========================================================================= -->
+
+    <article class="content-article" style="margin-top: 48px; line-height: 1.8;">
+      
+      <!-- Section 1: Introduction & Measurement Units -->
+      <section style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.8rem; color: var(--color-primary); margin-bottom: 16px; border-bottom: 2px solid var(--color-primary-light); padding-bottom: 8px;">
+          भारतीय भूमि माप प्रणाली: पारंपरिक इकाइयां और उनका रूपांतरण गणित
+        </h2>
+        <p>
+          भारत में भूमि रिकॉर्ड, खसरा-खतौनी, 7/12 उतारा और जमाबंदी में जमीन का रकबा दर्ज करने की प्रणालियां सैकड़ों वर्षों के इतिहास से जुड़ी हुई हैं। प्राचीन काल और ब्रिटिश शासनकाल में गंटर जरीब (Gunter's Chain), शाहजहानी जरीब, जरीब की कड़ियों (Links) और बांस की लग्गी (Laggi / Bamboo pole) के आधार पर गांव-गांव में जमीन नापी जाती थी। आज भले ही केंद्र और राज्य सरकारों द्वारा <strong>मीट्रिक प्रणाली (हेक्टेयर और वर्ग मीटर)</strong> को आधिकारिक दर्जा दे दिया गया है, लेकिन ग्रामीण जनजीवन, जमीन की रजिस्ट्री, बैंक ऋण और आपसी सौदों में आज भी <strong>बीघा, बिस्वा, कट्ठा, धुर, गुंठा, कनाल, मरला और सेंट</strong> का ही सर्वाधिक प्रचलन है।
+        </p>
+        <p>
+          जमीन की सही नाप न जानने के कारण अक्सर किसान भाई और शहरी प्लॉट खरीदार धोखाधड़ी, रकबा कटौती या पारिवारिक विवादों का शिकार हो जाते हैं। हमारा यह <strong>ऑल-इन-वन मास्टर जमीन कैलकुलेटर</strong> आधुनिक वैज्ञानिक पद्धति और राजस्व परिषद के प्रामाणिक सूत्रों पर आधारित है, जिससे आप घर बैठे बिना किसी पटवारी या अमीन के अपनी जमीन का सटीक क्षेत्रफल व रूपांतरण निकाल सकते हैं।
+        </p>
+      </section>
+
+      <!-- Section 2: Comprehensive State-Wise Bigha Comparison Table -->
+      <section style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.6rem; color: var(--color-primary); margin-bottom: 14px;">
+          राज्यवार 1 बीघा का प्रामाणिक मान (State-Wise 1 Bigha Measurement Table)
+        </h2>
+        <p>
+          भारत के विभिन्न राज्यों में 1 बीघा का क्षेत्रफल एक समान नहीं होता है। उदाहरण के लिए, उत्तर प्रदेश का 1 पक्का बीघा मध्य प्रदेश के 1 बीघा से दोगुने से भी अधिक बड़ा होता है। नीचे दी गई प्रामाणिक तालिका से आप समझ सकते हैं कि आपके राज्य में 1 बीघा में कितने वर्ग फुट, वर्ग गज, वर्ग मीटर और एकड़ होते हैं:
+        </p>
+
+        <div class="seo-table-wrap">
+          <table class="seo-table">
+            <thead>
+              <tr>
+                <th>राज्य (State)</th>
+                <th>बीघा का प्रकार</th>
+                <th>वर्ग फुट (Sq. Ft.)</th>
+                <th>वर्ग गज (Gaj)</th>
+                <th>वर्ग मीटर (Sq. Mt.)</th>
+                <th>1 एकड़ में कितने बीघा?</th>
+                <th>स्थानीय उप-इकाई (Subunits)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>उत्तर प्रदेश (UP)</strong></td>
+                <td>मानक पक्का बीघा</td>
+                <td>27,225 sq ft</td>
+                <td>3,025 गज</td>
+                <td>2,529.28 sq m</td>
+                <td>1.60 बीघा</td>
+                <td>1 बीघा = 20 बिस्वा = 400 बिस्वांसी</td>
+              </tr>
+              <tr>
+                <td><strong>उत्तर प्रदेश (पश्चिमी)</strong></td>
+                <td>कच्चा बीघा</td>
+                <td>9,075 sq ft</td>
+                <td>1,008.33 गज</td>
+                <td>843.09 sq m</td>
+                <td>4.80 कच्चा बीघा</td>
+                <td>1 कच्चा बीघा = 20 कच्चा बिस्वा</td>
+              </tr>
+              <tr>
+                <td><strong>बिहार (Bihar)</strong></td>
+                <td>मानक बीघा (6.5 हाथ लग्गी)</td>
+                <td>27,220 sq ft</td>
+                <td>3,024.4 गज</td>
+                <td>2,528.8 sq m</td>
+                <td>1.60 बीघा</td>
+                <td>1 बीघा = 20 कट्ठा = 400 धुर = 8000 धुरकी</td>
+              </tr>
+              <tr>
+                <td><strong>मध्य प्रदेश (MP)</strong></td>
+                <td>मध्य प्रदेश बीघा</td>
+                <td>12,000 sq ft</td>
+                <td>1,333.33 गज</td>
+                <td>1,114.83 sq m</td>
+                <td>3.63 बीघा</td>
+                <td>1 बीघा = 20 बिस्वा = 400 बिस्वांसी</td>
+              </tr>
+              <tr>
+                <td><strong>राजस्थान (Rajasthan)</strong></td>
+                <td>पक्का बीघा</td>
+                <td>27,225 sq ft</td>
+                <td>3,025 गज</td>
+                <td>2,529.28 sq m</td>
+                <td>1.60 बीघा</td>
+                <td>1 बीघा = 20 बिस्वा (कच्चा बीघा = 17,424 sq ft)</td>
+              </tr>
+              <tr>
+                <td><strong>पंजाब एवं हरियाणा</strong></td>
+                <td>पारंपरिक बीघा / किल्ला</td>
+                <td>9,075 sq ft (किल्ला = 43,560)</td>
+                <td>1,008.33 गज</td>
+                <td>843.09 sq m</td>
+                <td>1 किल्ला = 1 एकड़</td>
+                <td>1 किल्ला = 8 कनाल = 160 मरला = 1440 सरसाही</td>
+              </tr>
+              <tr>
+                <td><strong>पश्चिम बंगाल (WB)</strong></td>
+                <td>बंगाल बीघा</td>
+                <td>14,400 sq ft</td>
+                <td>1,600 गज</td>
+                <td>1,337.8 sq m</td>
+                <td>3.025 बीघा</td>
+                <td>1 बीघा = 20 कट्ठा = 320 छटाक = 100 डेसिमल</td>
+              </tr>
+              <tr>
+                <td><strong>असम (Assam)</strong></td>
+                <td>असम बीघा</td>
+                <td>14,400 sq ft</td>
+                <td>1,600 गज</td>
+                <td>1,337.8 sq m</td>
+                <td>3.025 बीघा</td>
+                <td>1 बीघा = 5 कथा = 100 लेसा (Lessa)</td>
+              </tr>
+              <tr>
+                <td><strong>गुजरात (Gujarat)</strong></td>
+                <td>वीघा (Vigha)</td>
+                <td>17,424 sq ft</td>
+                <td>1,936 गज</td>
+                <td>1,618.74 sq m</td>
+                <td>2.50 वीघा</td>
+                <td>1 वीघा = 16 गुंठा = 20 वसा (Vasa)</td>
+              </tr>
+              <tr>
+                <td><strong>महाराष्ट्र (Maharashtra)</strong></td>
+                <td>गुंठा / आर प्रणाली</td>
+                <td>1,089 sq ft (1 गुंठा)</td>
+                <td>121 गज</td>
+                <td>101.17 sq m (1 आर)</td>
+                <td>40 गुंठा = 1 एकड़</td>
+                <td>1 हेक्टर = 100 आर = 98.84 गुंठा = 2.47 एकड़</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Irregular Plot Mathematical Formulas -->
+      <section style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.6rem; color: var(--color-primary); margin-bottom: 14px;">
+          टेढ़े-मेढ़े (Irregular) खेत व प्लॉट का रकबा निकालने का गणितीय सूत्र
+        </h2>
+        <p>
+          वास्तविक जीवन में अधिकांश कृषि खेत आयताकार या वर्गाकार नहीं होते। मेड़ों के घुमावदार होने या सड़क के तिरछे होने के कारण खेतों की चारों भुजाएं अलग-अलग माप की होती हैं। राजस्व विभाग और अमीन ऐसे खेतों को नापने के लिए दो पद्धतियों का उपयोग करते हैं:
+        </p>
+
+        <h3 style="font-size: 1.25rem; color: var(--color-text); margin-top: 20px; margin-bottom: 8px;">
+          1. पटवारी औसत विधि (Average Quadrilateral Method):
+        </h3>
+        <p>
+          यह सबसे सरल और आम तौर पर उपयोग की जाने वाली विधि है। इसमें आमने-सामने की भुजाओं का औसत निकालकर गुणा किया जाता है:
+        </p>
+        <div style="background:var(--color-bg-alt); padding:16px 20px; border-left:4px solid var(--color-primary); border-radius:6px; font-family:monospace; font-size:1.05rem; margin:16px 0;">
+          औसत लंबाई (L) = (उत्तर भुजा + दक्षिण भुजा) ÷ 2<br>
+          औसत चौड़ाई (W) = (पूर्व भुजा + पश्चिम भुजा) ÷ 2<br>
+          कुल रकबा (क्षेत्रफल) = औसत लंबाई (L) × औसत चौड़ाई (W)
+        </div>
+        <p>
+          <strong>उदाहरण:</strong> यदि किसी खेत की उत्तरी भुजा 120 फुट, दक्षिणी भुजा 130 फुट, पूर्वी भुजा 85 फुट और पश्चिमी भुजा 75 फुट है:
+        </p>
+        <ul>
+          <li>औसत लंबाई = (120 + 130) ÷ 2 = 125 फुट</li>
+          <li>औसत चौड़ाई = (85 + 75) ÷ 2 = 80 फुट</li>
+          <li>कुल क्षेत्रफल = 125 × 80 = <strong>10,000 वर्ग फुट</strong> (लगभग 1,111.11 वर्ग गज या 0.229 एकड़)</li>
+        </ul>
+
+        <h3 style="font-size: 1.25rem; color: var(--color-text); margin-top: 24px; margin-bottom: 8px;">
+          2. विकर्ण त्रिभुजीय विधि (Diagonal Triangulation / Heron's Formula):
+        </h3>
+        <p>
+          यदि खेत का कोना बहुत अधिक नुकीला या विषमकोण हो, तो औसत विधि से 2% से 5% तक का अंतर आ सकता है। अत्यंत सटीक पैमाइश के लिए खेत के एक कोने से सामने वाले कोने तक फीता डालकर <strong>विकर्ण (Diagonal - d)</strong> नाप लिया जाता है। इससे खेत दो त्रिभुजों (Triangle 1 और Triangle 2) में विभाजित हो जाता है। इसके बाद हेरॉन सूत्र का उपयोग किया जाता है:
+        </p>
+        <div style="background:var(--color-bg-alt); padding:16px 20px; border-left:4px solid var(--color-accent); border-radius:6px; font-family:monospace; font-size:1.05rem; margin:16px 0;">
+          अर्ध-परिमाप (s) = (भुजा a + भुजा b + विकर्ण d) ÷ 2<br>
+          त्रिभुज क्षेत्रफल = √[ s × (s - a) × (s - b) × (s - d) ]<br>
+          कुल खेत रकबा = त्रिभुज 1 का क्षेत्रफल + त्रिभुज 2 का क्षेत्रफल
+        </div>
+      </section>
+
+      <!-- Section 4: Family Land Partition Rules -->
+      <section style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.6rem; color: var(--color-primary); margin-bottom: 14px;">
+          जमीन का पारिवारिक कानूनी बंटवारा कैसे करें? (Land Partition & Heir Rights)
+        </h2>
+        <p>
+          पैतृक भूमि पर अक्सर कई भाइयों, बहनों या वारिसों का संयुक्त नाम खतौनी में दर्ज होता है। जब तक जमीन का विधिवत कानूनी बंटवारा नहीं होता, तब तक कोई भी सह-खातेदार किसी विशेष दिशा (जैसे सड़क के किनारे) की जमीन पर अकेले दावा नहीं कर सकता। जमीन बंटवारे के दो प्रमुख रास्ते हैं:
+        </p>
+        <ol style="padding-left: 24px; margin: 16px 0;">
+          <li style="margin-bottom: 12px;">
+            <strong>आपसी सहमति से पारिवारिक समझौता (Mutual Family Settlement Deed):</strong> सभी जीवित वारिस आपस में बैठकर यह तय कर सकते हैं कि किसको कितना और किस दिशा का हिस्सा मिलेगा। इस पर एक पंचनामा या समझौता विलेख तैयार किया जाता है और उसे सब-रजिस्ट्रार कार्यालय में पंजीकृत करवाया जाता है। इसके पश्चात तहसीलदार कार्यालय में नाम अलग-अलग दर्ज कराने (खतौनी अलग कराने) के लिए आवेदन किया जाता है।
+          </li>
+          <li style="margin-bottom: 12px;">
+            <strong>राजस्व न्यायालय में बंटवारा वाद (Court Partition Suit - Section 116 / 176):</strong> यदि परिवार में कोई एक भाई या हिस्सेदार बंटवारे के लिए तैयार नहीं है, तो पीड़ित पक्ष उपजिलाधिकारी (SDM / Assistant Collector) की अदालत में राजस्व संहिता की धारा 116 (उत्तर प्रदेश में) अथवा संबंधित राज्य के भू-राजस्व कानून के तहत दावा दायर कर सकता है। कोर्ट हल्का लेखपाल या पटवारी को मौके पर भेजकर 'कुर्रा' (Lot Partition Plan) तैयार करवाता है और सड़क की फ्रंट वैल्यू को ध्यान में रखते हुए सभी को समान मूल्य का हिस्सा आवंटित करता है।
+          </li>
+          <li style="margin-bottom: 12px;">
+            <strong>हिंदू उत्तराधिकार (संशोधन) अधिनियम 2005 के तहत बेटियों का अधिकार:</strong> 9 सितंबर 2005 के बाद भारत में बेटियों को भी पैतृक संपत्ति में बेटों के बिल्कुल बराबर सह-दायिकी (Coparcenary) अधिकार प्राप्त है। अतः किसी भी पारिवारिक बंटवारे में बहनों या बेटियों का हिस्सा छोड़ना कानूनी रूप से अवैध है और भविष्य में डीड निरस्त हो सकती है।
+          </li>
+        </ol>
+      </section>
+
+      <!-- Section 5: Registry & Stamp Duty Calculation Formula -->
+      <section style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.6rem; color: var(--color-primary); margin-bottom: 14px;">
+          जमीन रजिस्ट्री खर्च और सर्किल रेट की गणना कैसे होती है?
+        </h2>
+        <p>
+          प्लॉट, मकान या कृषि भूमि खरीदते समय क्रेता को राज्य सरकार को स्टाम्प ड्यूटी और पंजीयन शुल्क देना अनिवार्य होता है। यह खर्च दो मूल्यों में से जो भी अधिक हो, उस पर लगाया जाता है:
+        </p>
+        <ul>
+          <li><strong>सर्किल रेट मूल्य (Government Circle Rate / Ready Reckoner Rate):</strong> जिला मजिस्ट्रेट (DM) द्वारा तय प्रति वर्ग मीटर या प्रति हेक्टेयर न्यूनतम सरकारी दर।</li>
+          <li><strong>वास्तविक सौदा मूल्य (Actual Transaction Consideration):</strong> जिस कीमत पर क्रेता और विक्रेता के बीच जमीन का सौदा हुआ है।</li>
+        </ul>
+        <div style="background:var(--color-bg-alt); padding:16px 20px; border-left:4px solid var(--color-primary); border-radius:6px; font-family:monospace; font-size:1.05rem; margin:16px 0;">
+          सर्किल रेट मूल्यांकन = कुल क्षेत्रफल (वर्ग मीटर/गज) × प्रति इकाई सरकारी सर्किल रेट<br>
+          स्टाम्प ड्यूटी = मूल्यांकन मूल्य × स्टाम्प शुल्क दर (%)<br>
+          पंजीकरण शुल्क = मूल्यांकन मूल्य × 1% (या राज्य निर्धारित स्लैब)<br>
+          कुल सरकारी व्यय = स्टाम्प ड्यूटी + पंजीकरण शुल्क + ई-स्टाम्पिंग चालान
+        </div>
+        <p>
+          <strong>महिला छूट (Female Concession):</strong> अधिकांश राज्यों (जैसे उत्तर प्रदेश, मध्य प्रदेश, राजस्थान, दिल्ली, हरियाणा) में यदि जमीन किसी महिला के नाम पर या प्रथम क्रेता के रूप में संयुक्त नाम से खरीदी जाती है, तो स्टाम्प ड्यूटी में 1% से 2% की सीधी छूट मिलती है, जिससे लाखों रुपयों की बचत हो सकती है।
+        </p>
+      </section>
+
+      <!-- Section 6: 7 Crucial Precautions During Land Measurement -->
+      <section style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.6rem; color: var(--color-primary); margin-bottom: 14px;">
+          जमीन नापते समय 7 सबसे जरूरी सावधानियां (Vital Precautions)
+        </h2>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">✔</span>
+            <strong>1. फिक्स प्वॉइंट (सिहद्दा या बुर्ज) से ही शुरुआत करें:</strong> खेत की नाप कभी भी अपनी मेड़ से शुरू न करें। गांव के सजरा (नक्शे) में तीन गांवों या तीन खेतों के मिलने वाले पक्के पत्थर (सिहद्दा / तिमेढ़ा) से नाप शुरू करनी चाहिए ताकि सीमा विवाद न हो।
+          </li>
+          <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">✔</span>
+            <strong>2. जरीब और फीते की शुद्धता जांचें:</strong> लोहे की जरीब गर्मी या खिंचाव से लंबी हो जाती है या उसकी कड़ियां मुड़ जाती हैं। नापने से पहले मानक स्टील टेप से 66 फुट (1 जरीब = 100 कड़ियां) की जांच अवश्य करें।
+          </li>
+          <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">✔</span>
+            <strong>3. कच्चा पैमाना और पक्का पैमाना समझें:</strong> पश्चिमी यूपी और राजस्थान में एक ही गांव में कच्चा बीघा और पक्का बीघा दोनों बोले जाते हैं। खतौनी में क्षेत्रफल हमेशा <em>हेक्टेयर</em> में लिखा होता है। अतः हेक्टेयर से ही अपनी स्थानीय इकाई निकालें।
+          </li>
+          <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">✔</span>
+            <strong>4. मेड़ की चौड़ाई को न भूलें:</strong> दो खेतों के बीच की मेड़ (Daunda / Boundary ridge) पर दोनों पड़ोसियों का आधा-आधा अधिकार होता है। नापते समय मेड़ के मध्य से पैमाइश करें।
+          </li>
+          <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">✔</span>
+            <strong>5. खसरा खतौनी और भू-नक्शा का मिलान:</strong> खतौनी में लिखा रकबा और सरकारी Bhu Naksha पर बने प्लॉट का नक्शा आपस में मेल खाना चाहिए। कई बार नक्शे में गाटा छोटा होता है और खतौनी में अधिक लिखा होता है, जिससे कब्जा कम मिलता है।
+          </li>
+          <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">✔</span>
+            <strong>6. सड़क या नाले की कटौती (Road Widening / Encroachment):</strong> यदि खेत के सामने लोक निर्माण विभाग (PWD) की सड़क या सिंचाई विभाग की नहर है, तो उनके आरक्षित बफर जोन की जांच करें ताकि भविष्य में डिमोलिशन का जोखिम न रहे।
+          </li>
+          <li style="margin-bottom: 14px; padding-left: 28px; position: relative;">
+            <span style="position: absolute; left: 0; color: var(--color-primary); font-weight: bold; font-size: 1.2rem;">✔</span>
+            <strong>7. सीमांकन (Demarcation / हदबरारी) सरकारी तरीके से कराएं:</strong> किसी भी विवाद की स्थिति में निजी अमीन के बजाय तहसील में धारा 24 (उत्तर प्रदेश में) या संबंधित सीमांकन आवेदन पत्र जमा करके कानूनगो व पुलिस बल की मौजूदगी में सीमांकन करवाएं।
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 7: Internal State Links for Verification -->
+      <section style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.6rem; color: var(--color-primary); margin-bottom: 14px;">
+          अपने राज्य का आधिकारिक भूलेख व खसरा-खतौनी पोर्टल चुनें
+        </h2>
+        <p>
+          जमीन नापने के बाद अपने खसरे का सत्यापन करने के लिए अपने राज्य के समर्पित गाइड पेज पर जाएं:
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
+          <a href="states/uttar-pradesh.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">उत्तर प्रदेश भूलेख (UP Bhulekh)</a>
+          <a href="states/maharashtra.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">महाराष्ट्र 7/12 उतारा</a>
+          <a href="states/madhya-pradesh.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">MP भूलेख पोर्टल</a>
+          <a href="states/bihar.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">बिहार भूमि रिकॉर्ड व जमाबंदी</a>
+          <a href="states/rajasthan.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">अपना खाता राजस्थान (Jamabandi)</a>
+          <a href="states/haryana.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">हरियाणा जमाबंदी व फर्द</a>
+          <a href="states/punjab.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">पंजाब PLRS जमाबंदी</a>
+          <a href="states/gujarat.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">गुजरात AnyROR (7/12 & 8A)</a>
+          <a href="states/west-bengal.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">बंगाल बांग्लारभूमि (Banglarbhumi)</a>
+          <a href="states/tripura/kani-ganda-calculator.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">त्रिपुरा कानि-गंडा कैलकुलेटर</a>
+          <a href="states/manipur/pari-sangam-calculator.html" class="btn btn-outline" style="border-radius:20px; font-size:0.88rem;">मणिपुर पारी-संगाम कैलकुलेटर</a>
+          <a href="states.html" class="btn btn-primary" style="border-radius:20px; font-size:0.88rem;">सभी 36 राज्य एवं UTs देखें →</a>
+        </div>
+      </section>
+
+      <!-- Section 8: Rich FAQ Accordions (6 Comprehensive FAQs) -->
+      <section style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.6rem; color: var(--color-primary); margin-bottom: 16px;">
+          अक्सर पूछे जाने वाले सवाल (FAQ - जमीन नाप, कनवर्टर व रजिस्ट्री)
+        </h2>
+
+        <details class="faq-item-ux">
+          <summary>1 बीघा में कितने वर्ग फुट (Square Feet) और एकड़ होते हैं?</summary>
+          <div class="faq-answer-content">
+            भारत में 1 बीघा का मान राज्य और क्षेत्र के अनुसार भिन्न होता है। मानक पक्का बीघा (उत्तर प्रदेश, राजस्थान, पंजाब) में <strong>27,225 वर्ग फुट</strong> (3,025 वर्ग गज या 0.625 एकड़) होते हैं। वहीं मध्य प्रदेश में 1 बीघा 12,000 वर्ग फुट (0.275 एकड़), पश्चिम बंगाल व असम में 14,400 वर्ग फुट (0.33 एकड़), गुजरात में 1 वीघा 17,424 वर्ग फुट (0.40 एकड़), तथा पश्चिमी उत्तर प्रदेश में कच्चा बीघा 9,075 वर्ग फुट (0.208 एकड़) होता है।
+          </div>
+        </details>
+
+        <details class="faq-item-ux">
+          <summary>टेढ़े-मेढ़े या 4 अलग-अलग भुजाओं वाले खेत का रकबा कैसे निकाला जाता है?</summary>
+          <div class="faq-answer-content">
+            पटवारी व राजस्व विभाग में 4 अलग-अलग भुजाओं वाले खेत का रकबा <strong>औसत विधि (Average Formula)</strong> से निकाला जाता है: 
+            <code>औसत लंबाई = (उत्तर + दक्षिण) ÷ 2</code> और <code>औसत चौड़ाई = (पूर्व + पश्चिम) ÷ 2</code>। फिर कुल रकबा = औसत लंबाई × औसत चौड़ाई। अधिक सटीक व कानूनी सीमांकन के लिए खेत के बीच एक विकर्ण (Diagonal) खींचकर उसे दो त्रिभुजों में बांटा जाता है और हेरॉन सूत्र [S = √s(s-a)(s-b)(s-c)] से दोनों त्रिभुजों का क्षेत्रफल जोड़ दिया जाता है।
+          </div>
+        </details>
+
+        <details class="faq-item-ux">
+          <summary>पारिवारिक जमीन का कानूनी बंटवारा (Partition) कैसे करें?</summary>
+          <div class="faq-answer-content">
+            पारिवारिक जमीन बंटवारे के दो प्रमुख तरीके हैं: 
+            <br>1. <strong>आपसी सहमति:</strong> पारिवारिक समझौता विलेख (Family Settlement Deed) बनाकर सब-रजिस्ट्रार कार्यालय में पंजीकृत करवाना और तहसील में धारा 34 के तहत नामांतरण कराना। 
+            <br>2. <strong>विवाद की स्थिति:</strong> राजस्व न्यायालय (SDM Court) में धारा 116 / 176 के तहत कुर्रा बंटवारा वाद (Partition Suit) दायर करना, जिसमें कोर्ट पटवारी से कुर्रा बनवाकर प्रत्येक हिस्सेदार को अलग खतौनी खाता संख्या आवंटित करता है।
+          </div>
+        </details>
+
+        <details class="faq-item-ux">
+          <summary>जमीन रजिस्ट्री में स्टाम्प ड्यूटी और रजिस्ट्री खर्च कैसे तय होता है?</summary>
+          <div class="faq-answer-content">
+            रजिस्ट्री खर्च जमीन के सर्किल रेट (सरकारी न्यूनतम मूल्य) या वास्तविक बिक्री मूल्य (जो भी अधिक हो) पर तय होता है। स्टाम्प ड्यूटी राज्यों के अनुसार सामान्यतः 5% से 7.5% होती है। अधिकांश राज्यों (जैसे यूपी, राजस्थान, एमपी, दिल्ली) में महिला खरीददार को 1% से 2% की विशेष छूट मिलती है। इसके अतिरिक्त 1% पंजीकरण शुल्क (Registration Fee) देय होता है।
+          </div>
+        </details>
+
+        <details class="faq-item-ux">
+          <summary>1 एकड़, 1 हेक्टेयर और 1 गुंठा में क्या संबंध है?</summary>
+          <div class="faq-answer-content">
+            <ul>
+              <li><strong>1 एकड़</strong> = 43,560 वर्ग फुट = 4,840 वर्ग गज = 40 गुंठा = 0.4047 हेक्टेयर</li>
+              <li><strong>1 हेक्टेयर</strong> = 10,000 वर्ग मीटर = 1,07,639 वर्ग फुट = 2.471 एकड़ = लगभग 98.84 गुंठा</li>
+              <li><strong>1 गुंठा</strong> (महाराष्ट्र, गोवा, गुजरात, कर्नाटक) = 1,089 वर्ग फुट = 121 वर्ग गज = 101.17 वर्ग मीटर (1 आर)</li>
+              <li><strong>1 सेंट</strong> (दक्षिण भारत) = 435.6 वर्ग फुट = 1/100 एकड़</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item-ux">
+          <summary>जमीन खरीदते समय सरकारी रिकॉर्ड में रकबा कैसे सत्यापित करें?</summary>
+          <div class="faq-answer-content">
+            जमीन का सौदा करने से पहले अपने राज्य के आधिकारिक भूलेख पोर्टल (जैसे upbhulekh.gov.in, mahabhulekh.maharashtra.gov.in) पर जाकर खसरा-खतौनी नकल देखें। वहां दर्ज क्षेत्रफल (हेक्टेयर में) का मिलान विक्रेता के बैनामे से करें, भू-नक्शा पोर्टल पर गाटा का नक्शा देखें, और उप-पंजीयक कार्यालय में पिछले 12 से 30 वर्षों का भार-मुक्त प्रमाण पत्र (Encumbrance Certificate) अवश्य जांचें।
+          </div>
+        </details>
+
+      </section>
+
+      <!-- Disclaimer Banner -->
+      <section style="margin-top: 40px;">
+        <div class="disclaimer-banner">
+          <h3 style="margin-bottom: 8px; font-size: 1.15rem;">⚠️ महत्वपूर्ण विधिक व तकनीकी अस्वीकरण</h3>
+          <p style="margin: 0; font-size: 0.92rem; line-height: 1.6;">
+            BhumiRecord कैलकुलेटर एक स्वतंत्र सूचनात्मक व गणितीय उपकरण है, जिसे राजस्व परिषद के प्रचलित सूत्रों के अनुसार बनाया गया है। विभिन्न जनपदों और तहसीलों में स्थानीय लग्गी या परंपरा के अनुसार मामूली क्षेत्रीय अंतर हो सकता है। कानूनी सीमांकन, रजिस्ट्री अथवा अदालती विवादों के लिए कृपया अपने स्थानीय राजस्व निरीक्षक (कानूनगो), पटवारी अथवा पंजीकृत अमीन से विधिवत पैमाइश अवश्य कराएं।
+          </p>
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">🏛️</span>
+            <span class="brand-text"><span class="brand-name">BhumiRecord</span></span>
+          </a>
+          <p>भारत के सभी 36 राज्यों व केंद्र शासित प्रदेशों के भूमि रिकॉर्ड, भूलेख, खसरा-खतौनी और जमीन माप कैलकुलेटर की सरल हिंदी गाइड।</p>
+        </div>
+        <div>
+          <h4>जमीन टूल्स व कैलकुलेटर</h4>
+          <ul>
+            <li><a href="land-calculator.html">जमीन नापने का कैलकुलेटर</a></li>
+            <li><a href="states/tripura/kani-ganda-calculator.html">कानि-गंडा कनवर्टर (त्रिपुरा)</a></li>
+            <li><a href="states/manipur/pari-sangam-calculator.html">पारी-संगाम कनवर्टर (मणिपुर)</a></li>
+            <li><a href="states.html">सभी 36 राज्य भूलेख गाइड</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>प्रमुख राज्य भूलेख</h4>
+          <ul>
+            <li><a href="states/uttar-pradesh.html">उत्तर प्रदेश भूलेख</a></li>
+            <li><a href="states/maharashtra.html">महाराष्ट्र 7/12 उतारा</a></li>
+            <li><a href="states/bihar.html">बिहार भूमि रिकॉर्ड</a></li>
+            <li><a href="states/madhya-pradesh.html">मध्य प्रदेश भूलेख</a></li>
+            <li><a href="states/rajasthan.html">राजस्थान जमाबंदी</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>जानकारी व कानूनी</h4>
+          <ul>
+            <li><a href="disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
+            <li><a href="privacy-policy.html">गोपनीयता नीति (Privacy Policy)</a></li>
+            <li><a href="sitemap.html">साइटमैप (Sitemap)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        ⚠️ <strong>अस्वीकरण:</strong> BhumiRecord एक स्वतंत्र नागरिक सूचना पोर्टल है। यह किसी भी सरकारी विभाग या राजस्व बोर्ड का आधिकारिक पोर्टल नहीं है।
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="footer-year">2026</span> BhumiRecord — सर्वाधिकार सुरक्षित</span>
+        <div style="display:flex;gap:16px;">
+          <a href="sitemap.html">Sitemap</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Theme, Nav & Master Calculator -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* ==========================================================================
+       MASTER LAND CALCULATOR ENGINE (BhumiRecord Pure Vanilla JavaScript)
+       ========================================================================== */
+
+    // Tab Switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.calc-tab-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      
+      const targetPanel = document.getElementById(tabId);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+      
+      // Mark active button
+      const clickedBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => 
+        b.getAttribute('onclick') && b.getAttribute('onclick').includes(tabId)
+      );
+      if (clickedBtn) {
+        clickedBtn.classList.add('active');
+        clickedBtn.setAttribute('aria-selected', 'true');
+      }
+    }
+
+    // Conversion Units Database (Base: Square Feet)
+    const UNIT_DEFINITIONS = {
+      // Standard
+      sqft: { name: 'वर्ग फुट (Sq Ft)', factor: 1, type: 'standard' },
+      gaj: { name: 'वर्ग गज (Gaj / Sq Yard)', factor: 9, type: 'standard' },
+      sqmt: { name: 'वर्ग मीटर (Sq Meter)', factor: 10.76391, type: 'standard' },
+      acre: { name: 'एकड़ (Acre)', factor: 43560, type: 'standard' },
+      hectare: { name: 'हेक्टेयर (Hectare)', factor: 107639.1, type: 'standard' },
+      guntha: { name: 'गुंठा (Guntha - MH/GJ/KA)', factor: 1089, type: 'standard' },
+      cent: { name: 'सेंट (Cent - South India)', factor: 435.6, type: 'standard' },
+
+      // State Specific
+      bigha_pucca: { name: 'पक्का बीघा (UP/Raj/Punjab - 27,225 sq ft)', factor: 27225, state: 'up' },
+      bigha_kacha: { name: 'कच्चा बीघा (Western UP - 9,075 sq ft)', factor: 9075, state: 'up' },
+      biswa_pucca: { name: 'पक्का बिस्वा (UP/Raj - 1,361.25 sq ft)', factor: 1361.25, state: 'up' },
+      biswansi: { name: 'बिस्वांसी (UP - 68.06 sq ft)', factor: 68.0625, state: 'up' },
+
+      bigha_bihar: { name: 'बिहार बीघा (Bihar - 27,220 sq ft)', factor: 27220, state: 'bihar' },
+      katha_bihar: { name: 'कट्ठा (Bihar - 1,361 sq ft)', factor: 1361, state: 'bihar' },
+      dhur_bihar: { name: 'धुर (Bihar - 68.05 sq ft)', factor: 68.05, state: 'bihar' },
+      dhurki_bihar: { name: 'धुरकी (Bihar - 3.40 sq ft)', factor: 3.4025, state: 'bihar' },
+
+      bigha_mp: { name: 'मध्य प्रदेश बीघा (MP - 12,000 sq ft)', factor: 12000, state: 'mp' },
+      biswa_mp: { name: 'मध्य प्रदेश बिस्वा (MP - 600 sq ft)', factor: 600, state: 'mp' },
+
+      bigha_raj_pucca: { name: 'राजस्थान पक्का बीघा (27,225 sq ft)', factor: 27225, state: 'rajasthan' },
+      bigha_raj_kacha: { name: 'राजस्थान कच्चा बीघा (17,424 sq ft)', factor: 17424, state: 'rajasthan' },
+
+      killa_ph: { name: 'किल्ला / एकड़ (Punjab/Haryana - 43,560 sq ft)', factor: 43560, state: 'punjab_haryana' },
+      kanal_ph: { name: 'कनाल (Punjab/Haryana - 5,445 sq ft)', factor: 5445, state: 'punjab_haryana' },
+      marla_ph: { name: 'मरला (Punjab/Haryana - 272.25 sq ft)', factor: 272.25, state: 'punjab_haryana' },
+      sarsahi_ph: { name: 'सरसाही (Punjab/Haryana - 30.25 sq ft)', factor: 30.25, state: 'punjab_haryana' },
+
+      are_mh: { name: 'आर (Are - MH - 100 sq m / 1,076.39 sq ft)', factor: 1076.39, state: 'maharashtra' },
+      guntha_mh: { name: 'गुंठा (MH - 1,089 sq ft)', factor: 1089, state: 'maharashtra' },
+
+      vigha_guj: { name: 'वीघा (Gujarat - 17,424 sq ft)', factor: 17424, state: 'gujarat' },
+
+      bigha_wb: { name: 'पश्चिम बंगाल बीघा (14,400 sq ft)', factor: 14400, state: 'wb' },
+      katha_wb: { name: 'कट्ठा (WB - 720 sq ft)', factor: 720, state: 'wb' },
+      chhatak_wb: { name: 'छटाक (WB - 45 sq ft)', factor: 45, state: 'wb' },
+      satak_wb: { name: 'शतक / डेसिमल (WB - 435.6 sq ft)', factor: 435.6, state: 'wb' },
+
+      bigha_assam: { name: 'असम बीघा (14,400 sq ft)', factor: 14400, state: 'assam' },
+      katha_assam: { name: 'कथा (Assam - 2,880 sq ft)', factor: 2880, state: 'assam' },
+      lessa_assam: { name: 'लेसा (Assam - 144 sq ft)', factor: 144, state: 'assam' },
+
+      dron_tripura: { name: 'द्रोण (Tripura - 2,76,480 sq ft)', factor: 276480, state: 'tripura' },
+      kani_tripura: { name: 'कानि (Tripura - 17,280 sq ft)', factor: 17280, state: 'tripura' },
+      ganda_tripura: { name: 'गंडा (Tripura - 864 sq ft)', factor: 864, state: 'tripura' },
+      kara_tripura: { name: 'करा (Tripura - 216 sq ft)', factor: 216, state: 'tripura' },
+
+      pari_manipur: { name: 'पारी (Manipur - 1 Hectare / 1,07,639 sq ft)', factor: 107639, state: 'manipur' },
+      sangam_manipur: { name: 'संगाम (Manipur - 26,910 sq ft)', factor: 26910, state: 'manipur' },
+      loukrak_manipur: { name: 'लूकराक (Manipur - 13,455 sq ft)', factor: 13455, state: 'manipur' },
+
+      ground_south: { name: 'ग्राउंड (Ground - TN - 2,400 sq ft)', factor: 2400, state: 'south' },
+      ankanam_south: { name: 'अंकनम (Ankanam - AP - 72 sq ft)', factor: 72, state: 'south' },
+      kuzhi_south: { name: 'कुझी (Kuzhi - TN - 144 sq ft)', factor: 144, state: 'south' }
+    };
+
+    // State Mapping for unit dropdown
+    const STATE_UNIT_MAPPING = {
+      national: ['acre', 'bigha_pucca', 'hectare', 'sqft', 'gaj', 'sqmt', 'guntha', 'cent'],
+      up: ['bigha_pucca', 'bigha_kacha', 'biswa_pucca', 'biswansi', 'acre', 'sqft', 'gaj', 'hectare'],
+      bihar: ['bigha_bihar', 'katha_bihar', 'dhur_bihar', 'dhurki_bihar', 'acre', 'sqft', 'gaj', 'hectare'],
+      mp: ['bigha_mp', 'biswa_mp', 'acre', 'hectare', 'sqft', 'gaj'],
+      rajasthan: ['bigha_raj_pucca', 'bigha_raj_kacha', 'biswa_pucca', 'acre', 'sqft', 'gaj', 'hectare'],
+      punjab_haryana: ['killa_ph', 'kanal_ph', 'marla_ph', 'sarsahi_ph', 'bigha_kacha', 'sqft', 'gaj'],
+      maharashtra: ['guntha_mh', 'are_mh', 'hectare', 'acre', 'sqft', 'gaj'],
+      gujarat: ['vigha_guj', 'guntha_mh', 'acre', 'hectare', 'sqft', 'gaj'],
+      wb: ['bigha_wb', 'katha_wb', 'chhatak_wb', 'satak_wb', 'acre', 'sqft', 'gaj'],
+      assam: ['bigha_assam', 'katha_assam', 'lessa_assam', 'acre', 'sqft', 'gaj'],
+      tripura: ['kani_tripura', 'ganda_tripura', 'kara_tripura', 'dron_tripura', 'acre', 'sqft'],
+      manipur: ['pari_manipur', 'sangam_manipur', 'loukrak_manipur', 'acre', 'sqft'],
+      south: ['ground_south', 'cent', 'guntha', 'ankanam_south', 'kuzhi_south', 'acre', 'sqft']
+    };
+
+    function updateConverterUnits() {
+      const state = document.getElementById('convState').value;
+      const unitSelect = document.getElementById('convUnit');
+      const allowedKeys = STATE_UNIT_MAPPING[state] || STATE_UNIT_MAPPING['national'];
+      
+      const prevVal = unitSelect.value;
+      unitSelect.innerHTML = '';
+      
+      allowedKeys.forEach(k => {
+        if (UNIT_DEFINITIONS[k]) {
+          const opt = document.createElement('option');
+          opt.value = k;
+          opt.textContent = UNIT_DEFINITIONS[k].name;
+          unitSelect.appendChild(opt);
+        }
+      });
+
+      if (allowedKeys.includes(prevVal)) {
+        unitSelect.value = prevVal;
+      } else {
+        unitSelect.selectedIndex = 0;
+      }
+
+      calculateUnitConversion();
+    }
+
+    function formatNumber(num, decimals = 4) {
+      if (isNaN(num) || num === null) return '0';
+      if (Math.abs(num) >= 1000) {
+        return num.toLocaleString('hi-IN', { maximumFractionDigits: 2 });
+      }
+      return Number(num.toFixed(decimals)).toString();
+    }
+
+    function calculateUnitConversion() {
+      const state = document.getElementById('convState').value;
+      const val = parseFloat(document.getElementById('convValue').value) || 0;
+      const unitKey = document.getElementById('convUnit').value;
+
+      const unitDef = UNIT_DEFINITIONS[unitKey];
+      if (!unitDef) return;
+
+      const totalSqFt = val * unitDef.factor;
+
+      // Base outputs
+      document.getElementById('resSqFt').textContent = formatNumber(totalSqFt, 2);
+      document.getElementById('resGaj').textContent = formatNumber(totalSqFt / 9, 2);
+      document.getElementById('resSqMt').textContent = formatNumber(totalSqFt / 10.76391, 2);
+      document.getElementById('resAcre').textContent = formatNumber(totalSqFt / 43560, 4);
+      document.getElementById('resHectare').textContent = formatNumber(totalSqFt / 107639.1, 4);
+      document.getElementById('resGuntha').textContent = formatNumber(totalSqFt / 1089, 2);
+
+      // Local units depending on state
+      const local1El = document.getElementById('resLocal1');
+      const local1Lbl = document.getElementById('resLocal1Name');
+      const local2El = document.getElementById('resLocal2');
+      const local2Lbl = document.getElementById('resLocal2Name');
+
+      if (state === 'bihar') {
+        local1Lbl.textContent = 'बिहार बीघा (20 कट्ठा)';
+        local1El.textContent = formatNumber(totalSqFt / 27220, 3);
+        local2Lbl.textContent = 'कट्ठा (Katha)';
+        local2El.textContent = formatNumber(totalSqFt / 1361, 2);
+      } else if (state === 'mp') {
+        local1Lbl.textContent = 'MP बीघा (12,000 sq ft)';
+        local1El.textContent = formatNumber(totalSqFt / 12000, 3);
+        local2Lbl.textContent = 'MP बिस्वा (Biswa)';
+        local2El.textContent = formatNumber(totalSqFt / 600, 2);
+      } else if (state === 'wb') {
+        local1Lbl.textContent = 'बंगाल बीघा (20 कट्ठा)';
+        local1El.textContent = formatNumber(totalSqFt / 14400, 3);
+        local2Lbl.textContent = 'कट्ठा / डेसिमल';
+        local2El.textContent = formatNumber(totalSqFt / 720, 2);
+      } else if (state === 'punjab_haryana') {
+        local1Lbl.textContent = 'किल्ला / एकड़ (Killa)';
+        local1El.textContent = formatNumber(totalSqFt / 43560, 3);
+        local2Lbl.textContent = 'कनाल (Kanal)';
+        local2El.textContent = formatNumber(totalSqFt / 5445, 2);
+      } else if (state === 'maharashtra' || state === 'gujarat') {
+        local1Lbl.textContent = state === 'gujarat' ? 'वीघा (Gujarat Vigha)' : 'आर (Are - 100 sq m)';
+        local1El.textContent = state === 'gujarat' ? formatNumber(totalSqFt / 17424, 3) : formatNumber(totalSqFt / 1076.39, 2);
+        local2Lbl.textContent = 'गुंठा (Guntha)';
+        local2El.textContent = formatNumber(totalSqFt / 1089, 2);
+      } else if (state === 'tripura') {
+        local1Lbl.textContent = 'कानि (Kani - 20 गंडा)';
+        local1El.textContent = formatNumber(totalSqFt / 17280, 3);
+        local2Lbl.textContent = 'गंडा (Ganda)';
+        local2El.textContent = formatNumber(totalSqFt / 864, 2);
+      } else {
+        // UP / Standard default
+        local1Lbl.textContent = 'पक्का बीघा (UP/Raj)';
+        local1El.textContent = formatNumber(totalSqFt / 27225, 3);
+        local2Lbl.textContent = 'बिस्वा (Pucca Biswa)';
+        local2El.textContent = formatNumber(totalSqFt / 1361.25, 2);
+      }
+    }
+
+    /* ================= TAB 2: FIELD AREA CALCULATOR ================= */
+    function togglePlotShape() {
+      const shape = document.querySelector('input[name="plotShape"]:checked').value;
+      const rectDiv = document.getElementById('rectPlotInputs');
+      const quadDiv = document.getElementById('quadPlotInputs');
+      const badge = document.getElementById('fieldCalcMethodBadge');
+
+      if (shape === 'rect') {
+        rectDiv.style.display = 'grid';
+        quadDiv.style.display = 'none';
+        badge.textContent = 'सीधा आयताकार (L × W)';
+      } else {
+        rectDiv.style.display = 'none';
+        quadDiv.style.display = 'grid';
+        badge.textContent = '4-भुजाओं वाला औसत सूत्र';
+      }
+      calculateFieldArea();
+    }
+
+    function calculateFieldArea() {
+      const shape = document.querySelector('input[name="plotShape"]:checked').value;
+      const unit = document.getElementById('fieldDimUnit').value;
+      const stateRef = document.getElementById('fieldStateRef').value;
+
+      // Unit to Feet multiplier
+      let toFeet = 1;
+      if (unit === 'meter') toFeet = 3.28084;
+      else if (unit === 'gaj') toFeet = 3;
+      else if (unit === 'kadi') toFeet = 0.66; // 1 Gunter's link = 7.92 inches = 0.66 ft
+
+      let totalSqFt = 0;
+
+      if (shape === 'rect') {
+        const l = (parseFloat(document.getElementById('rectLength').value) || 0) * toFeet;
+        const w = (parseFloat(document.getElementById('rectWidth').value) || 0) * toFeet;
+        totalSqFt = l * w;
+      } else {
+        const n = (parseFloat(document.getElementById('quadNorth').value) || 0) * toFeet;
+        const s = (parseFloat(document.getElementById('quadSouth').value) || 0) * toFeet;
+        const e = (parseFloat(document.getElementById('quadEast').value) || 0) * toFeet;
+        const w = (parseFloat(document.getElementById('quadWest').value) || 0) * toFeet;
+
+        const avgLen = (n + s) / 2;
+        const avgWid = (e + w) / 2;
+        totalSqFt = avgLen * avgWid;
+      }
+
+      document.getElementById('resFieldSqFt').textContent = formatNumber(totalSqFt, 2);
+      document.getElementById('resFieldGaj').textContent = formatNumber(totalSqFt / 9, 2);
+      document.getElementById('resFieldSqMt').textContent = formatNumber(totalSqFt / 10.76391, 2);
+      document.getElementById('resFieldAcre').textContent = formatNumber(totalSqFt / 43560, 4);
+      document.getElementById('resFieldHectare').textContent = formatNumber(totalSqFt / 107639.1, 4);
+      document.getElementById('resFieldGuntha').textContent = formatNumber(totalSqFt / 1089, 2);
+
+      // State bigha calculation
+      const bighaEl = document.getElementById('resFieldBigha');
+      const bighaLbl = document.getElementById('resFieldBighaLabel');
+      const subEl = document.getElementById('resFieldSubunit');
+      const subLbl = document.getElementById('resFieldSubunitLabel');
+
+      if (stateRef === 'bihar') {
+        bighaLbl.textContent = 'बिहार बीघा';
+        bighaEl.textContent = formatNumber(totalSqFt / 27220, 3);
+        subLbl.textContent = 'कट्ठा (Katha)';
+        subEl.textContent = formatNumber(totalSqFt / 1361, 2);
+      } else if (stateRef === 'mp') {
+        bighaLbl.textContent = 'MP बीघा';
+        bighaEl.textContent = formatNumber(totalSqFt / 12000, 3);
+        subLbl.textContent = 'MP बिस्वा (Biswa)';
+        subEl.textContent = formatNumber(totalSqFt / 600, 2);
+      } else if (stateRef === 'up_kacha') {
+        bighaLbl.textContent = 'कच्चा बीघा (UP)';
+        bighaEl.textContent = formatNumber(totalSqFt / 9075, 3);
+        subLbl.textContent = 'कच्चा बिस्वा';
+        subEl.textContent = formatNumber(totalSqFt / 453.75, 2);
+      } else if (stateRef === 'haryana_killa') {
+        bighaLbl.textContent = 'किल्ला / एकड़';
+        bighaEl.textContent = formatNumber(totalSqFt / 43560, 3);
+        subLbl.textContent = 'कनाल (Kanal)';
+        subEl.textContent = formatNumber(totalSqFt / 5445, 2);
+      } else if (stateRef === 'wb') {
+        bighaLbl.textContent = 'पश्चिम बंगाल बीघा';
+        bighaEl.textContent = formatNumber(totalSqFt / 14400, 3);
+        subLbl.textContent = 'कट्ठा (Katha)';
+        subEl.textContent = formatNumber(totalSqFt / 720, 2);
+      } else if (stateRef === 'gujarat_vigha') {
+        bighaLbl.textContent = 'गुजरात वीघा';
+        bighaEl.textContent = formatNumber(totalSqFt / 17424, 3);
+        subLbl.textContent = 'गुंठा (Guntha)';
+        subEl.textContent = formatNumber(totalSqFt / 1089, 2);
+      } else if (stateRef === 'mh_guntha') {
+        bighaLbl.textContent = 'आर (Are - 100 sq m)';
+        bighaEl.textContent = formatNumber(totalSqFt / 1076.39, 2);
+        subLbl.textContent = 'गुंठा (Guntha)';
+        subEl.textContent = formatNumber(totalSqFt / 1089, 2);
+      } else {
+        bighaLbl.textContent = 'पक्का बीघा (UP/Raj)';
+        bighaEl.textContent = formatNumber(totalSqFt / 27225, 3);
+        subLbl.textContent = 'पक्का बिस्वा';
+        subEl.textContent = formatNumber(totalSqFt / 1361.25, 2);
+      }
+    }
+
+    /* ================= TAB 3: PARTITION CALCULATOR ================= */
+    let customHeirsData = [
+      { name: 'हिस्सेदार 1 (बड़ा भाई)', share: '1/2' },
+      { name: 'हिस्सेदार 2 (छोटा भाई)', share: '1/4' },
+      { name: 'हिस्सेदार 3 (बहन)', share: '1/4' }
+    ];
+
+    function togglePartitionMode() {
+      const mode = document.getElementById('partMode').value;
+      document.getElementById('equalHeirsDiv').style.display = (mode === 'equal') ? 'block' : 'none';
+      document.getElementById('customHeirsDiv').style.display = (mode === 'custom') ? 'block' : 'none';
+      if (mode === 'custom') renderCustomHeirsList();
+      calculatePartition();
+    }
+
+    function renderCustomHeirsList() {
+      const listDiv = document.getElementById('customHeirsList');
+      listDiv.innerHTML = '';
+      customHeirsData.forEach((h, idx) => {
+        const row = document.createElement('div');
+        row.style = 'display:flex; gap:12px; margin-bottom:8px; align-items:center;';
+        row.innerHTML = `
+          <input type="text" class="form-control" style="flex:2;" value="${h.name}" oninput="customHeirsData[${idx}].name = this.value; calculatePartition();">
+          <input type="text" class="form-control" style="flex:1;" value="${h.share}" placeholder="उदा. 1/3 या 33%" oninput="customHeirsData[${idx}].share = this.value; calculatePartition();">
+          <button class="icon-btn" style="color:var(--color-danger); border-color:var(--color-danger);" onclick="removeCustomHeirRow(${idx})">✕</button>
+        `;
+        listDiv.appendChild(row);
+      });
+    }
+
+    function addCustomHeirRow() {
+      const nextNum = customHeirsData.length + 1;
+      customHeirsData.push({ name: `हिस्सेदार ${nextNum}`, share: '1/' + nextNum });
+      renderCustomHeirsList();
+      calculatePartition();
+    }
+
+    function removeCustomHeirRow(idx) {
+      if (customHeirsData.length <= 1) return;
+      customHeirsData.splice(idx, 1);
+      renderCustomHeirsList();
+      calculatePartition();
+    }
+
+    function parseShareFraction(str) {
+      if (!str) return 0;
+      str = str.toString().trim();
+      if (str.includes('/')) {
+        const parts = str.split('/');
+        const num = parseFloat(parts[0]);
+        const den = parseFloat(parts[1]);
+        if (den && !isNaN(num) && !isNaN(den)) return num / den;
+      }
+      if (str.includes('%')) {
+        return (parseFloat(str.replace('%', '')) || 0) / 100;
+      }
+      const val = parseFloat(str);
+      if (val > 1) return val / 100; // Treated as percentage
+      return val || 0;
+    }
+
+    const COLORS = ['#1B6B3A', '#2563EB', '#D97706', '#9333EA', '#DC2626', '#0891B2', '#4F46E5', '#059669'];
+
+    function calculatePartition() {
+      const totalVal = parseFloat(document.getElementById('partTotalArea').value) || 0;
+      const unitKey = document.getElementById('partUnit').value;
+      const mode = document.getElementById('partMode').value;
+      const unitFactorMap = {
+        bigha_pucca: 27225,
+        bigha_kacha: 9075,
+        bigha_mp: 12000,
+        acre: 43560,
+        hectare: 107639.1,
+        guntha: 1089,
+        sqft: 1,
+        gaj: 9,
+        katha_bihar: 1361
+      };
+      const factor = unitFactorMap[unitKey] || 43560;
+      const totalSqFt = totalVal * factor;
+
+      let heirShares = [];
+
+      if (mode === 'equal') {
+        const count = parseInt(document.getElementById('partHeirCount').value) || 1;
+        document.getElementById('partShareBadge').textContent = `प्रति हिस्सेदार: 1/${count} हिस्सा (${(100 / count).toFixed(2)}%)`;
+        for (let i = 1; i <= count; i++) {
+          heirShares.push({
+            name: `हिस्सेदार ${i}`,
+            ratio: 1 / count,
+            percent: 100 / count
+          });
+        }
+      } else {
+        let sumWeight = 0;
+        customHeirsData.forEach(h => {
+          sumWeight += parseShareFraction(h.share);
+        });
+        if (sumWeight <= 0) sumWeight = 1;
+
+        heirShares = customHeirsData.map(h => {
+          const rawFraction = parseShareFraction(h.share);
+          const normalized = rawFraction / sumWeight;
+          return {
+            name: h.name || 'हिस्सेदार',
+            ratio: normalized,
+            percent: normalized * 100
+          };
+        });
+        document.getElementById('partShareBadge').textContent = `कुल हिस्सेदार: ${heirShares.length} (कस्टम अंश अनुपात)`;
+      }
+
+      // Populate Visual Bar
+      const visualBar = document.getElementById('heirVisualBar');
+      visualBar.innerHTML = '';
+      heirShares.forEach((h, i) => {
+        const seg = document.createElement('div');
+        seg.className = 'heir-bar-segment';
+        seg.style.width = h.percent + '%';
+        seg.style.backgroundColor = COLORS[i % COLORS.length];
+        seg.title = `${h.name}: ${h.percent.toFixed(1)}%`;
+        if (h.percent >= 8) {
+          seg.textContent = `${h.percent.toFixed(0)}%`;
+        }
+        visualBar.appendChild(seg);
+      });
+
+      // Populate Table
+      const tbody = document.getElementById('heirTableBody');
+      tbody.innerHTML = '';
+      heirShares.forEach((h, i) => {
+        const heirSqFt = totalSqFt * h.ratio;
+        const heirGaj = heirSqFt / 9;
+        const heirAcre = heirSqFt / 43560;
+        const heirOrigUnit = totalVal * h.ratio;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>
+            <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:${COLORS[i % COLORS.length]}; margin-right:8px;"></span>
+            <strong>${h.name}</strong>
+          </td>
+          <td>${h.percent.toFixed(2)}%</td>
+          <td>${formatNumber(heirSqFt, 2)} sq ft</td>
+          <td>${formatNumber(heirGaj, 2)} गज</td>
+          <td>${formatNumber(heirAcre, 3)} एकड़</td>
+          <td><strong>${formatNumber(heirOrigUnit, 3)}</strong></td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    /* ================= TAB 4: REGISTRY & STAMP DUTY ================= */
+    const STATE_REGISTRY_RULES = {
+      up: { male: 7.0, female: 6.0, joint: 6.5, regFee: 1.0, maxReg: null, name: 'उत्तर प्रदेश' },
+      mp: { male: 7.5, female: 6.5, joint: 7.0, regFee: 1.0, maxReg: null, name: 'मध्य प्रदेश' },
+      bihar: { male: 6.0, female: 5.7, joint: 6.0, regFee: 2.0, maxReg: null, name: 'बिहार' },
+      rajasthan: { male: 6.0, female: 5.0, joint: 5.5, regFee: 1.0, maxReg: null, name: 'राजस्थान' },
+      maharashtra: { male: 6.0, female: 5.0, joint: 5.5, regFee: 1.0, maxReg: 30000, name: 'महाराष्ट्र' },
+      haryana: { male: 7.0, female: 5.0, joint: 6.0, regFee: 1.0, maxReg: 50000, name: 'हरियाणा' },
+      punjab: { male: 7.0, female: 6.0, joint: 6.5, regFee: 1.0, maxReg: null, name: 'पंजाब' },
+      delhi: { male: 6.0, female: 4.0, joint: 5.0, regFee: 1.0, maxReg: null, name: 'दिल्ली' },
+      gujarat: { male: 4.9, female: 4.9, joint: 4.9, regFee: 1.0, femaleRegZero: true, name: 'गुजरात' },
+      wb: { male: 5.0, female: 5.0, joint: 5.0, regFee: 1.0, maxReg: null, name: 'पश्चिम बंगाल' }
+    };
+
+    function calculateRegistry() {
+      const stateKey = document.getElementById('regState').value;
+      const locality = document.getElementById('regLocality').value;
+      const gender = document.getElementById('regGender').value;
+      const propVal = parseFloat(document.getElementById('regPropValue').value) || 0;
+
+      const rule = STATE_REGISTRY_RULES[stateKey] || STATE_REGISTRY_RULES['up'];
+
+      let dutyRate = rule[gender] || rule.male;
+      // Rural adjustment for states like Haryana
+      if (stateKey === 'haryana' && locality === 'rural') {
+        dutyRate = (gender === 'female') ? 3.0 : 5.0;
+      }
+
+      const stampDuty = (propVal * dutyRate) / 100;
+      
+      let regFeeRate = rule.regFee || 1.0;
+      if (stateKey === 'gujarat' && gender === 'female') {
+        regFeeRate = 0; // Gujarat has full registration fee waiver for female buyers
+      }
+      let regFee = (propVal * regFeeRate) / 100;
+      if (rule.maxReg && regFee > rule.maxReg) {
+        regFee = rule.maxReg;
+      }
+
+      const totalGovt = stampDuty + regFee;
+
+      // Male duty comparison for savings
+      const maleDuty = (propVal * rule.male) / 100;
+      const maleRegFee = (propVal * rule.regFee) / 100;
+      const maleTotal = maleDuty + maleRegFee;
+      const savings = Math.max(0, maleTotal - totalGovt);
+
+      document.getElementById('regDutyRateBadge').textContent = `स्टाम्प ड्यूटी दर: ${dutyRate}% (${rule.name})`;
+      document.getElementById('resStampDuty').textContent = '₹ ' + formatNumber(stampDuty, 0);
+      document.getElementById('resStampDutyPercent').textContent = `स्टाम्प ड्यूटी (${dutyRate}%)`;
+      document.getElementById('resRegFee').textContent = '₹ ' + formatNumber(regFee, 0);
+      document.getElementById('resTotalGovt').textContent = '₹ ' + formatNumber(totalGovt, 0);
+      document.getElementById('resFemaleSavings').textContent = '₹ ' + formatNumber(savings, 0);
+    }
+
+    /* ================= VIRAL UTILITIES & SHARING ================= */
+    function showToast(msg) {
+      const toast = document.getElementById('copyToast');
+      toast.textContent = msg;
+      toast.className = 'show';
+      setTimeout(() => { toast.className = toast.className.replace('show', ''); }, 2500);
+    }
+
+    function getSummaryText(type) {
+      let text = '';
+      if (type === 'converter') {
+        const val = document.getElementById('convValue').value;
+        const unitName = document.getElementById('convUnit').options[document.getElementById('convUnit').selectedIndex].text;
+        const sqft = document.getElementById('resSqFt').textContent;
+        const gaj = document.getElementById('resGaj').textContent;
+        const acre = document.getElementById('resAcre').textContent;
+        text = `🌾 *BhumiRecord - जमीन इकाई कनवर्टर रिजल्ट* 🌾\n` +
+               `मूल रकबा: ${val} ${unitName}\n` +
+               `✓ वर्ग फुट: ${sqft} sq ft\n` +
+               `✓ वर्ग गज: ${gaj} गज\n` +
+               `✓ एकड़: ${acre} Acre\n\n` +
+               `मुफ्त में जमीन नापने के लिए खोलें: https://akhairkar.github.io/BhumiRecord/land-calculator.html`;
+      } else if (type === 'field') {
+        const sqft = document.getElementById('resFieldSqFt').textContent;
+        const gaj = document.getElementById('resFieldGaj').textContent;
+        const acre = document.getElementById('resFieldAcre').textContent;
+        const bigha = document.getElementById('resFieldBigha').textContent;
+        const bighaLbl = document.getElementById('resFieldBighaLabel').textContent;
+        text = `📐 *BhumiRecord - खेत व प्लॉट नाप रिजल्ट* 📐\n` +
+               `✓ कुल क्षेत्रफल: ${sqft} वर्ग फुट\n` +
+               `✓ वर्ग गज: ${gaj} गज\n` +
+               `✓ एकड़: ${acre} एकड़\n` +
+               `✓ ${bighaLbl}: ${bigha}\n\n` +
+               `ऑनलाइन खेत का रकबा नापें: https://akhairkar.github.io/BhumiRecord/land-calculator.html`;
+      } else if (type === 'partition') {
+        const total = document.getElementById('partTotalArea').value;
+        const unit = document.getElementById('partUnit').options[document.getElementById('partUnit').selectedIndex].text;
+        const badge = document.getElementById('partShareBadge').textContent;
+        text = `👨‍👩‍👧‍👦 *BhumiRecord - पारिवारिक जमीन बंटवारा रिजल्ट* 👨‍👩‍👧‍👦\n` +
+               `कुल पैतृक रकबा: ${total} ${unit}\n` +
+               `बंटवारा विवरण: ${badge}\n\n` +
+               `सटीक हिस्सा देखने के लिए चेक करें: https://akhairkar.github.io/BhumiRecord/land-calculator.html`;
+      } else if (type === 'registry') {
+        const val = document.getElementById('regPropValue').value;
+        const stamp = document.getElementById('resStampDuty').textContent;
+        const reg = document.getElementById('resRegFee').textContent;
+        const total = document.getElementById('resTotalGovt').textContent;
+        text = `📑 *BhumiRecord - जमीन रजिस्ट्री स्टाम्प ड्यूटी अनुमान* 📑\n` +
+               `संपत्ति मूल्य: ₹ ${parseFloat(val).toLocaleString('hi-IN')}\n` +
+               `अनुमानित स्टाम्प ड्यूटी: ${stamp}\n` +
+               `पंजीकरण शुल्क: ${reg}\n` +
+               `कुल सरकारी खर्च: ${total}\n\n` +
+               `रजिस्ट्री खर्च कैलकुलेट करें: https://akhairkar.github.io/BhumiRecord/land-calculator.html`;
+      }
+      return text;
+    }
+
+    function shareWhatsApp(type) {
+      const text = getSummaryText(type);
+      const url = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text);
+      window.open(url, '_blank');
+    }
+
+    function copyResults(type) {
+      const text = getSummaryText(type);
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('परिणाम सफलतापूर्वक कॉपी हो गया!');
+        }).catch(() => {
+          fallbackCopy(text);
+        });
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('परिणाम सफलतापूर्वक कॉपी हो गया!');
+    }
+
+    function printSlip(type) {
+      const slipContainer = document.getElementById('printableSlip');
+      const now = new Date();
+      const dateStr = now.toLocaleDateString('hi-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+      
+      let bodyHtml = '';
+      if (type === 'converter') {
+        const val = document.getElementById('convValue').value;
+        const unitName = document.getElementById('convUnit').options[document.getElementById('convUnit').selectedIndex].text;
+        bodyHtml = `
+          <h3>जमीन इकाई रूपांतरण पर्ची (Unit Conversion Slip)</h3>
+          <p><strong>दर्ज किया गया रकबा:</strong> ${val} ${unitName}</p>
+          <table border="1" cellpadding="8" style="width:100%; border-collapse:collapse; margin-top:16px;">
+            <tr><th>इकाई (Unit)</th><th>क्षेत्रफल (Area)</th></tr>
+            <tr><td>वर्ग फुट (Square Feet)</td><td>${document.getElementById('resSqFt').textContent}</td></tr>
+            <tr><td>वर्ग गज (Gaj)</td><td>${document.getElementById('resGaj').textContent}</td></tr>
+            <tr><td>वर्ग मीटर (Sq Meters)</td><td>${document.getElementById('resSqMt').textContent}</td></tr>
+            <tr><td>एकड़ (Acres)</td><td>${document.getElementById('resAcre').textContent}</td></tr>
+            <tr><td>हेक्टेयर (Hectares)</td><td>${document.getElementById('resHectare').textContent}</td></tr>
+            <tr><td>${document.getElementById('resLocal1Name').textContent}</td><td>${document.getElementById('resLocal1').textContent}</td></tr>
+          </table>
+        `;
+      } else if (type === 'field') {
+        bodyHtml = `
+          <h3>खेत व प्लॉट क्षेत्रफल पैमाइश पर्ची (Land Measurement Slip)</h3>
+          <table border="1" cellpadding="8" style="width:100%; border-collapse:collapse; margin-top:16px;">
+            <tr><th>माप विवरण</th><th>मान</th></tr>
+            <tr><td>वर्ग फुट (Sq. Ft.)</td><td>${document.getElementById('resFieldSqFt').textContent}</td></tr>
+            <tr><td>वर्ग गज (Gaj)</td><td>${document.getElementById('resFieldGaj').textContent}</td></tr>
+            <tr><td>वर्ग मीटर (Sq. Meters)</td><td>${document.getElementById('resFieldSqMt').textContent}</td></tr>
+            <tr><td>एकड़ (Acres)</td><td>${document.getElementById('resFieldAcre').textContent}</td></tr>
+            <tr><td>हेक्टेयर (Hectares)</td><td>${document.getElementById('resFieldHectare').textContent}</td></tr>
+            <tr><td>${document.getElementById('resFieldBighaLabel').textContent}</td><td>${document.getElementById('resFieldBigha').textContent}</td></tr>
+          </table>
+        `;
+      } else if (type === 'partition') {
+        const tableHtml = document.getElementById('heirShareTable').outerHTML;
+        bodyHtml = `
+          <h3>पारिवारिक जमीन हिस्सा बंटवारा पर्ची (Heir Partition Slip)</h3>
+          <p><strong>कुल पैतृक रकबा:</strong> ${document.getElementById('partTotalArea').value} ${document.getElementById('partUnit').options[document.getElementById('partUnit').selectedIndex].text}</p>
+          ${tableHtml}
+        `;
+      } else if (type === 'registry') {
+        bodyHtml = `
+          <h3>जमीन रजिस्ट्री स्टाम्प शुल्क अनुमान पर्ची (Stamp Duty Slip)</h3>
+          <table border="1" cellpadding="8" style="width:100%; border-collapse:collapse; margin-top:16px;">
+            <tr><th>मद</th><th>अनुमानित राशि</th></tr>
+            <tr><td>स्टाम्प ड्यूटी</td><td>${document.getElementById('resStampDuty').textContent}</td></tr>
+            <tr><td>पंजीकरण शुल्क</td><td>${document.getElementById('resRegFee').textContent}</td></tr>
+            <tr><td><strong>कुल सरकारी देय शुल्क</strong></td><td><strong>${document.getElementById('resTotalGovt').textContent}</strong></td></tr>
+            <tr><td>महिला छूट बचत</td><td>${document.getElementById('resFemaleSavings').textContent}</td></tr>
+          </table>
+        `;
+      }
+
+      slipContainer.innerHTML = `
+        <div style="font-family: Arial, sans-serif; padding: 24px; border: 2px solid #000;">
+          <div style="text-align: center; border-bottom: 2px solid #000; padding-bottom: 12px; margin-bottom: 16px;">
+            <h2 style="margin:0; font-size:1.6rem;">🏛️ BhumiRecord.in</h2>
+            <p style="margin:4px 0 0 0; font-size:0.9rem;">भारत का विश्वसनीय स्वतंत्र भूमि रिकॉर्ड व पैमाइश पोर्टल</p>
+            <p style="margin:4px 0 0 0; font-size:0.8rem; color:#555;">तिथि: ${dateStr}</p>
+          </div>
+          ${bodyHtml}
+          <div style="margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed #777; padding-top: 10px; text-align: center; color: #555;">
+            यह पर्ची BhumiRecord.in ऑनलाइन कैलकुलेटर द्वारा जनरेट की गई है। आधिकारिक सीमांकन हेतु राजस्व विभाग के दस्तावेजों का उपयोग करें।
+          </div>
+        </div>
+      `;
+      slipContainer.style.display = 'block';
+      window.print();
+      setTimeout(() => { slipContainer.style.display = 'none'; }, 1000);
+    }
+
+    // Initialize on Load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateConverterUnits();
+      calculateFieldArea();
+      calculatePartition();
+      calculateRegistry();
+    });
+  </script>
+</body>
+</html>
