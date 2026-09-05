@@ -40,9 +40,9 @@
     /* Semantic Accordion */
     details.faq-item { background: #fff; border: 1px solid #eee; border-radius: 8px; margin-bottom: 12px; padding: 0; box-shadow: var(--shadow-sm); transition: all 0.2s; }
     details.faq-item summary { font-weight: 600; padding: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-    details.faq-item summary::-webkit-details-marker { display: none; }
-    details.faq-item summary::after { content: '▼'; font-size: 0.8rem; color: var(--primary-color); transition: transform 0.2s; }
-    details.faq-item[open] summary::after { transform: rotate(180deg); }
+    details.faq-item summary:-webkit-details-marker { display: none; }
+    details.faq-item summary:after { content: '▼'; font-size: 0.8rem; color: var(--primary-color); transition: transform 0.2s; }
+    details.faq-item[open] summary:after { transform: rotate(180deg); }
     details.faq-item[open] { border-left: 4px solid var(--primary-color); }
     .faq-answer-content { padding: 0 16px 16px 16px; color: #4b5563; line-height: 1.6; border-top: 1px solid #f9fafb; margin-top: 8px; padding-top: 16px; }
     
@@ -53,7 +53,7 @@
     .doc-meta span { background: #f3f4f6; padding: 4px 12px; border-radius: 12px; }
     
     .checklist li { position: relative; padding-left: 28px; margin-bottom: 12px; }
-    .checklist li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #10b981; font-weight: bold; font-size: 1.1rem; }
+    .checklist li:before { content: '✓'; position: absolute; left: 0; top: 0; color: #10b981; font-weight: bold; font-size: 1.1rem; }
   </style>
 
   <!-- Structured Data -->
@@ -239,7 +239,7 @@
         <p class="hero-sub mt-16 mx-auto" style="max-width:750px;">राजस्व विभाग छत्तीसगढ़ शासन के आधिकारिक पोर्टल bhuiyan.cg.nic.in से अपना खसरा (P-II), किश्तबंदी खतौनी (B-1) और भू-नक्शा देखने की संपूर्ण स्टेप-बाय-स्टेप गाइड।</p>
         
         <div class="hero-cta-group mt-24" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-          <a href="#quick-services" class="btn btn-primary">भूलेख सेवाएं देखें ↓</a>
+          <a href="#how-to-check" class="btn btn-primary">ऑनलाइन प्रक्रिया देखें ↓</a>
           <a href="#district-directory" class="btn btn-outline">जिले चुनें (33 Districts)</a>
           <a href="#official-portal" class="btn btn-outline" style="border-color:#10b981; color:#047857;">आधिकारिक पोर्टल →</a>
         </div>
@@ -360,7 +360,64 @@
       </div>
     </section>
 
-    <!-- ===== 7. DOCUMENT COMPARISON ===== -->
+    <!-- ===== 6. IMPORTANT DOCUMENTS (DEEP DIVE) ===== -->
+    <section class="container mt-48">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2>छत्तीसगढ़ के प्रमुख भूमि दस्तावेज़ (विस्तृत जानकारी)</h2>
+        <p class="text-muted mb-24">छत्तीसगढ़ के राजस्व रिकॉर्ड में उपयोग होने वाले 4 सबसे महत्वपूर्ण दस्तावेज़</p>
+
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>1. खसरा (P-II) नकल</h3>
+          <div class="doc-meta">
+            <span>प्रकार: अधिकार अभिलेख (RoR)</span>
+            <span>विभाग: राजस्व विभाग छत्तीसगढ़ (भुइयां)</span>
+            <span>पहचान: खसरा नंबर / भूखंड क्रमांक</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            खसरा (P-II) छत्तीसगढ़ में भूमि का मुख्य अधिकार अभिलेख है। इसमें खेत का विशिष्ट खसरा नंबर, कुल रकबा (हेक्टेयर में), भूमि स्वामी का नाम, पिता का नाम, भूमि की श्रेणी (सिंचित/असिंचित), वार्षिक भू-राजस्व और कैफियत कॉलम में बैंक लोन या बंधक का विवरण दर्ज होता है।
+          </p>
+        </div>
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>2. खतौनी (B-I) संक्षिप्त अभिलेख</h3>
+          <div class="doc-meta">
+            <span>प्रकार: खाता बही (Khatauni)</span>
+            <span>विभाग: राजस्व विभाग छत्तीसगढ़</span>
+            <span>पहचान: खाता संख्या</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            खतौनी (B-I) किसी खातेदार के नाम पर संबंधित गांव में स्थित सभी खसरों का समेकित ब्योरा होता है। इसमें किसान के सभी खसरा नंबर, कुल योग रकबा और देय लगान एक ही दस्तावेज़ में दर्ज रहते हैं। किसान क्रेडिट कार्ड (KCC) और धान उपार्जन हेतु B-I अनिवार्य है।
+          </p>
+        </div>
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>3. नामांतरण पंजी (Mutation Register)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: स्वामित्व हस्तांतरण अभिलेख</span>
+            <span>विभाग: तहसीलदार / नायब तहसीलदार</span>
+            <span>पहचान: नामांतरण पंजी क्रमांक</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            रजिस्ट्री (बैनामा), फौती (विरासत) या बंटवारे के बाद राजस्व रिकॉर्ड में नया नाम दर्ज करने का विधिवत आदेश नामांतरण पंजी में दर्ज होता है। तहसीलदार के आदेश के बाद ही भुइयां सॉफ्टवेयर में खसरा और B-I में नया नाम अपडेट होता है।
+          </p>
+        </div>
+        <!-- Document Card -->
+        <div class="doc-card">
+          <h3>4. डिजिटल भू-नक्शा (Bhu Naksha CG)</h3>
+          <div class="doc-meta">
+            <span>प्रकार: कैडस्ट्रल भू-मानचित्र</span>
+            <span>विभाग: राजस्व विभाग छत्तीसगढ़</span>
+            <span>पहचान: खसरा क्रमांक</span>
+          </div>
+          <p class="text-muted" style="line-height: 1.7;">
+            भू-नक्शा छत्तीसगढ़ के गांवों का डिजिटल शजरा मैप है। इसमें खसरे का वास्तविक आकार, सीमाएं, मेड़, चकरोड और सरकारी निस्तार भूमि नक्शे पर चिन्हित रहती है। सीमा विवादों के निपटारे और सीमांकन हेतु भू-नक्शा आवश्यक है।
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!-- ===== 7. DOCUMENT COMPARISON ===== -->
     <section class="container mt-48">
       <div style="max-width: 900px; margin: 0 auto;">
         <h2>छत्तीसगढ़ भूमि दस्तावेज़ों की तुलना</h2>
@@ -437,7 +494,61 @@
       </div>
     </section>
 
-    <!-- ===== 11. DISTRICT DIRECTORY ===== -->
+    <!-- ===== 9. HOW TO CHECK LAND RECORDS ===== -->
+    <section class="section-green mt-48" id="how-to-check" style="background: #f0fdf4; padding: 48px 0; border-top: 1px solid #bbf7d0; border-bottom: 1px solid #bbf7d0;">
+      <div class="container">
+        <div class="section-header text-center mb-32">
+          <h2>ऑनलाइन छत्तीसगढ़ भुइयां खसरा (P-II) व खतौनी (B-I) कैसे देखें? (Step-by-Step Guide)</h2>
+          <p class="text-muted">आधिकारिक Bhuiyan CG पोर्टल (bhuiyan.cg.nic.in) पर खसरा खोजने की 5-चरणीय सरल प्रक्रिया</p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 32px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid #e5e7eb;">
+          <ol class="steps" style="list-style: none; padding: 0; margin: 0;">
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">आधिकारिक भुइयां पोर्टल खोलें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">इंटरनेट ब्राउज़र में <strong>bhuiyan.cg.nic.in</strong> पर जाएं। होमपेज पर <strong>'खसरा (P-II) व खतौनी (B-I) की नकल'</strong> लिंक पर क्लिक करें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">जिला, तहसील और ग्राम चुनें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">ड्रॉपडाउन सूची से अपना <strong>'जिला'</strong> (जैसे रायपुर, बिलासपुर, दुर्ग), <strong>'तहसील'</strong>, <strong>'राजस्व निरीक्षक मंडल (RI)'</strong> और <strong>'ग्राम'</strong> का चयन करें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">सर्च का प्रकार चुनें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;"><strong>'खसरा वार'</strong> अथवा <strong>'नाम वार'</strong> में से किसी एक विकल्प का चयन करें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">खसरा नंबर या किसान का नाम चुनें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">सूची में से अपना खसरा नंबर दर्ज करें अथवा खातेदार का नाम चुनें और सबमिट करें।</p>
+              </div>
+            </li>
+            <li class="step-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+              <div class="step-number" style="background: var(--primary-color); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">5</div>
+              <div class="step-content">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">डिजिटल हस्ताक्षरित B-I / P-II डाउनलोड करें</h4>
+                <p class="text-muted" style="margin: 0; line-height: 1.6;">स्क्रीन पर प्रदर्शित <strong>'डिजिटल हस्ताक्षरित P-II'</strong> अथवा <strong>'डिजिटल हस्ताक्षरित B-I'</strong> लिंक पर क्लिक करके बारकोड युक्त अधिकृत PDF डाउनलोड करें।</p>
+              </div>
+            </li>
+          </ol>
+          
+          <div class="mt-24 p-16" style="background: #f0fdfa; border-left: 4px solid #14b8a6; border-radius: 4px;">
+            <strong>💡 टिप (डिजिटल हस्ताक्षर युक्त नकल):</strong> भुइयां पोर्टल से डाउनलोड की गई B-I/P-II कॉपी पर डिजिटल हस्ताक्षर और QR कोड अंकित होता है, जिसे किसी भी बैंक, रजिस्ट्री कार्यालय या सरकारी काम में कानूनी रूप से मान्य माना जाता है।
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ===== 11. DISTRICT DIRECTORY ===== -->
     <section class="container mt-48" id="district-directory">
       <div class="section-header text-center mb-16">
         <h2>छत्तीसगढ़ के जिले (33 Districts Directory)</h2>
@@ -740,27 +851,27 @@
 
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">भुइयां (Bhuiyan)::</strong>
+            <strong style="color:var(--primary-color);">भुइयां (Bhuiyan):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">छत्तीसगढ़ सरकार का मुख्य कंप्यूटरीकृत भूमि अभिलेख पोर्टल।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">खसरा (P-II)::</strong>
+            <strong style="color:var(--primary-color);">खसरा (P-II):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">खेत का प्राथमिक सर्वेक्षण दस्तावेज़ जिसमें रकबा और फसल दर्ज होती है।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">किश्तबंदी (B-1)::</strong>
+            <strong style="color:var(--primary-color);">किश्तबंदी (B-1):</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">खातेदार के नाम दर्ज समस्त भूमियों और सरकारी लगान का खाता।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">धारा 170-ख::</strong>
+            <strong style="color:var(--primary-color);">धारा 170-ख:</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">आदिवासी भूमि के अवैध अंतरण को रोकने संबंधी कठोर कानूनी प्रावधान।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">पटवारी हल्का::</strong>
+            <strong style="color:var(--primary-color);">पटवारी हल्का:</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">एक या अधिक राजस्व ग्रामों का वह क्षेत्र जो एक पटवारी के अधीन होता है।</p>
           </div>
           <div style="background:#fff; border:1px solid #e5e7eb; border-radius:8px; padding:16px;">
-            <strong style="color:var(--primary-color);">कैफियत::</strong>
+            <strong style="color:var(--primary-color);">कैफियत:</strong>
             <p class="mt-8 text-muted" style="font-size:0.9rem;">खसरे का वह स्तंभ जहां बैंक लोन, बंधक अथवा कोर्ट केस दर्ज होता है।</p>
           </div>
         </div>
@@ -792,18 +903,47 @@
       </div>
     </section>
 
+    
     <!-- ===== 14 & 15. OFFICIAL PORTAL & TRUST (E-E-A-T) ===== -->
     <section class="container mt-48" id="official-portal">
-      <div style="max-width: 900px; margin: 0 auto; background:rgba(16, 185, 129, 0.08); border-left:4px solid #10b981; padding:24px; border-radius:4px;">
-        <h3 style="color:#047857; margin-bottom:8px;">छत्तीसगढ़ भूलेख का आधिकारिक सरकारी पोर्टल</h3>
-        <p class="text-muted mb-16" style="line-height:1.7;">
-          नागरिकों की सुरक्षा और प्रामाणिकता हेतु हमेशा राज्य सरकार के अधिकृत वेब पोर्टल का ही उपयोग करें:
-        </p>
-        <ul style="list-style:none; padding:0; margin:0; line-height:2;">
-          <li>🏛️ <strong>आधिकारिक पोर्टल:</strong> <a href="https://bhuiyan.cg.nic.in/" target="_blank" rel="noopener noreferrer" style="color:#047857; font-weight:bold; text-decoration:underline;">https://bhuiyan.cg.nic.in/ (Official Website)</a></li>
-        </ul>
-        <div class="mt-16 text-muted" style="font-size:0.85rem; border-top:1px solid #a7f3d0; padding-top:12px;">
-          ⚠️ <strong>महत्वपूर्ण अस्वीकरण:</strong> BhumiRecord एक स्वतंत्र शैक्षिक एवं सूचनात्मक पोर्टल है। यह किसी भी राज्य सरकार या राजस्व विभाग की आधिकारिक वेबसाइट नहीं है। किसी भी कानूनी साक्ष्य, रजिस्ट्री अथवा न्यायालयीन कार्य हेतु संबंधित राजस्व कार्यालय से जारी प्रमाणित प्रति ही मान्य होगी।
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="two-col" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: start;">
+          <div>
+            <h2>विश्वास और पारदर्शिता (Trust & Independence)</h2>
+            <p class="mt-16 text-muted" style="line-height: 1.8;">
+              <strong>BhumiRecord एक स्वतंत्र और गैर-सरकारी सूचनात्मक पोर्टल है।</strong> हमारा एकमात्र उद्देश्य छत्तीसगढ़ के किसानों और नागरिकों को राज्य के भूमि रिकॉर्ड, खाता-खसरा और राजस्व प्रक्रियाओं को सरल व स्पष्ट हिंदी भाषा में समझाना है।
+            </p>
+            <p class="mt-16 text-muted" style="line-height: 1.8;">
+              हम किसी भी सरकारी विभाग अथवा राजस्व एवं आपदा प्रबंधन विभाग, छत्तीसगढ़ शासन से संबद्ध नहीं हैं। भूमि का वास्तविक डेटा केवल राज्य सरकार के अधिकृत सर्वरों द्वारा अनुरक्षित किया जाता है। किसी भी कानूनी साक्ष्य, बैंक ऋण, रजिस्ट्री अथवा अदालती कार्यों के लिए संबंधित राजस्व तहसील अथवा अधिकृत सरकारी पोर्टल से जारी डिजिटल हस्ताक्षरित प्रमाणित प्रति ही मान्य होगी।
+            </p>
+            <div class="mt-24">
+              <a href="../disclaimer.html" style="color: var(--primary-color); font-weight: 600; text-decoration: underline;">हमारी पूरी अस्वीकरण नीति (Disclaimer) पढ़ें →</a>
+            </div>
+          </div>
+          
+          <div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; box-shadow: var(--shadow-sm);">
+              <h4 style="color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-top: 0; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.5rem;">✅</span> आधिकारिक सरकारी पोर्टल्स (Chhattisgarh Official)
+              </h4>
+              
+              <div class="mt-16">
+                <span class="text-muted" style="font-size: 0.85rem; display: block;">Bhuiyan CG (भुइयां)</span>
+                <span style="font-size: 1.05rem; color: #1e293b; font-weight: 600; display: block;">bhuiyan.cg.nic.in</span>
+                <a href="https://bhuiyan.cg.nic.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mt-8" style="width: 100%; display: block; text-align: center; box-sizing: border-box;">आधिकारिक पोर्टल पर जाएं →</a>
+              </div>
+              
+              <div class="mt-24">
+                <span class="text-muted" style="font-size: 0.85rem; display: block;">CG Bhu Naksha (भू-नक्शा)</span>
+                <span style="font-size: 1.05rem; color: #1e293b; font-weight: 600; display: block;">bhunaksha.cg.nic.in</span>
+                <a href="https://bhunaksha.cg.nic.in/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm mt-8" style="width: 100%; display: block; text-align: center; box-sizing: border-box;">भू-नक्शा पोर्टल खोलें →</a>
+              </div>
+              
+              <p class="mt-24 text-muted" style="font-size: 0.8rem; text-align: center; margin-bottom: 0;">
+                🔒 उपरोक्त लिंक आपको छत्तीसगढ़ सरकार के आधिकारिक सर्वरों पर ले जाएंगे।
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -881,20 +1021,22 @@
       </div>
     </section>
 
-    <!-- ===== 23. FINAL CTA ===== -->
-    <section class="section-green text-center mt-48" style="padding: 48px 0; background:var(--primary-light);">
+    
+    <!-- ===== 18. FINAL CTA ===== -->
+    <section style="background: var(--primary-color); color: white; padding: 64px 0; text-align: center; margin-top: 48px;">
       <div class="container">
-        <h2>अन्य राज्यों के भूमि रिकॉर्ड की जानकारी</h2>
-        <p class="text-muted mt-8 mb-24" style="max-width:600px; margin-left:auto; margin-right:auto;">
-          भारत के विभिन्न राज्यों के भूलेख, खसरा, खतौनी, जमाबंदी और 7/12 उतारा की प्रामाणिक गाइड्स देखें।
+        <h2 style="color: white; margin-bottom: 16px;">छत्तीसगढ़ भूमि रिकॉर्ड की जानकारी खोजें</h2>
+        <p style="opacity: 0.9; max-width: 650px; margin: 0 auto 32px auto; font-size: 1.1rem; line-height: 1.6;">
+          छत्तीसगढ़ भू-राजस्व संहिता 1959 व म्यूटेशन नियम के नियमों, ऑनलाइन प्रक्रियाओं और अपने 33 जिलों की विशिष्ट राजस्व जानकारी को आसानी से समझें।
         </p>
-        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-          <a href="../states.html" class="btn btn-primary">सभी 36 राज्य देखें →</a>
-          <a href="uttar-pradesh.html" class="btn btn-outline">उत्तर प्रदेश भूलेख</a>
-          <a href="maharashtra.html" class="btn btn-outline">महाराष्ट्र 7/12</a>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="#how-to-check" class="btn" style="background: white; color: var(--primary-color); font-weight: 600;">प्रक्रिया दोबारा पढ़ें ↑</a>
+          <a href="#district-directory" class="btn" style="border: 1px solid white; color: white;">33 जिलेवार सूची देखें</a>
+          <a href="../states.html" class="btn" style="border: 1px solid transparent; color: white; text-decoration: underline;">सभी 36 राज्य देखें →</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- ===== FOOTER ===== -->
