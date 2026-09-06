@@ -897,3 +897,17 @@ https://akhairkar.github.io/BhumiRecord/districts/tamil-nadu/tiruvarur.html
 https://akhairkar.github.io/BhumiRecord/districts/tamil-nadu/vellore.html
 https://akhairkar.github.io/BhumiRecord/districts/tamil-nadu/viluppuram.html
 https://akhairkar.github.io/BhumiRecord/districts/tamil-nadu/virudhunagar.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/alappuzha.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/ernakulam.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/idukki.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/kannur.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/kasaragod.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/kollam.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/kottayam.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/kozhikode.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/malappuram.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/palakkad.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/pathanamthitta.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/thiruvananthapuram.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/thrissur.html
+https://akhairkar.github.io/BhumiRecord/districts/kerala/wayanad.html
