@@ -22,10 +22,15 @@
     .calc-panel.active { display: block; }
     .result-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 16px; margin-top: 16px; }
     .draft-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: monospace; white-space: pre-wrap; line-height: 1.6; max-height: 380px; overflow-y: auto; font-size: 0.9rem; color: #1e293b; }
-    .sticky-sitelinks { position: sticky; top: 70px; z-index: 40; background: rgba(255,255,255,0.98); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; padding: 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+    .breadcrumb { font-size: 0.88rem; color: var(--color-text-muted); padding: 14px 0 8px 0; display: flex; align-items: center; flex-wrap: wrap; line-height: 1.5; }
+    .breadcrumb a { color: var(--primary-color, #1b6b3a); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-separator { margin: 0 8px; color: #9ca3af; }
+    .sticky-sitelinks { position: sticky; top: 64px; z-index: 40; background: rgba(255,255,255,0.98); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; padding: 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
     .sitelinks-wrap { display: flex; gap: 10px; overflow-x: auto; white-space: nowrap; padding: 2px 16px; scrollbar-width: thin; }
-    .sitelink-chip { background: #f3f4f6; color: #374151; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-decoration: none; border: 1px solid #e5e7eb; }
+    .sitelink-chip { background: #f3f4f6; color: #374151; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-decoration: none; border: 1px solid #e5e7eb; transition: all 0.2s ease; }
     .sitelink-chip:hover { background: var(--primary-color, #1b6b3a); color: white; }
+    [id] { scroll-margin-top: 120px; }
     .reading-table { width: 100%; border-collapse: collapse; margin-top: 16px; background: white; }
     .reading-table th, .reading-table td { border: 1px solid #e5e7eb; padding: 12px 14px; text-align: left; font-size: 0.9rem; }
     .reading-table th { background: #f8fafc; font-weight: 700; color: #1e293b; }
@@ -158,8 +163,8 @@
         <span class="brand-mark">🏛️</span>
         <span class="brand-text"><span class="brand-name">BhumiRecord</span></span>
       </a>
-      <nav class="site-nav">
-        <ul class="nav-list">
+      <nav class="main-nav" aria-label="मुख्य नेविगेशन">
+        <ul>
           <li><a href="../../index.html">मुख्य पृष्ठ</a></li>
           <li><a href="../../states/uttar-pradesh.html">उत्तर प्रदेश</a></li>
           <li><a href="../../forms.html">राजस्व प्रपत्र</a></li>
@@ -168,10 +173,67 @@
           <li><a href="../../land-calculator.html">भूमि कैलकुलेटर</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <button class="theme-toggle icon-btn" id="theme-toggle" aria-label="डार्क/लाइट मोड टॉगल करें">🌙</button>
+        <button class="nav-toggle icon-btn" id="nav-toggle" aria-label="मेनू खोलें">☰</button>
+      </div>
     </div>
   </header>
 
-  <!-- Sticky Jump Sitelinks Bar -->
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="मोबाइल नेविगेशन">
+    <div class="mobile-nav-header">
+      <a href="../../index.html" class="brand">
+        <span class="brand-mark">🏛️</span>
+        <span class="brand-text"><span class="brand-name">BhumiRecord</span></span>
+      </a>
+      <button class="mobile-nav-close" id="mobile-nav-close">✕</button>
+    </div>
+    <span class="mobile-section-title">नेविगेशन</span>
+    <a href="../../index.html">🏠 मुख्य पृष्ठ</a>
+    <a href="../../states/uttar-pradesh.html">🌐 उत्तर प्रदेश State Hub</a>
+    <a href="../../land-calculator.html">🧮 भूमि कैलकुलेटर</a>
+    <a href="../../forms.html">📑 राजस्व प्रपत्र</a>
+    <a href="../../schemes.html">🏛️ सरकारी योजनाएं</a>
+    <a href="../../illegal-possession-remedies.html">⚖️ भूमि विवाद निवारण</a>
+    <span class="mobile-section-title">जानकारी</span>
+    <a href="../../disclaimer.html">⚠️ अस्वीकरण</a>
+  </div>
+
+  <!-- Breadcrumb Display (Cleanly positioned above Hero) -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="ब्रेडक्रम्ब नेविगेशन">
+      <a href="../../index.html">होम</a>
+      <span class="breadcrumb-separator">›</span>
+      <a href="../../states/uttar-pradesh.html">उत्तर प्रदेश</a>
+      <span class="breadcrumb-separator">›</span>
+      <span aria-current="page" style="color: var(--primary-color, #1b6b3a); font-weight: 700;">महराजगंज भूलेख व खतौनी</span>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="container" style="margin-top: 8px;">
+    <div class="hero-card" style="background: linear-gradient(135deg, #134e2a, #1b6b3a); color: white; padding: 40px 32px; border-radius: 16px; box-shadow: var(--shadow-md);">
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+        <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">🏛️ गोरखपुर मंडल</span>
+        <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">📄 16-अंकीय यूनिक गाटा कोड</span>
+        <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">📍 5 तहसीलें</span>
+        <span style="background: #f59e0b; color: #000; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">2026 विधिक अद्यतन</span>
+      </div>
+      <h1 style="font-size: 2.2rem; font-weight: 800; line-height: 1.3; margin-bottom: 16px;">महराजगंज भूलेख खतौनी नकल, खसरा व 16-अंकीय गाटा कोड [2026]</h1>
+      <p style="font-size: 1.1rem; line-height: 1.7; opacity: 0.95; max-width: 820px; margin-bottom: 24px;">
+        उत्तर प्रदेश राजस्व परिषद (UP Bhulekh) अंतर्गत <strong>महराजगंज (गोरखपुर मंडल)</strong> के सभी राजस्व ग्रामों की खतौनी (RoR), खसरा पड़ताल, प्रमाणित भू-नक्शा, दाखिल-खारिज व वरासत की प्रामाणिक विधिक गाइड। अपनी तहसील व ग्राम चुनकर घर बैठे सरकारी रिकॉर्ड जांचें।
+      </p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="#how-to-check" class="btn" style="background: #f59e0b; color: #000; font-weight: 700; border: none; padding: 12px 24px; border-radius: 8px;">ऑनलाइन खतौनी जांचें ↓</a>
+        <a href="#maharajganj-tools" class="btn" style="background: white; color: #134e2a; font-weight: 700; border: none; padding: 12px 24px; border-radius: 8px;">भूमि कैलकुलेटर 🧮</a>
+        <a href="#tehsils" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid white; padding: 12px 24px; border-radius: 8px;">तहसील सूची 📍</a>
+        <a href="https://upbhulekh.gov.in" target="_blank" rel="noopener" class="btn" style="background: transparent; color: #a7f3d0; text-decoration: underline; padding: 12px 16px;">आधिकारिक भूलेख पोर्टल ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Jump Sitelinks Bar (Placed right below hero, sticky when scrolling into content) -->
   <nav class="sticky-sitelinks" aria-label="त्वरित नेविगेशन">
     <div class="container sitelinks-wrap">
       <a href="#how-to-check" class="sitelink-chip">⚡ ऑनलाइन खतौनी</a>
@@ -186,37 +248,6 @@
   </nav>
 
   <main id="main-content">
-    <!-- Breadcrumb Display -->
-    <div class="container mt-16">
-      <nav class="breadcrumb" aria-label="ब्रेडक्रम्ब नेविगेशन" style="font-size: 0.85rem; color: #6b7280;">
-        <a href="../../index.html" style="color: #6b7280; text-decoration: none;">होम</a> &gt; 
-        <a href="../../states/uttar-pradesh.html" style="color: #6b7280; text-decoration: none;">उत्तर प्रदेश</a> &gt; 
-        <span style="color: var(--primary-color, #1b6b3a); font-weight: 600;">महराजगंज भूलेख व खतौनी</span>
-      </nav>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="container mt-24">
-      <div class="hero-card" style="background: linear-gradient(135deg, #134e2a, #1b6b3a); color: white; padding: 40px 32px; border-radius: 16px; box-shadow: var(--shadow-md);">
-        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
-          <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">🏛️ गोरखपुर मंडल</span>
-          <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">📄 16-अंकीय यूनिक गाटा कोड</span>
-          <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">📍 5 तहसीलें</span>
-          <span style="background: #f59e0b; color: #000; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">2026 विधिक अद्यतन</span>
-        </div>
-        <h1 style="font-size: 2.2rem; font-weight: 800; line-height: 1.3; margin-bottom: 16px;">महराजगंज भूलेख खतौनी नकल, खसरा व 16-अंकीय गाटा कोड [2026]</h1>
-        <p style="font-size: 1.1rem; line-height: 1.7; opacity: 0.95; max-width: 820px; margin-bottom: 24px;">
-          उत्तर प्रदेश राजस्व परिषद (UP Bhulekh) अंतर्गत <strong>महराजगंज (गोरखपुर मंडल)</strong> के सभी राजस्व ग्रामों की खतौनी (RoR), खसरा पड़ताल, प्रमाणित भू-नक्शा, दाखिल-खारिज व वरासत की प्रामाणिक विधिक गाइड। अपनी तहसील व ग्राम चुनकर घर बैठे सरकारी रिकॉर्ड जांचें।
-        </p>
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="#how-to-check" class="btn" style="background: #f59e0b; color: #000; font-weight: 700; border: none; padding: 12px 24px; border-radius: 8px;">ऑनलाइन खतौनी जांचें ↓</a>
-          <a href="#maharajganj-tools" class="btn" style="background: white; color: #134e2a; font-weight: 700; border: none; padding: 12px 24px; border-radius: 8px;">भूमि कैलकुलेटर 🧮</a>
-          <a href="#tehsils" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid white; padding: 12px 24px; border-radius: 8px;">तहसील सूची 📍</a>
-          <a href="https://upbhulekh.gov.in" target="_blank" rel="noopener" class="btn" style="background: transparent; color: #a7f3d0; text-decoration: underline; padding: 12px 16px;">आधिकारिक भूलेख पोर्टल ↗</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Section 2: Services Grid & 4-Step Checking Guide -->
     <section class="container mt-40" id="how-to-check">
       <div class="section-header text-center mb-24">
@@ -835,6 +866,7 @@
     </div>
   </footer>
 
+  <script src="../../assets/js/main.js"></script>
   <!-- Zero-Dependency JavaScript -->
   <script>
     // Tab switching

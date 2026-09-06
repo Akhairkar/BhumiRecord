@@ -435,8 +435,72 @@ section { padding: 56px 0; }
 }
 .scheme-card h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; color: var(--color-text); line-height: 1.35; }
 .scheme-card p { font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.55; margin-bottom: 18px; flex: 1; }
-.scheme-card-meta { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; font-size: 0.85rem; border-top: 1px solid var(--color-border-light); padding-top: 12px; }
-.scheme-card-meta-item { display: flex; justify-content: space-between; color: var(--color-text-muted); }
-.scheme-card-meta-item strong { color: var(--color-text); }
 .scheme-card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ==========================================================================
+   Breadcrumb & Jump Nav Global Enhancements
+   ========================================================================== */
+.breadcrumb {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  padding: 14px 0 8px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+.breadcrumb a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.breadcrumb-separator {
+  margin: 0 8px;
+  color: #9ca3af;
+}
+
+/* Sticky sitelinks navigation */
+.sticky-sitelinks {
+  position: sticky;
+  top: 64px;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+.sitelinks-wrap {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 2px 16px;
+  scrollbar-width: thin;
+}
+.sitelink-chip {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+.sitelink-chip:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+/* Anchor scroll margin offset for sticky header + sitelinks */
+[id] {
+  scroll-margin-top: 120px;
+}
+
 
