@@ -5707,4 +5707,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/puducherry/puducherry.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/puducherry/karaikal.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/puducherry/mahe.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/puducherry/yanam.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
 </urlset>

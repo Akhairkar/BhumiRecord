@@ -949,3 +949,7 @@ https://akhairkar.github.io/BhumiRecord/districts/assam/west-karbi-anglong.html
 https://akhairkar.github.io/BhumiRecord/districts/goa/north-goa.html
 https://akhairkar.github.io/BhumiRecord/districts/goa/south-goa.html
 https://akhairkar.github.io/BhumiRecord/districts/chandigarh/chandigarh.html
+https://akhairkar.github.io/BhumiRecord/districts/puducherry/puducherry.html
+https://akhairkar.github.io/BhumiRecord/districts/puducherry/karaikal.html
+https://akhairkar.github.io/BhumiRecord/districts/puducherry/mahe.html
+https://akhairkar.github.io/BhumiRecord/districts/puducherry/yanam.html
