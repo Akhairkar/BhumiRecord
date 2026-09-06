@@ -603,3 +603,15 @@ https://akhairkar.github.io/BhumiRecord/districts/punjab/sangrur.html
 https://akhairkar.github.io/BhumiRecord/districts/punjab/sas-nagar.html
 https://akhairkar.github.io/BhumiRecord/districts/punjab/sbs-nagar.html
 https://akhairkar.github.io/BhumiRecord/districts/punjab/tarn-taran.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/bilaspur.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/chamba.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/hamirpur.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/kangra.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/kinnaur.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/kullu.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/lahaul-and-spiti.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/mandi.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/shimla.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/sirmaur.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/solan.html
+https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/una.html
