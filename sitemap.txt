@@ -959,3 +959,5 @@ https://akhairkar.github.io/BhumiRecord/districts/dadra-and-nagar-haveli-and-dam
 https://akhairkar.github.io/BhumiRecord/districts/andaman-and-nicobar-islands/south-andaman.html
 https://akhairkar.github.io/BhumiRecord/districts/andaman-and-nicobar-islands/north-and-middle-andaman.html
 https://akhairkar.github.io/BhumiRecord/districts/andaman-and-nicobar-islands/nicobar.html
+https://akhairkar.github.io/BhumiRecord/districts/ladakh/leh.html
+https://akhairkar.github.io/BhumiRecord/districts/ladakh/kargil.html
