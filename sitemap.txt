@@ -615,3 +615,16 @@ https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/shimla.html
 https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/sirmaur.html
 https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/solan.html
 https://akhairkar.github.io/BhumiRecord/districts/himachal-pradesh/una.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/almora.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/bageshwar.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/chamoli.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/champawat.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/dehradun.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/haridwar.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/nainital.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/pauri-garhwal.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/pithoragarh.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/rudraprayag.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/tehri-garhwal.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/udham-singh-nagar.html
+https://akhairkar.github.io/BhumiRecord/districts/uttarakhand/uttarkashi.html
