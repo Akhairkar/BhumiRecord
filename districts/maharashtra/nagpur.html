@@ -71,6 +71,32 @@
     details.faq-item-ux summary::after { content: '+'; font-size: 1.3rem; color: var(--color-primary); }
     details.faq-item-ux[open] summary::after { content: '−'; }
     details.faq-item-ux .faq-answer-content { padding: 0 20px 20px 20px; color: var(--color-text); line-height: 1.75; border-top: 1px solid var(--color-border); margin-top: 6px; padding-top: 14px; font-size: 0.94rem; }
+
+    /* 4-in-1 Calculator Tabs */
+    .calc-tabs-wrapper { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; border-bottom: 2px solid var(--color-border); padding-bottom: 12px; }
+    .calc-tab-btn { background: var(--color-bg-card); border: 1px solid var(--color-border); padding: 10px 18px; border-radius: 25px; font-weight: 700; font-size: 0.9rem; color: var(--color-text); cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 6px; }
+    .calc-tab-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .calc-tab-btn.active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); box-shadow: 0 4px 12px rgba(27,107,58,0.25); }
+    
+    .calc-panel { display: none; }
+    .calc-panel.active { display: block; animation: fadeIn 0.25s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+    .calc-box-master { background: var(--color-bg-card); border: 2px solid var(--color-primary); border-radius: 14px; padding: 26px; box-shadow: var(--shadow-md); margin: 24px 0; }
+    .results-display-card { background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: 10px; padding: 18px 20px; margin-top: 18px; }
+    .res-grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 12px; }
+    .res-item-box { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 8px; padding: 12px 14px; text-align: center; }
+    .res-val-big { font-size: 1.25rem; font-weight: 800; color: var(--color-primary); }
+    .res-lbl-sub { font-size: 0.8rem; color: var(--color-text-muted); font-weight: 600; margin-top: 4px; }
+
+    .draft-container { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 22px; margin: 24px 0; box-shadow: var(--shadow-sm); }
+    .draft-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-border); padding-bottom: 12px; margin-bottom: 14px; }
+    .draft-title { font-weight: 700; font-size: 1.05rem; color: var(--color-text); }
+    .copy-btn { background: var(--color-primary); color: #fff; border: none; padding: 7px 16px; border-radius: 6px; font-size: 0.84rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: background 0.2s; }
+    .copy-btn:hover { opacity: 0.9; }
+    .copy-btn.copied { background: #10b981; }
+    .draft-text { background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: 8px; padding: 18px; font-family: 'Courier New', monospace, sans-serif; font-size: 0.9rem; line-height: 1.7; white-space: pre-wrap; color: var(--color-text); max-height: 380px; overflow-y: auto; }
+
   </style>
 
   <!-- Structured Data: BreadcrumbList -->
@@ -342,36 +368,231 @@
       </div>
     </section>
 
-    <!-- 3. NEW SECTION: NAGPUR LAND CALCULATOR WIDGET -->
+        <!-- 3. NEW SECTION: 4-IN-1 NAGPUR MASTER LAND CALCULATOR -->
     <section class="content-section" id="nagpur-tools">
-      <h2>🧮 3. नागपुर व विदर्भ जमीन कैलकुलेटर (गुंठा-एकड़-हेक्टर कनवर्टर)</h2>
-      <p>नागपुर और विदर्भ क्षेत्र में जमीन की खरीद-बिक्री व खेती की माप पारंपरिक रूप से <strong>गुंठा (Guntha)</strong> और <strong>एकड़ (Acre)</strong> में की जाती है, जबकि सरकारी 7/12 में रकबा <strong>हेक्टर (Hectare) और आर (Are)</strong> में दर्ज होता है (1 आर = 1 गुंठा = 1,089 वर्ग फुट)।</p>
+      <h2>🧮 3. नागपुर व विदर्भ 4-in-1 मास्टर जमीन कैलकुलेटर</h2>
+      <p>नागपुर जिले के 7/12 व 8A धारकों, किसानों और प्लॉट खरीदारों के लिए 4-in-1 मास्टर टूल। गुंठा-आर कनवर्टर, 4-भुजाओं वाले खेत का रकबा, पारिवारिक वारसा बंटवारा और नागपुर रजिस्ट्री स्टाम्प ड्यूटी की गणना सीधे यहीं करें:</p>
 
-      <div class="widget-box">
-        <h3 style="margin-top:0; color:var(--color-primary); font-size:1.25rem;">📐 नागपुर गुंठा से एकड़ व वर्ग फुट लाइव कनवर्टर</h3>
-        <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:16px;">अपने खेत या प्लॉट का गुंठा दर्ज करें और तुरंत एकड़, वर्ग फुट व हेक्टर में मान जानें:</p>
-        
-        <div class="widget-grid">
-          <div class="widget-field">
-            <label for="nagpur-guntha-input">गुंठा (Guntha / आर) दर्ज करें:</label>
-            <input type="number" id="nagpur-guntha-input" value="20" min="0.1" step="0.5" oninput="convertNagpurLand()">
+      <div class="calc-box-master">
+        <!-- Tab Navigation Buttons -->
+        <div class="calc-tabs-wrapper" role="tablist">
+          <button class="calc-tab-btn active" id="tab-btn-1" onclick="switchNagpurTab('panel-unit')">
+            <span>🔄</span> 1. गुंठा व आर कनवर्टर
+          </button>
+          <button class="calc-tab-btn" id="tab-btn-2" onclick="switchNagpurTab('panel-field')">
+            <span>📐</span> 2. शेताचे क्षेत्रफळ (Plot Area)
+          </button>
+          <button class="calc-tab-btn" id="tab-btn-3" onclick="switchNagpurTab('panel-partition')">
+            <span>👨‍👩‍👧‍👦</span> 3. वारसा हिस्सा वाटप
+          </button>
+          <button class="calc-tab-btn" id="tab-btn-4" onclick="switchNagpurTab('panel-stamp')">
+            <span>📑</span> 4. नागपुर मुद्रांक शुल्क (Stamp Duty)
+          </button>
+        </div>
+
+        <!-- PANEL 1: Unit Converter -->
+        <div class="calc-panel active" id="panel-unit">
+          <h3 style="margin-top:0; color:var(--color-primary); font-size:1.25rem;">🔄 नागपुर व महाराष्ट्र जमीन इकाई कनवर्टर</h3>
+          <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:16px;">
+            नागपुर में 1 गुंठा = 1 आर = 1,089 वर्ग फुट (33 ft × 33 ft)। 40 गुंठे = 1 एकड़ (43,560 वर्ग फुट) और 1 हेक्टर = 2.471 एकड़ (100 आर)।
+          </p>
+
+          <div class="widget-grid">
+            <div class="widget-field">
+              <label for="u-val">क्षेत्रफल मान (संख्या दर्ज करें):</label>
+              <input type="number" id="u-val" value="20" min="0.01" step="any" oninput="runNagpurUnitCalc()">
+            </div>
+            <div class="widget-field">
+              <label for="u-from">वर्तमान इकाई (From Unit):</label>
+              <select id="u-from" onchange="runNagpurUnitCalc()">
+                <option value="guntha" selected>गुंठा / आर (Guntha / Are)</option>
+                <option value="acre">एकड़ (Acre)</option>
+                <option value="hectare">हेक्टर (Hectare)</option>
+                <option value="sqft">चौरस फूट (Sq. Feet)</option>
+                <option value="sqmt">चौरस मीटर (Sq. Meters)</option>
+                <option value="bigha">पक्का बीघा (27,225 sq ft)</option>
+              </select>
+            </div>
           </div>
-          <div class="widget-field">
-            <label>एकड़ (Acre) में मान:</label>
-            <input type="text" id="nagpur-acre-output" value="0.50 एकड़" readonly style="background:var(--color-bg-alt); font-weight:700;">
-          </div>
-          <div class="widget-field">
-            <label>वर्ग फुट (Sq. Ft.) में मान:</label>
-            <input type="text" id="nagpur-sqft-output" value="21,780 वर्ग फुट" readonly style="background:var(--color-bg-alt); font-weight:700;">
-          </div>
-          <div class="widget-field">
-            <label>हेक्टर (Hectare) में मान:</label>
-            <input type="text" id="nagpur-hectare-output" value="0.202 हेक्टर" readonly style="background:var(--color-bg-alt); font-weight:700;">
+
+          <div class="results-display-card">
+            <div style="font-weight:700; font-size:0.95rem; color:var(--color-text); margin-bottom:8px;">📊 लाइव रूपांतरण परिणाम (Instant Converted Results):</div>
+            <div class="res-grid-4">
+              <div class="res-item-box">
+                <div class="res-val-big" id="out-guntha">20.00</div>
+                <div class="res-lbl-sub">गुंठा (आर)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="out-acre">0.500</div>
+                <div class="res-lbl-sub">एकड़ (Acres)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="out-hectare">0.202</div>
+                <div class="res-lbl-sub">हेक्टर (Hectares)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="out-sqft">21,780</div>
+                <div class="res-lbl-sub">चौरस फूट (Sq. Ft.)</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div style="text-align:center; margin-top:16px;">
-          <a href="../../land-calculator.html?state=maharashtra" class="btn btn-primary" style="padding:10px 24px; border-radius:30px; font-size:0.92rem; font-weight:700;">🧮 4-in-1 मास्टर जमीन कैलकुलेटर खोलें (खेत नाप, बंटवारा व स्टाम्प ड्यूटी) →</a>
+        <!-- PANEL 2: 4-Sided Field Area -->
+        <div class="calc-panel" id="panel-field">
+          <h3 style="margin-top:0; color:var(--color-primary); font-size:1.25rem;">📐 4-बाजू शेताचे व प्लॉटचे क्षेत्रफळ कॅल्क्युलेटर</h3>
+          <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:16px;">
+            नागपुर के टेढ़े-मेढ़े खेत या प्लॉट की चारों भुजाओं (उत्तर, दक्षिण, पूर्व, पश्चिम) की लंबाई फुट में दर्ज करें:
+          </p>
+
+          <div class="widget-grid">
+            <div class="widget-field">
+              <label for="f-north">उत्तर बाजू (North Length in Feet):</label>
+              <input type="number" id="f-north" value="150" min="1" oninput="runNagpurFieldCalc()">
+            </div>
+            <div class="widget-field">
+              <label for="f-south">दक्षिण बाजू (South Length in Feet):</label>
+              <input type="number" id="f-south" value="160" min="1" oninput="runNagpurFieldCalc()">
+            </div>
+            <div class="widget-field">
+              <label for="f-east">पूर्व बाजू (East Width in Feet):</label>
+              <input type="number" id="f-east" value="130" min="1" oninput="runNagpurFieldCalc()">
+            </div>
+            <div class="widget-field">
+              <label for="f-west">पश्चिम बाजू (West Width in Feet):</label>
+              <input type="number" id="f-west" value="140" min="1" oninput="runNagpurFieldCalc()">
+            </div>
+          </div>
+
+          <div class="results-display-card">
+            <div style="font-weight:700; font-size:0.95rem; color:var(--color-text); margin-bottom:8px;">📐 एकूण मोजमाप परिणाम (Total Calculated Area):</div>
+            <div class="res-grid-4">
+              <div class="res-item-box">
+                <div class="res-val-big" id="f-res-sqft">20,925</div>
+                <div class="res-lbl-sub">एकूण चौरस फूट (Sq. Ft.)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="f-res-guntha">19.21</div>
+                <div class="res-lbl-sub">एकूण गुंठा (आर)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="f-res-acre">0.480</div>
+                <div class="res-lbl-sub">एकूण एकड़ (Acre)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="f-res-hec">0.194</div>
+                <div class="res-lbl-sub">हेक्टर (Hectare)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 3: Family Partition -->
+        <div class="calc-panel" id="panel-partition">
+          <h3 style="margin-top:0; color:var(--color-primary); font-size:1.25rem;">👨‍👩‍👧‍👦 कौटुंबिक वाटप व वारसा हिस्सा कॅल्क्युलेटर</h3>
+          <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:16px;">
+            हिंदू वारसा कायदा (सुधारणा) 2005 आणि महाराष्ट्र जमीन महसूल संहितेनुसार वारसदारांमध्ये (मुले, मुली, आई) समान हिस्सा काढा:
+          </p>
+
+          <div class="widget-grid">
+            <div class="widget-field">
+              <label for="p-total">एकूण जमीन (संख्या दर्ज करें):</label>
+              <input type="number" id="p-total" value="4" min="0.1" step="any" oninput="runNagpurPartitionCalc()">
+            </div>
+            <div class="widget-field">
+              <label for="p-unit">जमीन एकक (Unit):</label>
+              <select id="p-unit" onchange="runNagpurPartitionCalc()">
+                <option value="acre" selected>एकड़ (Acre)</option>
+                <option value="guntha">गुंठा / आर (Guntha)</option>
+                <option value="hectare">हेक्टर (Hectare)</option>
+              </select>
+            </div>
+            <div class="widget-field">
+              <label for="p-heirs">एकूण वारसदार संख्या (मुले + मुली + वारस):</label>
+              <input type="number" id="p-heirs" value="3" min="1" max="50" oninput="runNagpurPartitionCalc()">
+            </div>
+          </div>
+
+          <div class="results-display-card">
+            <div style="font-weight:700; font-size:0.95rem; color:var(--color-text); margin-bottom:8px;">👨‍👩‍👧‍👦 प्रत्येकाचा हिस्सा (Per Shareholder Area):</div>
+            <div class="res-grid-4">
+              <div class="res-item-box">
+                <div class="res-val-big" id="p-res-guntha">53.33</div>
+                <div class="res-lbl-sub">प्रत्येकी गुंठा (आर)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="p-res-acre">1.333</div>
+                <div class="res-lbl-sub">प्रत्येकी एकड़ (Acre)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="p-res-sqft">58,080</div>
+                <div class="res-lbl-sub">प्रत्येकी चौरस फूट</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="p-res-pct">33.33%</div>
+                <div class="res-lbl-sub">टक्केवारी हिस्सा</div>
+              </div>
+            </div>
+            <div style="margin-top:12px; font-size:0.88rem; color:var(--color-text); line-height:1.6; background:rgba(27,107,58,0.06); padding:10px 14px; border-radius:6px; border-left:3px solid var(--color-primary);">
+              💡 <strong>टीप:</strong> हिस्सा निश्चित झाल्यानंतर तलाठी कार्यालयात 'कौटुंबिक वाटप पत्र' नोंदवून 7/12 वर स्वतंत्र फेरफार नोंद करून घ्या.
+            </div>
+          </div>
+        </div>
+
+        <!-- PANEL 4: Nagpur Stamp Duty & Registry -->
+        <div class="calc-panel" id="panel-stamp">
+          <h3 style="margin-top:0; color:var(--color-primary); font-size:1.25rem;">📑 नागपुर मुद्रांक शुल्क (Stamp Duty) व दस्त नोंदणी खर्च</h3>
+          <p style="font-size:0.9rem; color:var(--color-text-muted); margin-bottom:16px;">
+            नागपूर महानगरपालिका (NMC / NIT) किंवा नागपूर ग्रामीण क्षेत्रासाठी रेडी रेकनर मूल्यानुसार अचूक सरकारी शुल्काचा अंदाज:
+          </p>
+
+          <div class="widget-grid">
+            <div class="widget-field">
+              <label for="s-val">मिळकतीचे मूल्य (Ready Reckoner / खरेदी किंमत ₹):</label>
+              <input type="number" id="s-val" value="3000000" min="50000" step="10000" oninput="runNagpurStampCalc()">
+            </div>
+            <div class="widget-field">
+              <label for="s-area">नागपूर क्षेत्र निवडा:</label>
+              <select id="s-area" onchange="runNagpurStampCalc()">
+                <option value="nmc" selected>नागपूर महानगरपालिका (NMC / Urban - 7%)</option>
+                <option value="rural">नागपूर ग्रामीण / ग्रामपंचायत (Rural - 6%)</option>
+              </select>
+            </div>
+            <div class="widget-field">
+              <label for="s-gender">खरेदीदार (Gender / महिला सूट):</label>
+              <select id="s-gender" onchange="runNagpurStampCalc()">
+                <option value="male" selected>पुरुष (Male - सामान्य दर)</option>
+                <option value="female">महिला (Female - 1% सवलत)</option>
+                <option value="joint">संयुक्त (Male + Female - 0.5% सवलत)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="results-display-card">
+            <div style="font-weight:700; font-size:0.95rem; color:var(--color-text); margin-bottom:8px;">📑 अंदाजित सरकारी नोंदणी खर्च (Estimated Govt Charges):</div>
+            <div class="res-grid-4">
+              <div class="res-item-box">
+                <div class="res-val-big" id="s-rate-display">7%</div>
+                <div class="res-lbl-sub">लागू मुद्रांक दर (Rate)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="s-stamp-fee">₹2,10,000</div>
+                <div class="res-lbl-sub">मुद्रांक शुल्क (Stamp Duty)</div>
+              </div>
+              <div class="res-item-box">
+                <div class="res-val-big" id="s-reg-fee">₹30,000</div>
+                <div class="res-lbl-sub">नोंदणी फी (Max ₹30k)</div>
+              </div>
+              <div class="res-item-box" style="border-color:var(--color-primary); background:rgba(27,107,58,0.06);">
+                <div class="res-val-big" id="s-total-fee">₹2,40,000</div>
+                <div class="res-lbl-sub">एकूण सरकारी खर्च</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:20px;">
+          <a href="../../land-calculator.html?state=maharashtra" class="btn btn-outline" style="border-radius:30px; font-size:0.9rem; font-weight:700; padding:8px 24px;">🌐 संपूर्ण भारत 4-in-1 मास्टर कैलकुलेटर पेज उघडा →</a>
         </div>
       </div>
     </section>
@@ -455,17 +676,62 @@
       </div>
     </section>
 
-    <!-- 6. NEW SECTION: FORMS & APPLICATIONS -->
+        <!-- 6. NEW SECTION: FORMS & APPLICATIONS WITH 1-CLICK DRAFT -->
     <section class="content-section" id="nagpur-forms">
-      <h2>📑 6. नागपुर राजस्व अर्ज व फेरफार प्रारूप (Ready-to-Use Drafts)</h2>
-      <p>नागपुर के तलाठी या तहसील कार्यालय में आवेदन प्रस्तुत करने के लिए हमारे कानूनी प्रारूप केंद्र से सीधे 1-क्लिक में कॉपी करें:</p>
-      
-      <div style="background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:12px; padding:20px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px;">
-        <div>
-          <h3 style="margin:0 0 6px 0; font-size:1.15rem;">राजस्व आवेदन फॉर्म व कानूनी प्रारूप केंद्र</h3>
-          <p style="margin:0; font-size:0.9rem; color:var(--color-text-muted);">फेरफार नोंद अर्ज, वारस नोंद (वरासत), कौटुंबिक वाटणी (पारिवारिक बंटवारा) और दुरुस्ती अर्ज के रेडीमेड ड्राफ्ट्स।</p>
+      <h2>📑 6. नागपुर फेरफार व वारस नोंद अर्ज प्रारूप (Ready-to-Use Draft)</h2>
+      <p>नागपुर जिले के तलाठी या तहसील कार्यालय में 7/12 पर नाम दर्ज कराने (वारस नोंद अथवा खरेदी नोंद) हेतु विहित प्रारूप। 'कॉपी करा' बटणावर क्लिक करून थेट प्रिंट घ्या किंवा वर्डमध्ये पेस्ट करा:</p>
+
+      <div class="draft-container">
+        <div class="draft-header">
+          <span class="draft-title">📄 नागपूर तलाठी फेरफार नोंद अर्ज प्रारूप (वारस नोंद / खरेदी दस्त नोंद)</span>
+          <button class="copy-btn" id="btn-copy-ferfar" onclick="copyDraft('btn-copy-ferfar', 'draft-ferfar-text')">📋 कॉपी करा</button>
         </div>
-        <a href="../../forms.html" class="btn btn-primary" style="white-space:nowrap; padding:10px 22px; font-size:0.9rem;">📑 सभी फॉर्म्स व ड्राफ्ट्स देखें →</a>
+        <div class="draft-text" id="draft-ferfar-text">प्रति,
+मा. तलाठी साहेब,
+सजा: [सजा / गावाचे नाव], तालुका: [तालुक्याचे नाव], जिल्हा: नागपूर.
+
+विषय: मौजे [गावाचे नाव] येथील गट नंबर/सर्व्हे नंबर: [गट नंबर] वरील 7/12 वर [वारस नोंद / खरेदी नोंद / वाटप नोंद] करणेबाबत अर्ज.
+
+अर्जदार:
+[अर्जदाराचे पूर्ण नाव], वय: [वय], व्यवसाय: [व्यवसाय],
+पत्ता: [पूर्ण पत्ता, तालुका व जिल्हा नागपूर], मोबाईल नंबर: [फोन नंबर].
+
+महोदय,
+मी नम्रतापूर्वक खालीलप्रमाणे अर्ज सादर करतो/करते:
+
+१. हे की, मौजे: [गावाचे नाव], तालुका: [तालुका], जिल्हा: नागपूर येथील गट नंबर/सर्व्हे नंबर: [गट नंबर], एकूण क्षेत्र: [क्षेत्र हेक्टर/आर मध्ये], आकारणी: [आकार] ही शेतजमीन मूळ खातेदार कै. [मूळ मालकाचे नाव] यांच्या नावे 7/12 वर नोंद होती.
+
+२. हे की, सदर मूळ खातेदार यांचा मृत्यू दिनांक: [मृत्यू तारीख] रोजी झालेला आहे. त्यांच्या मृत्यूनंतर त्यांचे खालील कायदेशीर वारसदार हयात आहेत:
+   (१) [वारसदार १ चे नाव], वय: [वय], नाते: [उदा. मुलगा], पत्ता: [पत्ता]
+   (२) [वारसदार २ चे नाव], वय: [वय], नाते: [उदा. मुलगी], पत्ता: [पत्ता]
+   (३) [वारसदार ३ चे नाव], वय: [वय], नाते: [उदा. पत्नी], पत्ता: [पत्ता]
+
+३. हे की, वरील सर्व वारसदारांखेरीज इतर कोणीही कायदेशीर वारसदार नाही.
+
+४. हे की, सदर मिळकतीबाबत कोणताही दिवाणी वाद प्रलंबित नसून सर्व वारसदारांची नावे 7/12 व 8A वर दाखल होण्यास कोणाचीही हरकत नाही.
+
+अतएव विनंती की:
+सदर गट नंबर: [गट नंबर] वरील 7/12 वर महसूल नियमांनुसार कच्ची फेरफार नोंद (Pencil Entry) करून, विहित मुदतीची नोटीस बजावून अंतिम फेरफार नोंद मंजूर करण्यात यावी.
+
+दिनांक: [तारीख]
+आपला नम्र,
+हस्ताक्षर: ...................................
+नाव: [अर्जदाराचे नाव]
+
+संलग्न कागदपत्रे:
+१. मूळ मृत्यू दाखला सत्यप्रत.
+२. कुटुंब वारस शपथपत्र (Affidavit).
+३. अद्ययावत 7/12 व 8A उतारा.
+४. सर्व वारसदारांचे आधार कार्ड सत्यप्रत.
+५. रेशन कार्ड सत्यप्रत.</div>
+      </div>
+
+      <div style="background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:12px; padding:20px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; margin-top:20px;">
+        <div>
+          <h3 style="margin:0 0 6px 0; font-size:1.15rem;">अधिक महसूल अर्ज व कायदेशीर प्रारूपे</h3>
+          <p style="margin:0; font-size:0.9rem; color:var(--color-text-muted);">कौटुंबिक वाटणी (बंटवारा), खतौनी नाव दुरुस्ती, आणि सीमांकन अर्जांसाठी आमचे फॉर्म्स केंद्र पहा:</p>
+        </div>
+        <a href="../../forms.html" class="btn btn-primary" style="white-space:nowrap; padding:10px 22px; font-size:0.9rem;">📑 सर्व फॉर्म्स व प्रारूपे पहा →</a>
       </div>
     </section>
 
@@ -623,15 +889,130 @@
 
   <script src="../../assets/js/main.js"></script>
   <script>
-    function convertNagpurLand() {
-      const guntha = parseFloat(document.getElementById('nagpur-guntha-input').value) || 0;
-      const acre = (guntha / 40).toFixed(3);
-      const sqft = Math.round(guntha * 1089);
-      const hectare = (guntha * 0.010117).toFixed(3);
+    // Tab switcher for Nagpur 4-in-1 Calculator
+    function switchNagpurTab(panelId) {
+      document.querySelectorAll('.calc-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.calc-panel').forEach(panel => panel.classList.remove('active'));
 
-      document.getElementById('nagpur-acre-output').value = acre + ' एकड़';
-      document.getElementById('nagpur-sqft-output').value = sqft.toLocaleString('en-IN') + ' वर्ग फुट';
-      document.getElementById('nagpur-hectare-output').value = hectare + ' हेक्टर';
+      if (panelId === 'panel-unit') {
+        document.getElementById('tab-btn-1').classList.add('active');
+        document.getElementById('panel-unit').classList.add('active');
+      } else if (panelId === 'panel-field') {
+        document.getElementById('tab-btn-2').classList.add('active');
+        document.getElementById('panel-field').classList.add('active');
+      } else if (panelId === 'panel-partition') {
+        document.getElementById('tab-btn-3').classList.add('active');
+        document.getElementById('panel-partition').classList.add('active');
+      } else if (panelId === 'panel-stamp') {
+        document.getElementById('tab-btn-4').classList.add('active');
+        document.getElementById('panel-stamp').classList.add('active');
+      }
+    }
+
+    // 1. Unit Converter Calculations
+    function runNagpurUnitCalc() {
+      const val = parseFloat(document.getElementById('u-val').value) || 0;
+      const fromUnit = document.getElementById('u-from').value;
+
+      let sqft = 0;
+      if (fromUnit === 'guntha') sqft = val * 1089;
+      else if (fromUnit === 'acre') sqft = val * 43560;
+      else if (fromUnit === 'hectare') sqft = val * 107639.1;
+      else if (fromUnit === 'sqft') sqft = val;
+      else if (fromUnit === 'sqmt') sqft = val * 10.7639;
+      else if (fromUnit === 'bigha') sqft = val * 27225;
+
+      const guntha = (sqft / 1089).toFixed(2);
+      const acre = (sqft / 43560).toFixed(3);
+      const hectare = (sqft / 107639.1).toFixed(3);
+
+      document.getElementById('out-guntha').innerText = parseFloat(guntha).toLocaleString('en-IN');
+      document.getElementById('out-acre').innerText = parseFloat(acre).toLocaleString('en-IN');
+      document.getElementById('out-hectare').innerText = parseFloat(hectare).toLocaleString('en-IN');
+      document.getElementById('out-sqft').innerText = Math.round(sqft).toLocaleString('en-IN');
+    }
+
+    // 2. 4-Sided Field Area
+    function runNagpurFieldCalc() {
+      const n = parseFloat(document.getElementById('f-north').value) || 0;
+      const s = parseFloat(document.getElementById('f-south').value) || 0;
+      const e = parseFloat(document.getElementById('f-east').value) || 0;
+      const w = parseFloat(document.getElementById('f-west').value) || 0;
+
+      const avgLen = (n + s) / 2;
+      const avgWid = (e + w) / 2;
+      const sqft = avgLen * avgWid;
+
+      const guntha = (sqft / 1089).toFixed(2);
+      const acre = (sqft / 43560).toFixed(3);
+      const hec = (sqft / 107639.1).toFixed(3);
+
+      document.getElementById('f-res-sqft').innerText = Math.round(sqft).toLocaleString('en-IN');
+      document.getElementById('f-res-guntha').innerText = parseFloat(guntha).toLocaleString('en-IN');
+      document.getElementById('f-res-acre').innerText = parseFloat(acre).toLocaleString('en-IN');
+      document.getElementById('f-res-hec').innerText = parseFloat(hec).toLocaleString('en-IN');
+    }
+
+    // 3. Family Partition
+    function runNagpurPartitionCalc() {
+      const total = parseFloat(document.getElementById('p-total').value) || 0;
+      const unit = document.getElementById('p-unit').value;
+      const heirs = parseInt(document.getElementById('p-heirs').value) || 1;
+
+      let totalSqft = 0;
+      if (unit === 'acre') totalSqft = total * 43560;
+      else if (unit === 'guntha') totalSqft = total * 1089;
+      else if (unit === 'hectare') totalSqft = total * 107639.1;
+
+      const perPersonSqft = totalSqft / heirs;
+      const perPersonGuntha = (perPersonSqft / 1089).toFixed(2);
+      const perPersonAcre = (perPersonSqft / 43560).toFixed(3);
+      const pct = (100 / heirs).toFixed(2) + '%';
+
+      document.getElementById('p-res-guntha').innerText = parseFloat(perPersonGuntha).toLocaleString('en-IN');
+      document.getElementById('p-res-acre').innerText = parseFloat(perPersonAcre).toLocaleString('en-IN');
+      document.getElementById('p-res-sqft').innerText = Math.round(perPersonSqft).toLocaleString('en-IN');
+      document.getElementById('p-res-pct').innerText = pct;
+    }
+
+    // 4. Nagpur Stamp Duty Calculation
+    function runNagpurStampCalc() {
+      const val = parseFloat(document.getElementById('s-val').value) || 0;
+      const area = document.getElementById('s-area').value;
+      const gender = document.getElementById('s-gender').value;
+
+      let baseRate = (area === 'nmc') ? 7.0 : 6.0; // 7% NMC, 6% Rural
+      if (gender === 'female') {
+        baseRate -= 1.0; // 1% female concession in Maharashtra
+      } else if (gender === 'joint') {
+        baseRate -= 0.5; // 0.5% joint concession
+      }
+
+      const stampDuty = Math.round((val * baseRate) / 100);
+      const regFee = Math.min(30000, Math.round((val * 0.01))); // 1% capped at 30k
+      const totalCost = stampDuty + regFee;
+
+      document.getElementById('s-rate-display').innerText = baseRate.toFixed(1) + '%';
+      document.getElementById('s-stamp-fee').innerText = '₹' + stampDuty.toLocaleString('en-IN');
+      document.getElementById('s-reg-fee').innerText = '₹' + regFee.toLocaleString('en-IN');
+      document.getElementById('s-total-fee').innerText = '₹' + totalCost.toLocaleString('en-IN');
+    }
+
+    // Copy draft function
+    function copyDraft(btnId, targetId) {
+      const text = document.getElementById(targetId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById(btnId);
+        const originalText = btn.innerHTML;
+        btn.classList.add('copied');
+        btn.innerHTML = '✔ कॉपी झाले!';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = originalText;
+        }, 2500);
+      }).catch(err => {
+        alert('कॉपी करण्यात त्रुटी आली. कृपया स्वतः मजकूर सिलेक्ट करून कॉपी करा.');
+      });
     }
   </script>
 </body>
