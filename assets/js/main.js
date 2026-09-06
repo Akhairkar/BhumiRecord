@@ -13,6 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Theme Toggle
+  var themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    var currentTheme = localStorage.getItem('bhumi_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+    themeToggle.addEventListener('click', function () {
+      var nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('bhumi_theme', nextTheme);
+      themeToggle.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
+    });
+  }
+
   // Mobile nav
   var navToggle = document.getElementById('nav-toggle');
   var mobileNav = document.getElementById('mobile-nav');

@@ -2,6 +2,14 @@ https://akhairkar.github.io/BhumiRecord/
 https://akhairkar.github.io/BhumiRecord/states.html
 https://akhairkar.github.io/BhumiRecord/land-calculator.html
 https://akhairkar.github.io/BhumiRecord/forms.html
+https://akhairkar.github.io/BhumiRecord/schemes.html
+https://akhairkar.github.io/BhumiRecord/schemes/kisan-credit-card.html
+https://akhairkar.github.io/BhumiRecord/schemes/kisan-kalyan-yojana.html
+https://akhairkar.github.io/BhumiRecord/schemes/namo-shetkari-yojana.html
+https://akhairkar.github.io/BhumiRecord/schemes/pm-fasal-bima.html
+https://akhairkar.github.io/BhumiRecord/schemes/pm-kisan.html
+https://akhairkar.github.io/BhumiRecord/schemes/rythu-bharosa.html
+https://akhairkar.github.io/BhumiRecord/schemes/svamitva-yojana.html
 https://akhairkar.github.io/BhumiRecord/states/andaman-and-nicobar-islands.html
 https://akhairkar.github.io/BhumiRecord/states/andhra-pradesh.html
 https://akhairkar.github.io/BhumiRecord/states/arunachal-pradesh.html
