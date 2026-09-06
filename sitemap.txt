@@ -685,3 +685,14 @@ https://akhairkar.github.io/BhumiRecord/districts/jharkhand/sahibganj.html
 https://akhairkar.github.io/BhumiRecord/districts/jharkhand/saraikela-kharsawan.html
 https://akhairkar.github.io/BhumiRecord/districts/jharkhand/simdega.html
 https://akhairkar.github.io/BhumiRecord/districts/jharkhand/west-singhbhum.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/central-delhi.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/east-delhi.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/new-delhi.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/north-delhi.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/north-east-delhi.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/north-west-delhi.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/shahdara.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/south-delhi.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/south-east-delhi.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/south-west-delhi.html
+https://akhairkar.github.io/BhumiRecord/districts/delhi/west-delhi.html
