@@ -948,3 +948,4 @@ https://akhairkar.github.io/BhumiRecord/districts/assam/udalguri.html
 https://akhairkar.github.io/BhumiRecord/districts/assam/west-karbi-anglong.html
 https://akhairkar.github.io/BhumiRecord/districts/goa/north-goa.html
 https://akhairkar.github.io/BhumiRecord/districts/goa/south-goa.html
+https://akhairkar.github.io/BhumiRecord/districts/chandigarh/chandigarh.html
