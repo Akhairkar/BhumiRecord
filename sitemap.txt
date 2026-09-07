@@ -977,3 +977,11 @@ https://akhairkar.github.io/BhumiRecord/districts/sikkim/namchi.html
 https://akhairkar.github.io/BhumiRecord/districts/sikkim/gyalshing.html
 https://akhairkar.github.io/BhumiRecord/districts/sikkim/pakyong.html
 https://akhairkar.github.io/BhumiRecord/districts/sikkim/soreng.html
+https://akhairkar.github.io/BhumiRecord/districts/tripura/west-tripura.html
+https://akhairkar.github.io/BhumiRecord/districts/tripura/khowai.html
+https://akhairkar.github.io/BhumiRecord/districts/tripura/sipahijala.html
+https://akhairkar.github.io/BhumiRecord/districts/tripura/gomati.html
+https://akhairkar.github.io/BhumiRecord/districts/tripura/south-tripura.html
+https://akhairkar.github.io/BhumiRecord/districts/tripura/dhalai.html
+https://akhairkar.github.io/BhumiRecord/districts/tripura/unakoti.html
+https://akhairkar.github.io/BhumiRecord/districts/tripura/north-tripura.html
