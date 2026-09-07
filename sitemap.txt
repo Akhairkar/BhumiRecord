@@ -961,3 +961,13 @@ https://akhairkar.github.io/BhumiRecord/districts/andaman-and-nicobar-islands/no
 https://akhairkar.github.io/BhumiRecord/districts/andaman-and-nicobar-islands/nicobar.html
 https://akhairkar.github.io/BhumiRecord/districts/ladakh/leh.html
 https://akhairkar.github.io/BhumiRecord/districts/ladakh/kargil.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/kavaratti.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/agatti.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/amini.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/andrott.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/kalpeni.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/kiltan.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/chetlat.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/kadmat.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/bitra.html
+https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/minicoy.html
