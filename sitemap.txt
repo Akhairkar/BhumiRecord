@@ -971,3 +971,9 @@ https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/chetlat.html
 https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/kadmat.html
 https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/bitra.html
 https://akhairkar.github.io/BhumiRecord/districts/lakshadweep/minicoy.html
+https://akhairkar.github.io/BhumiRecord/districts/sikkim/gangtok.html
+https://akhairkar.github.io/BhumiRecord/districts/sikkim/mangan.html
+https://akhairkar.github.io/BhumiRecord/districts/sikkim/namchi.html
+https://akhairkar.github.io/BhumiRecord/districts/sikkim/gyalshing.html
+https://akhairkar.github.io/BhumiRecord/districts/sikkim/pakyong.html
+https://akhairkar.github.io/BhumiRecord/districts/sikkim/soreng.html

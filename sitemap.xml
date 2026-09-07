@@ -5839,4 +5839,40 @@
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/sikkim/gangtok.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/sikkim/mangan.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/sikkim/namchi.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/sikkim/gyalshing.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/sikkim/pakyong.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://akhairkar.github.io/BhumiRecord/districts/sikkim/soreng.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
 </urlset>
