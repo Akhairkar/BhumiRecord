@@ -996,3 +996,15 @@ https://akhairkar.github.io/BhumiRecord/districts/mizoram/siaha.html
 https://akhairkar.github.io/BhumiRecord/districts/mizoram/saitual.html
 https://akhairkar.github.io/BhumiRecord/districts/mizoram/khawzawl.html
 https://akhairkar.github.io/BhumiRecord/districts/mizoram/hnahthial.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/east-khasi-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/west-khasi-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/south-west-khasi-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/eastern-west-khasi-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/ri-bhoi.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/west-garo-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/east-garo-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/south-garo-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/north-garo-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/south-west-garo-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/west-jaintia-hills.html
+https://akhairkar.github.io/BhumiRecord/districts/meghalaya/east-jaintia-hills.html
