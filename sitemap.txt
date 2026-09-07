@@ -985,3 +985,14 @@ https://akhairkar.github.io/BhumiRecord/districts/tripura/south-tripura.html
 https://akhairkar.github.io/BhumiRecord/districts/tripura/dhalai.html
 https://akhairkar.github.io/BhumiRecord/districts/tripura/unakoti.html
 https://akhairkar.github.io/BhumiRecord/districts/tripura/north-tripura.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/aizawl.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/lunglei.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/champhai.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/kolasib.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/serchhip.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/lawngtlai.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/mamit.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/siaha.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/saitual.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/khawzawl.html
+https://akhairkar.github.io/BhumiRecord/districts/mizoram/hnahthial.html
